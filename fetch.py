@@ -108,8 +108,7 @@ def to_entries(feed_url: str):
     res = feedparser.parse(feed_url)
 
     if res.get('status') != 200:
-        print(f"parse failed: url={feed_url}, status={res.get('status')}, headers={res.get('headers')}")
-        print(res.get('bozo_exception'))
+        print(f"parse failed: url={feed_url}, status={res.get('status')}, headers={res.get('headers')}, exception={res.get('bozo_exception')}")
         return {
             'feed_url': feed_url,
             'entries': []

@@ -139,7 +139,13 @@ def main():
         "https://tech.nri-net.com/rss",
         "https://nttdocomo-developers.jp/feed",
         "https://engineers.ntt.com/feed",
-        "https://www.ntt-tx.co.jp/column/rss.xml"
+        "https://www.ntt-tx.co.jp/column/rss.xml",
+        "https://connpass.com/explore/ja.atom",
+        "https://jpaztech.github.io/blog/atom.xml",
+        "https://news.microsoft.com/ja-jp/category/blog/feed/",
+        "https://jpwinsup.github.io/blog/atom.xml",
+        "http://blogs.windows.com/japan/feed/",
+        "https://techblog.zozo.com/feed"
     ]
 
     save_as_json('result.json', [to_entries(feed_url) for feed_url in feed_urls])
@@ -166,7 +172,7 @@ def main():
         ) as i
     )
     select
-        feed_title as page_title,
+        feed_title,
         page_url,
         cast(total_bookmark_count as integer) as total_bookmark_count,
         entry_title as top_entry_title,

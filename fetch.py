@@ -131,7 +131,15 @@ def main():
         "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/",
         "https://blogs.oracle.com/oracle4engineer/rss",
         "https://www.cncf.io/feed/",
-        "https://www.ipa.go.jp/about/newsonly-rss.rdf"
+        "https://www.ipa.go.jp/about/newsonly-rss.rdf",
+        "https://techblog.lycorp.co.jp/ja/feed/index.xml",
+        "https://azure.microsoft.com/ja-jp/blog/feed/",
+        "https://cloudblog.withgoogle.com/ja/products/gcp/rss/",
+        "https://developers-jp.googleblog.com/feeds/posts/default",
+        "https://tech.nri-net.com/rss",
+        "https://nttdocomo-developers.jp/feed",
+        "https://engineers.ntt.com/feed",
+        "https://www.ntt-tx.co.jp/column/rss.xml"
     ]
 
     save_as_json('result.json', [to_entries(feed_url) for feed_url in feed_urls])
@@ -151,12 +159,14 @@ def main():
             ) as total_bookmark_count
         from (
             select
+               feed_title,
                page_url,
                unnest(entries, recursive := true)
             from 'result.json'
         ) as i
     )
     select
+        feed_title as page_title,
         page_url,
         cast(total_bookmark_count as integer) as total_bookmark_count,
         entry_title as top_entry_title,

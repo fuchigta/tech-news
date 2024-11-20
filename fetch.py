@@ -2,6 +2,7 @@
 import datetime
 import json
 from urllib.parse import urlparse, urlunparse
+import duckdb
 import feedparser
 
 
@@ -16,7 +17,7 @@ def remove_query_params(url: str) -> str:
     return urlunparse(clean)
 
 
-def fetch_bookmark_counts(items: list[dict[str, str]], url_key: str = 'link', batch_size: int = 50) -> list[dict[str, any]]:
+def fetch_bookmark_counts(items: list[dict[str, str]], url_key: str = 'entry_url', batch_size: int = 50) -> list[dict[str, any]]:
     """
     URLのリストに対してはてなブックマーク数を取得し、元のデータに追加する関数
     
@@ -80,44 +81,94 @@ def get_updated(entry: dict[str, any]) -> datetime.datetime:
     return datetime.datetime(*updated[:6])
 
 
-def to_entries(url: str):
-    res = feedparser.parse(url)
+def to_entries(feed_url: str):
+    res = feedparser.parse(feed_url)
 
-    if res.status != 200:
+    if res.get('status') != 200:
+        print(f"parse failed: url={feed_url}, status={res.get('status')}, headers={res.get('headers')}")
+        print(res.get('bozo_exception'))
         return {
-            'url': url,
+            'feed_url': feed_url,
             'entries': []
         }
 
     return {
-        'url': url,
-        'icon': res.feed.get('icon'),
-        'image': res.feed.get('image', {}).get('href'),
-        'etag': res.get('etag'),
-        'modified': res.get('modifed', get_updated(res.feed).isoformat()),
+        'page_url': res.feed.link,
+        'feed_url': feed_url,
+        'feed_title': res.feed.get('title'),
+        'feed_icon': res.feed.get('icon'),
+        'feed_image': res.feed.get('image', {}).get('href'),
+        'feed_etag': res.get('etag'),
+        'feed_modified': res.get('modifed', get_updated(res.feed).isoformat()),
         'entries': fetch_bookmark_counts([{
-            'title': entry.get('title'),
-            'author': entry.get('author'),
-            'link': remove_query_params(entry.get('link')),
-            'tags': [tag.get('term') for tag in entry.get('tags', []) ],
-            "updated": get_updated(entry).isoformat()
+            'entry_title': entry.get('title'),
+            'entry_author': entry.get('author'),
+            'entry_url': remove_query_params(entry.get('link')),
+            'entry_tags': [tag.get('term') for tag in entry.get('tags', []) ],
+            "entry_updated": get_updated(entry).isoformat()
         } for entry in res.entries])
     }
 
 
-def print_as_json(data):
-    print(json.dumps(data, indent=4, ensure_ascii=False))
+def save_as_json(name, data):
+    with open(name, mode='w', encoding="utf-8") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
 
 
 def main():
-    urls = [
+    feed_urls = [
         "https://qiita.com/popular-items/feed",
         "https://dev.classmethod.jp/feed/",
-        "https://zenn.dev/feed"
+        "https://zenn.dev/feed",
+        "https://news.ycombinator.com/rss",
+        "https://www.publickey1.jp/atom.xml",
+        "https://postd.cc/feed/",
+        "https://thinkit.co.jp/rss.xml",
+        "https://gihyo.jp/dev/feed/rss1",
+        "https://coliss.com/feed/",
+        "https://community.aws/rss",
+        "https://aws.amazon.com/jp/blogs/news/feed/",
+        "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/",
+        "https://blogs.oracle.com/oracle4engineer/rss",
+        "https://www.cncf.io/feed/",
+        "https://www.ipa.go.jp/about/newsonly-rss.rdf"
     ]
 
-    print_as_json([to_entries(url) for url in urls])
+    save_as_json('result.json', [to_entries(feed_url) for feed_url in feed_urls])
 
+    save_as_json('result-ranking.json', duckdb.sql("""
+    with e as (
+        select
+            *,
+            ROW_NUMBER() OVER (
+               PARTITION BY page_url
+               ORDER BY
+                    bookmark_count DESC,
+                    entry_updated DESC
+            ) as rank,
+            SUM(bookmark_count) OVER (
+               PARTITION BY page_url
+            ) as total_bookmark_count
+        from (
+            select
+               page_url,
+               unnest(entries, recursive := true)
+            from 'result.json'
+        ) as i
+    )
+    select
+        page_url,
+        cast(total_bookmark_count as integer) as total_bookmark_count,
+        entry_title as top_entry_title,
+        entry_url as top_entry_url,
+        cast(bookmark_count as integer) as top_bookmark_count
+    from e
+    where
+        rank = 1
+    order by
+        total_bookmark_count desc,
+        entry_updated desc
+    """).to_df().to_dict(orient="records"))
 
 if __name__ == "__main__":
     main()

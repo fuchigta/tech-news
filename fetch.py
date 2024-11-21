@@ -1,11 +1,59 @@
 
 import datetime
 import json
+import os
 from urllib.parse import urlparse, urlunparse
+from bs4 import BeautifulSoup
 import duckdb
 import feedparser
 import requests
 import math
+
+def get_entry_image(entry) -> str:
+    """
+    feedparserのentryオブジェクトから画像URLを抽出する
+    
+    Args:
+        entry: feedparserのentryオブジェクト
+    
+    Returns:
+        str: 見つかった画像URL
+    """
+    # 1. メディアコンテンツをチェック
+    if 'media_content' in entry:
+        for media in entry['media_content']:
+            if 'url' in media:
+                return media['url']
+    
+    # 2. メディアサムネイルをチェック
+    if 'media_thumbnail' in entry:
+        for media in entry['media_thumbnail']:
+            if 'url' in media:
+                return media['url']
+    
+    # 3. エンクロージャーをチェック
+    if 'enclosures' in entry:
+        for enclosure in entry['enclosures']:
+            if 'type' in enclosure and enclosure['type'].startswith('image/'):
+                return enclosure['href']
+    
+    # 4. コンテンツ内のimg要素を解析
+    if 'content' in entry:
+        for content in entry['content']:
+            if 'value' in content:
+                soup = BeautifulSoup(content['value'], 'html.parser')
+                for img in soup.find_all('img'):
+                    if img.get('src'):
+                        return img['src']
+    
+    # 5. descriptionからimg要素を解析
+    if 'description' in entry:
+        soup = BeautifulSoup(entry.description, 'html.parser')
+        for img in soup.find_all('img'):
+            if img.get('src'):
+                return img['src']
+    
+    return None
 
 
 def is_within(date: datetime.datetime, n: datetime.timedelta) -> bool:
@@ -126,6 +174,7 @@ def to_entries(feed_url: str):
             'entry_title': entry.get('title'),
             'entry_author': entry.get('author'),
             'entry_url': remove_query_params(entry.get('link')),
+            'entry_image_url': get_entry_image(entry),
             'entry_tags': [tag.get('term') for tag in entry.get('tags', []) ],
             "entry_updated": get_updated_isoformat(entry)
         } for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=31))])
@@ -133,7 +182,8 @@ def to_entries(feed_url: str):
 
 
 def save_as_json(name, data):
-    with open(name, mode='w', encoding="utf-8") as f:
+    path = os.path.join(os.path.dirname(__file__), "frontend", "public", name)
+    with open(path, mode='w', encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
 
@@ -190,7 +240,7 @@ def main():
                feed_title,
                page_url,
                unnest(entries, recursive := true)
-            from 'result.json'
+            from './frontend/public/result.json'
         ) as i
     )
     select
@@ -214,7 +264,7 @@ def main():
             feed_title,
             page_url,
             unnest(entries, recursive := true)
-        from 'result.json'
+        from './frontend/public/result.json'
     )
     select
         feed_title,
@@ -231,6 +281,34 @@ def main():
         entry_count desc,
         oldest_entry_updated asc
     """).to_df().to_dict(orient="records"))
+
+    save_as_json('result-images.json', duckdb.sql("""
+    with e as (
+        select
+            *,
+            unnest(entries, recursive := true)
+        from './frontend/public/result.json'
+    )
+    select
+        feed_title,
+        entry_title,
+        entry_url,
+        entry_image_url
+    from (
+        select
+            *,
+            row_number() over (
+                partition by feed_title
+                order by entry_updated desc
+            ) as rank
+        from
+            e
+        where
+            entry_image_url IS NOT NULL
+    ) as e
+    where
+        e.rank == 1
+    """).to_df().to_dict(orient='records'))
 
 if __name__ == "__main__":
     main()

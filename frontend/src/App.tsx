@@ -20,7 +20,7 @@ function App() {
   }
 
   const loadQuery = `
-    CREATE TABLE IF NOT EXISTS entries AS SELECT * FROM '${basename}/result.json';
+    CREATE TABLE IF NOT EXISTS result AS SELECT * FROM '${basename}/result.json';
   `;
 
   useEffect(() => {

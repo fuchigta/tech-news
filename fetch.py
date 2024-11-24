@@ -3,11 +3,15 @@ import datetime
 import json
 import os
 from urllib.parse import urlparse, urlunparse
-from bs4 import BeautifulSoup
-import duckdb
+import warnings
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 import feedparser
 import requests
 import math
+
+
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
+
 
 def get_entry_image(entry) -> str:
     """
@@ -166,9 +170,7 @@ def to_entries(feed_url: str):
         'page_url': res.feed.link,
         'feed_url': feed_url,
         'feed_title': res.feed.get('title'),
-        'feed_icon': res.feed.get('icon'),
         'feed_image': res.feed.get('image', {}).get('href'),
-        'feed_etag': res.get('etag'),
         'feed_modified': res.get('modifed', get_updated_isoformat(res.feed)),
         'entries': fetch_bookmark_counts([{
             'entry_title': entry.get('title'),
@@ -181,46 +183,20 @@ def to_entries(feed_url: str):
     }
 
 
-def save_as_json(name, data):
+def save_to_json(name, data):
     path = os.path.join(os.path.dirname(__file__), "frontend", "public", name)
     with open(path, mode='w', encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
 
-def main():
-    feed_urls = [
-        "https://qiita.com/popular-items/feed",
-        "https://dev.classmethod.jp/feed/",
-        "https://zenn.dev/feed",
-        "https://news.ycombinator.com/rss",
-        "https://www.publickey1.jp/atom.xml",
-        "https://postd.cc/feed/",
-        "https://thinkit.co.jp/rss.xml",
-        "https://gihyo.jp/dev/feed/rss1",
-        "https://coliss.com/feed/",
-        "https://community.aws/rss",
-        "https://aws.amazon.com/jp/blogs/news/feed/",
-        "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/",
-        "https://blogs.oracle.com/oracle4engineer/rss",
-        "https://www.cncf.io/feed/",
-        "https://www.ipa.go.jp/about/newsonly-rss.rdf",
-        "https://techblog.lycorp.co.jp/ja/feed/index.xml",
-        "https://azure.microsoft.com/ja-jp/blog/feed/",
-        "https://cloudblog.withgoogle.com/ja/products/gcp/rss/",
-        "https://developers-jp.googleblog.com/feeds/posts/default",
-        "https://tech.nri-net.com/rss",
-        "https://nttdocomo-developers.jp/feed",
-        "https://engineers.ntt.com/feed",
-        "https://www.ntt-tx.co.jp/column/rss.xml",
-        "https://connpass.com/explore/ja.atom",
-        "https://jpaztech.github.io/blog/atom.xml",
-        "https://news.microsoft.com/ja-jp/category/blog/feed/",
-        "https://jpwinsup.github.io/blog/atom.xml",
-        "http://blogs.windows.com/japan/feed/",
-        "https://techblog.zozo.com/feed"
-    ]
+def load_from_json(name):
+    path = os.path.join(os.path.dirname(__file__), name)
+    with open(path, mode='r', encoding="utf-8") as f:
+        return json.load(f)
 
-    save_as_json('result.json', [to_entries(feed_url) for feed_url in feed_urls])
+
+def main():
+    save_to_json('result.json', [to_entries(feed_url) for feed_url in load_from_json('feed.json')])
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@ import * as duckdb from "@duckdb/duckdb-wasm";
 import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { format } from "@formkit/tempo";
 
 
 export function News({ db }: { db: duckdb.AsyncDuckDB }) {
@@ -14,14 +15,12 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
             entry_updated desc,
             bookmark_count desc
         ) as rank,
-        sum(bookmark_count) over (
-          partition by feed_title
-        ) as feed_bookmark_count,
         e.*
       from (
-        SELECT
+        select
           feed_title,
           page_url,
+          feed_url,
           feed_image,
           unnest(entries, recursive := true)
         from
@@ -31,6 +30,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
     select
       feed_title,
       page_url,
+      feed_url,
       feed_image,
       cast(feed_bookmark_count as integer) as feed_bookmark_count,
       array_agg({
@@ -40,14 +40,25 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
         entry_image_url: entry_image_url,
         entry_updated: entry_updated,
         bookmark_count: cast(bookmark_count as integer)
-      }) as entries
-    from
-      ranking
-    where
-      rank <= 10
+      } order by
+        bookmark_count desc,
+        entry_updated desc
+      ) as entries
+    from (
+      select
+        sum(bookmark_count) over (
+          partition by feed_title
+        ) as feed_bookmark_count,
+        *
+      from
+        ranking
+      where
+        rank <= 10
+    ) as ranking
     group by
       feed_title,
       page_url,
+      feed_url,
       feed_image,
       feed_bookmark_count
     order by
@@ -58,6 +69,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
   type queryType = {
     ['feed_title']: Utf8
     ['page_url']: Utf8
+    ['feed_url']: Utf8
     ['feed_image']: Utf8
     ['feed_bookmark_count']: Int32
     ['entries']: List<Struct<{
@@ -72,56 +84,92 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
   const [result, setResult] = useState<StructRowProxy<queryType>[] | null>(null);
 
   useEffect(() => {
-    const doit = async () => {
+    const loadResult = async () => {
       const conn = await db.connect();
       const results = await conn.query<queryType>(query);
-      const resultRows: StructRowProxy<queryType>[] = results
-        .toArray();
-      setResult(resultRows);
+      setResult(results.toArray());
       await conn.close();
     };
-    doit();
+    loadResult();
   }, [db, query]);
+
+  const renderFeedHeader = (feed: StructRowProxy<queryType>) => (
+    <CardHeader className="text-left">
+      <CardTitle>{feed.feed_title}</CardTitle>
+      <CardDescription><a href={feed.page_url} target="_blank">{feed.page_url}</a></CardDescription>
+      <CardDescription>
+        <a
+          href={`https://feedly.com/i/subscription/feed${encodeURIComponent('/' + feed.feed_url)}`}
+          target='blank'
+        >
+          <img
+            src='https://s1.feedly.com/legacy/feedly-follow-rectangle-flat-small_2x.png'
+            alt='follow us in feedly'
+            width='66'
+            height='20'
+          />
+        </a>
+      </CardDescription>
+      {
+        feed.feed_bookmark_count ?
+          <CardDescription>{feed.feed_bookmark_count} bookmarks</CardDescription>
+          : <></>
+      }
+    </CardHeader>
+  )
 
   return (
     <Card className="flex flex-col justify-center">
       <CardHeader className="text-left">
-        <CardTitle>News</CardTitle>
+        <CardTitle>人気のRSSエントリ</CardTitle>
       </CardHeader>
       <CardContent className="grow grid grid-cols-1 gap-4">
         {
           result ? (
             <>
               {
-                result.map((feed, i) => (
-                  <Card key={i}>
-                    <CardHeader className="text-left">
-                      <CardTitle>{feed.feed_title}</CardTitle>
-                      <CardDescription><a href={feed.page_url} target="_blank">{feed.page_url}</a></CardDescription>
+                result.map((feed) => (
+                  <Card key={feed.feed_url}>
+                    {
+                      feed.feed_image ?
+                        <CardHeader className="flex flex-row">
+                          <img src={feed.feed_image} className="object-cover max-w-40 h-auto self-center" />
+                          {
+                            renderFeedHeader(feed)
+                          }
+                        </CardHeader> : renderFeedHeader(feed)
+                    }
+                    <CardContent className={`grid grid-cols-${Math.min(5, feed.entries.length)} gap-2`}>
                       {
-                        feed.feed_bookmark_count ?
-                          <CardDescription>{feed.feed_bookmark_count} bookmarks</CardDescription>
-                          : <></>
-                      }
-                    </CardHeader>
-                    <CardContent className="grid grid-cols-5 gap-2">
-                      {
-                        feed.entries.toArray().map((entry, j) => (
-                          <Card key={`${i}-${j}`} className="row-span-1 cursor-pointer flex flex-col justify-between" onClick={() => {
+                        feed.entries.toArray().map((entry) => (
+                          <Card key={entry.entry_url} className="col-span-1 cursor-pointer flex flex-col justify-between" onClick={() => {
                             const w = window.open(entry.entry_url, '_blank', 'noopener,noreferrer')
                             if (w) {
                               w.opener = null
                             }
                           }}>
                             <CardHeader className="text-left">
-                              <CardTitle>{entry.entry_title}</CardTitle>
-                              <CardDescription>{entry.entry_updated}</CardDescription>
+                              <CardTitle className="text-sm">{entry.entry_title}</CardTitle>
+                              <CardDescription>
+                                {
+                                  format({
+                                    date: entry.entry_updated,
+                                    format: {
+                                      date: "long",
+                                      time: "short"
+                                    },
+                                    locale: "ja",
+                                    tz: "Asia/Tokyo"
+                                  })
+                                }
+                              </CardDescription>
                               {
                                 entry.bookmark_count ?
                                   <CardDescription>
-                                    <a href={`https://b.hatena.ne.jp/entrylist?url=${entry.entry_url}`}>
-                                      <img src={`https://b.hatena.ne.jp/bc/de/${entry.entry_url}`} alt="はてなブックマーク数" title="はてなブックマーク数" />
-                                    </a>
+                                    <img
+                                      src={`https://b.hatena.ne.jp/bc/de/${entry.entry_url}`}
+                                      alt="はてなブックマーク数"
+                                      title="はてなブックマーク数" />
                                   </CardDescription>
                                   : <></>
                               }
@@ -129,7 +177,11 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                             <CardContent className="grow flex flex-col justify-start">
                               {
                                 entry.entry_image_url ? (
-                                  <img src={entry.entry_image_url} className="object-cover h-auto w-full" alt="画像" onError={(e: any) => e.target.style.display = 'none'} />
+                                  <img
+                                    src={entry.entry_image_url}
+                                    className="object-cover h-auto max-w-full"
+                                    alt="画像"
+                                    onError={(e: any) => e.target.style.display = 'none'} />
                                 ) : (
                                   <></>
                                 )

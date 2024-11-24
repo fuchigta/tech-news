@@ -1,0 +1,3328 @@
+[
+    {
+        "page_url": "https://qiita.com/popular-items",
+        "feed_url": "https://qiita.com/popular-items/feed",
+        "feed_title": "Qiita - 人気の記事",
+        "feed_image": null,
+        "feed_modified": "2024-11-23T20:00:00",
+        "entries": [
+            {
+                "entry_title": "東大・東大生が公開しているエンジニアが読むべき資料まとめ",
+                "entry_author": "KNR109",
+                "entry_url": "https://qiita.com/KNR109/items/853c8d8fe36ede1cc453",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T14:22:39",
+                "bookmark_count": 670
+            },
+            {
+                "entry_title": "AIの女の子がわいわい競馬予想するシステムを個人展示したら倍率2000倍の馬券が当たってしまった (2)マルチエージェント構造編",
+                "entry_author": "oktamajun",
+                "entry_url": "https://qiita.com/oktamajun/items/7c848302339662dd58c3",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T16:30:23",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "AIの女の子がわいわい競馬予想するシステムを個人展示したら倍率2000倍の馬券が当たってしまった (3)キャラ実装編･上",
+                "entry_author": "oktamajun",
+                "entry_url": "https://qiita.com/oktamajun/items/31d9eb46a4937decb67a",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T16:27:55",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Flutter未経験者が3ヶ月でハッカソン入賞した話",
+                "entry_author": "oudon0216",
+                "entry_url": "https://qiita.com/oudon0216/items/fd1321639e5346e75b86",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T06:52:37",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Amazon Bedrock Prompt optimizationでプロンプト最適化！",
+                "entry_author": "y-mae",
+                "entry_url": "https://qiita.com/y-mae/items/7f4b39038f79f6a6f4d4",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T09:16:06",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "［アップデート］CloudFront VPC origins とは",
+                "entry_author": "j2-yano",
+                "entry_url": "https://qiita.com/j2-yano/items/3aba0f546820927b70c7",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T09:16:47",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "[2025年AWS認定全冠を目指す君へ〜]AWS新規資格の出題チャットボットを作ろう！",
+                "entry_author": "asuka0708japan",
+                "entry_url": "https://qiita.com/asuka0708japan/items/02a7c53798e08c2e3bea",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T10:07:16",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "【C#】ジェネリックの null チェックでガベージを出さない方法を模索",
+                "entry_author": "abetakahiro123",
+                "entry_url": "https://qiita.com/abetakahiro123/items/636e1566d403958ebeb2",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T12:16:10",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "40歳からエンジニアと呼ばれるようになった男が「いっちょやったるか」と思うようになるまで",
+                "entry_author": "IchidaU",
+                "entry_url": "https://qiita.com/IchidaU/items/7c07864d19ba86120b25",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T19:19:21",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "mason.nvim にインストールしたいパッケージを追加する",
+                "entry_author": "delphinus",
+                "entry_url": "https://qiita.com/delphinus/items/e1ced262d6506cfbebf5",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T01:11:50",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "通知機能の実装",
+                "entry_author": "Tohru-f",
+                "entry_url": "https://qiita.com/Tohru-f/items/82ac87219653e2fa01c8",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T03:20:15",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "初心者向け：AWS Route 53 を使い、お名前.com の独自ドメインを紐付けてブラウザからアクセスする検証",
+                "entry_author": "free-honda",
+                "entry_url": "https://qiita.com/free-honda/items/7a1fa3336273c3b7cfab",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T03:19:47",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Raspberry Piで、Lチカ（LEDチカチカ）してみた！~ with PyConjp2024~",
+                "entry_author": "hfslca7439",
+                "entry_url": "https://qiita.com/hfslca7439/items/3ba453200d75f38e9167",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T06:50:26",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "浮動小数点の89.51を文字列に変換して遊ぶ。(チェックと丸め有り)",
+                "entry_author": "caa45040",
+                "entry_url": "https://qiita.com/caa45040/items/ebc1c45a7b8865ce5aa0",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T09:24:17",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "【Vercel】PHP8.3でLaravelアプリを動かしたい",
+                "entry_author": "umekikazuya",
+                "entry_url": "https://qiita.com/umekikazuya/items/6649388e59481fd99730",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T07:38:01",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "競プロで見るKőnigの定理",
+                "entry_author": "downerkei",
+                "entry_url": "https://qiita.com/downerkei/items/a999f5f6eca410a48541",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T04:40:40",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "【第４回 サーバーワークス 日高僚太さん】2024 Japan AWS Jr. Champions インタビュー企画",
+                "entry_author": "tekuta7",
+                "entry_url": "https://qiita.com/tekuta7/items/6c37d36f775dae58fd89",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T15:14:21",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "闘魂が照らすAIの未来──雑相（雑な相談）から花咲く創造の力",
+                "entry_author": "torifukukaiou",
+                "entry_url": "https://qiita.com/torifukukaiou/items/9ac6c7258c8a1549674a",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T07:32:39",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "指数的な爆発に対応する",
+                "entry_author": "OtsukaTomoaki",
+                "entry_url": "https://qiita.com/OtsukaTomoaki/items/3d8767353fa518ac19c6",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T06:52:08",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Chakra UI Drawerで、ハンバーガーメニューをコンポーネント化できない",
+                "entry_author": "like-mountain",
+                "entry_url": "https://qiita.com/like-mountain/items/539e5a5ea10c9c076c8f",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T00:05:48",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Linux初心者向け：AlmaLinuxとは？長期サポートが求められる環境でのCentOS後継としての新たな選択肢",
+                "entry_author": "free-honda",
+                "entry_url": "https://qiita.com/free-honda/items/835300a0a18b206352cc",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T15:52:24",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "docker compose で VisualBasic を動かせる環境を作成してみた",
+                "entry_author": "okumurakengo",
+                "entry_url": "https://qiita.com/okumurakengo/items/18d3bf9f42ba2535a652",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T10:29:06",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "コードレビューとエビデンスの重要性",
+                "entry_author": "Z-Naoto",
+                "entry_url": "https://qiita.com/Z-Naoto/items/b715628b9ffb3633c185",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T09:09:58",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "「AILBREAK」に挑戦してみた！LLMセキュリティを楽しく学べるゲーム",
+                "entry_author": "MuFive",
+                "entry_url": "https://qiita.com/MuFive/items/796325ebaa6d1ccb8286",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T09:56:54",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "🤖 Azure OpenAI o1-preview をPythonを使ってAPI経由で活用して日常業務の質を高める📈",
+                "entry_author": "RepKuririn",
+                "entry_url": "https://qiita.com/RepKuririn/items/be792ebf2c1d471ab6a2",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T00:07:37",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "【イベントレポート】第3回　自治体システム標準化・ガバメントクラウド勉強会",
+                "entry_author": "MASAKIOKUDA-eng",
+                "entry_url": "https://qiita.com/MASAKIOKUDA-eng/items/278ab03a24b795c3fc32",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T01:31:20",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "MSX エミュレータ用のゲームコントローラーを作る",
+                "entry_author": "ht_deko",
+                "entry_url": "https://qiita.com/ht_deko/items/ae3f9d0721a4271969c4",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T12:59:01",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[Next.js App Router] Server Components と SSR の概念理解・違いについて",
+                "entry_author": "yuuu1654",
+                "entry_url": "https://qiita.com/yuuu1654/items/8c98ea586e61e1f9ce98",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T15:54:59",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "AWS Chatbot で Slack チャットチャネルから Amazon Bedrock とやり取りする",
+                "entry_author": "leomaro7",
+                "entry_url": "https://qiita.com/leomaro7/items/59c4aadd4a0093cb8e09",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T07:45:37",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "新しい.NETのスキャフォールディングを試してみる",
+                "entry_author": "karuakun",
+                "entry_url": "https://qiita.com/karuakun/items/101b257e3ef9bab818e7",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T08:18:50",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://dev.classmethod.jp",
+        "feed_url": "https://dev.classmethod.jp/feed/",
+        "feed_title": "DevelopersIO",
+        "feed_image": null,
+        "feed_modified": "2024-11-24T06:02:02",
+        "entries": [
+            {
+                "entry_title": "[アップデート] Amazon MWAAのマイクロ環境クラス「mw1.micro」が追加されたので環境構築してみました",
+                "entry_author": "石川覚",
+                "entry_url": "https://dev.classmethod.jp/articles/amazon-mwaa-micro-env/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS",
+                    "Amazon MWAA"
+                ],
+                "entry_updated": "2024-11-24T06:02:02",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "日本語版の Windows Server 2025 AMI がリリースされたので試してみた",
+                "entry_author": "Takuya Shibata",
+                "entry_url": "https://dev.classmethod.jp/articles/try-windows-server-2025-jp-ami/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon EC2",
+                    "AWS Windows AMI",
+                    "Windows Server",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-24T04:24:52",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[アップデート] AWS Step Functions で変数が使えるようになりました",
+                "entry_author": "いわさ",
+                "entry_url": "https://dev.classmethod.jp/articles/step-functions-variables/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS Step Functions",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-23T21:40:50",
+                "bookmark_count": 3
+            },
+            {
+                "entry_title": "[アップデート] CloudFrontディストリビューションのIPアドレスを固定化できるようになりました",
+                "entry_author": "あしざわ",
+                "entry_url": "https://dev.classmethod.jp/articles/cloudfront-support-anycast-static-ip/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon CloudFront",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-23T17:10:34",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[アップデート] Amazon Redshift Query Editor V2、結果セットと出力サイズの上限を100MBに拡大したので検証しました",
+                "entry_author": "石川覚",
+                "entry_url": "https://dev.classmethod.jp/articles/amazon-redshift-query-editor-v2-100mb/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS",
+                    "Amazon Redshift",
+                    "Amazon Redshift Serverless"
+                ],
+                "entry_updated": "2024-11-23T11:55:21",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Amazon Bedrock Knowledge Bases とPineconeで低コストなRAGを構築する",
+                "entry_author": "酒井貴央",
+                "entry_url": "https://dev.classmethod.jp/articles/bedrock-kb-rag-pinecone-lowcost/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon Bedrock Knowledge Bases",
+                    "Amazon Bedrock",
+                    "AWS",
+                    "生成AI",
+                    "RAG"
+                ],
+                "entry_updated": "2024-11-23T07:00:02",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[アップデート] Amazon Cognito ユーザープールに「機能 Tier」の概念が追加されたので、Tier ごとに利用可能な機能をまとめてみた",
+                "entry_author": "若槻龍太",
+                "entry_url": "https://dev.classmethod.jp/articles/amazon-cognito-user-pools-feature-tiers/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon Cognito"
+                ],
+                "entry_updated": "2024-11-23T06:27:28",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[アップデート]Amazon QuickSight に画像ファイルをアップロードしてダッシュボードで表示できるようになりました",
+                "entry_author": "大村 保貴",
+                "entry_url": "https://dev.classmethod.jp/articles/amazon-quicksight-image-component/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T04:29:54",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Amazon Bedrock Flows が一般公開されました",
+                "entry_author": "森田力",
+                "entry_url": "https://dev.classmethod.jp/articles/bedrock-flows-ga/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon Bedrock",
+                    "生成AI",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-23T00:46:56",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[プレビュー] Amazon QuickSight 分析間でビジュアルのインポートが可能になりました",
+                "entry_author": "大村 保貴",
+                "entry_url": "https://dev.classmethod.jp/articles/importing-visuals-between-amazon-quicksight-analyses-beta/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon QuickSight",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-23T00:39:02",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "コンテナイメージの一貫性を保持するスケジューリングロジックがコンテナ単位で設定可能になりました",
+                "entry_author": "たかくに",
+                "entry_url": "https://dev.classmethod.jp/articles/amazon-ecs-configure-software-version-consistency/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon ECS",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-23T00:00:02",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[アップデート] Amazon Cognito ユーザープールに機能プランの概念が導入され、料金計算方法が変わります",
+                "entry_author": "いわさ",
+                "entry_url": "https://dev.classmethod.jp/articles/new-feature-tiers-cognito/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon Cognito",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-22T22:20:02",
+                "bookmark_count": 3
+            },
+            {
+                "entry_title": "[アップデート] Lambda 関数のランタイムで Node.js 22 が利用可能になったので AWS CDK で設定してみた",
+                "entry_author": "若槻龍太",
+                "entry_url": "https://dev.classmethod.jp/articles/aws-cdk-configuration-for-nodejs-22-runtime-in-lambda-functions/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS Lambda",
+                    "Node.js",
+                    "AWS CDK"
+                ],
+                "entry_updated": "2024-11-22T15:12:26",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "IaCで管理するLambdaで更新時に古いバージョンを削除する方法",
+                "entry_author": "夏目祐樹",
+                "entry_url": "https://dev.classmethod.jp/articles/delete-old-version-on-aws-lambda-when-updating/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS Lambda",
+                    "AWS SAM",
+                    "AWS CDK"
+                ],
+                "entry_updated": "2024-11-22T14:06:20",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "【アップデート】LambdaがCloudWatch Application SignalsによるAPMをサポートするようになりました！",
+                "entry_author": "岩田智哉",
+                "entry_url": "https://dev.classmethod.jp/articles/cw-application-signals-support-lambda/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS Lambda",
+                    "Amazon CloudWatch"
+                ],
+                "entry_updated": "2024-11-22T13:44:59",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[新機能] AWS Glue Data Catalog の Apache Icebergテーブルの自動最適化機能がVPC対応したので試してみました",
+                "entry_author": "石川覚",
+                "entry_url": "https://dev.classmethod.jp/articles/aws-glue-data-catalog-apache-iceberg-vpc/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS",
+                    "AWS Glue"
+                ],
+                "entry_updated": "2024-11-22T12:27:10",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "新しいイベントスペースでクラメソさっぽろIT勉強会(仮)#6を開催しました #cm_sapporo_study",
+                "entry_author": "さかじ",
+                "entry_url": "https://dev.classmethod.jp/articles/cm-sapporo-study-6/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "勉強会",
+                    "会社紹介"
+                ],
+                "entry_updated": "2024-11-22T10:41:24",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "AWS CDKでAmazon FSx for NetApp ONTAPの運用に必要なリソースをまとめてデプロイしてみた",
+                "entry_author": "のんピ",
+                "entry_url": "https://dev.classmethod.jp/articles/deploy-amazon-fsx-for-netapp-ontap-resources-with-aws-cdk/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon FSx for NetApp ONTAP",
+                    "AWS Backup",
+                    "CloudWatch Alarm",
+                    "AWS Key Management Service（KMS）",
+                    "AWS CDK",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-22T09:24:12",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "The First Design Workshop Insights: CMJP x CMDN Collaboration",
+                "entry_author": "tien-le-h",
+                "entry_url": "https://dev.classmethod.jp/articles/the-first-design-workshop-insights-cmjp-x-cmdn-collaboration/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Vietnamese Blog"
+                ],
+                "entry_updated": "2024-11-22T08:53:56",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Google 提供の gcloud CLI Docker イメージを独自の Artifact Registry にプッシュする",
+                "entry_author": "hanzawa.yuya",
+                "entry_url": "https://dev.classmethod.jp/articles/artifact-registry-gcloud-cli-docker/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Google Cloud (GCP)",
+                    "Artifact Registry",
+                    "Docker"
+                ],
+                "entry_updated": "2024-11-22T08:47:10",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[アップデート]S3 Express One Zone に S3 ライフサイクルルールを設定できるようになりました",
+                "entry_author": "大村 保貴",
+                "entry_url": "https://dev.classmethod.jp/articles/amazon-s3-express-one-zone-s3-lifecycle-expirations/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Amazon S3 Express One Zone",
+                    "Amazon S3",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-22T08:44:05",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "GitHub上にあるファイルに対して、Lambdaで追記してgit pushしてみた",
+                "entry_author": "sora",
+                "entry_url": "https://dev.classmethod.jp/articles/github-lambda-file-modify/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS",
+                    "AWS Lambda",
+                    "GitHub",
+                    "Git",
+                    "Lambda Layers"
+                ],
+                "entry_updated": "2024-11-22T08:15:04",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[情報セキュリティ白書2024] 2023年度に観測されたインシデント状況-世界における情報セキュリティ インシデント状況 を読んでみた",
+                "entry_author": "toyoshima-masaya",
+                "entry_url": "https://dev.classmethod.jp/articles/ipa-wp-security-2024-world-incident-status/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "セキュリティ"
+                ],
+                "entry_updated": "2024-11-22T07:19:13",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "解決策を固定せず、課題に立ち返って選択肢を広げる",
+                "entry_author": "田部井勝彦",
+                "entry_url": "https://dev.classmethod.jp/articles/fixed-issues-and-solutions/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "組織開発室"
+                ],
+                "entry_updated": "2024-11-22T05:37:35",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[登壇レポート]「DynamoDB でスロットリングが発生したとき」という内容で登壇してきました #cm_sapporo_study",
+                "entry_author": "emi",
+                "entry_url": "https://dev.classmethod.jp/articles/when-throttling-occurs-in-dynamodb/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "イベント",
+                    "コミュニティ",
+                    "Amazon DynamoDB"
+                ],
+                "entry_updated": "2024-11-22T05:06:02",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "AWS Global Accelerator でフローログを取得する方法を教えてください",
+                "entry_author": "hato",
+                "entry_url": "https://dev.classmethod.jp/articles/tsnote-aws-global-accelerator-flow-logs-enabled/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS Global Accelerator",
+                    "Amazon S3",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-22T03:08:46",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "GuardDuty で UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.OutsideAWS が発報された時の確認ポイント",
+                "entry_author": "m.hayakawa",
+                "entry_url": "https://dev.classmethod.jp/articles/tsnote-guardduty-unauthorizedaccess-iamuser-instancecredentialexfiltration-001/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS",
+                    "Amazon GuardDuty"
+                ],
+                "entry_updated": "2024-11-22T02:55:04",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Compute Optimizer から アイドル状態のEBSボリュームを洗い出す",
+                "entry_author": "川原征大",
+                "entry_url": "https://dev.classmethod.jp/articles/list-idle-ebs-volumes-by-compute-optimizer/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS Compute Optimizer",
+                    "Amazon EBS",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-22T02:09:26",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "特定の IP アドレス または CloudShell からのみ S3 バケットにアクセス可能に制限する方法を教えてください",
+                "entry_author": "かねこ",
+                "entry_url": "https://dev.classmethod.jp/articles/ts-note-access-restriction-allow-from-specific-ips-or-cloudshell/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS",
+                    "AWS IAM",
+                    "AWS CloudShell",
+                    "Amazon S3"
+                ],
+                "entry_updated": "2024-11-22T01:54:17",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[アップデート]Security Hub のセキュリティ標準に新たに5個のチェック項目が追加されました(2024/11/15)",
+                "entry_author": "吉田 岳史",
+                "entry_url": "https://dev.classmethod.jp/articles/securityhub-5-new-controls-2024-11-15/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "AWS Security Hub",
+                    "AWS"
+                ],
+                "entry_updated": "2024-11-22T01:45:47",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://zenn.dev",
+        "feed_url": "https://zenn.dev/feed",
+        "feed_title": "Zennのトレンド",
+        "feed_image": "https://static.zenn.studio/images/logo-only-dark.png",
+        "feed_modified": "2024-11-24T06:53:04",
+        "entries": [
+            {
+                "entry_title": "vimconf2024参加メモ",
+                "entry_author": "takets",
+                "entry_url": "https://zenn.dev/takets/articles/21c9836f207bdf",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s---JypPOp2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:vimconf2024%25E5%258F%2582%25E5%258A%25A0%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takets%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hpZm8wLVNSQlJjSlZmY3NQRFRmT0hGWEpxbmlENVRWdWNkTXh6V2c9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T01:54:47",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "ピザ2枚分の人数のMLプロジェクトのPMを1年間やった知見",
+                "entry_author": "yCarbon",
+                "entry_url": "https://zenn.dev/ycarbon/articles/e2bb98e808e531",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--sdNLImmp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2594%25E3%2582%25B62%25E6%259E%259A%25E5%2588%2586%25E3%2581%25AE%25E4%25BA%25BA%25E6%2595%25B0%25E3%2581%25AEML%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AEPM%25E3%2582%25921%25E5%25B9%25B4%25E9%2596%2593%25E3%2582%2584%25E3%2581%25A3%25E3%2581%259F%25E7%259F%25A5%25E8%25A6%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yCarbon%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM1OWYyNzFjNDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T23:52:06",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Microsoft.Extensions.VectorData を触ってみよう",
+                "entry_author": "Kazuki Ota",
+                "entry_url": "https://zenn.dev/microsoft/articles/unified-ai-building-block-002",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--YC4TXIuf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Microsoft.Extensions.VectorData%2520%25E3%2582%2592%25E8%25A7%25A6%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Ota%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhmNzg3NDJjNDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T15:01:09",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "CDK に ESLint を導入する",
+                "entry_author": "yamanashi",
+                "entry_url": "https://zenn.dev/yamaren/articles/6c1fd7c04aa25c",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--9_s5dkcg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CDK%2520%25E3%2581%25AB%2520ESLint%2520%25E3%2582%2592%25E5%25B0%258E%25E5%2585%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yamanashi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcyMGUxOTkxY2QuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T10:05:38",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "pprintを上回る整形力のsetprintを作った話",
+                "entry_author": "mtur",
+                "entry_url": "https://zenn.dev/mtur/articles/e889baacd1cf19",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--qKgcNVr8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pprint%25E3%2582%2592%25E4%25B8%258A%25E5%259B%259E%25E3%2582%258B%25E6%2595%25B4%25E5%25BD%25A2%25E5%258A%259B%25E3%2581%25AEsetprint%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mtur%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzU2NjQzNmVmODguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T07:20:36",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Mermaid Graphical Editorを使うとVSCodeでサクサク図が書けるよ",
+                "entry_author": "Kanon",
+                "entry_url": "https://zenn.dev/yskn_sid25/articles/67d848f70d7a5b",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--pS1JbwBU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Mermaid%2520Graphical%2520Editor%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E3%2581%25A8VSCode%25E3%2581%25A7%25E3%2582%25B5%25E3%2582%25AF%25E3%2582%25B5%25E3%2582%25AF%25E5%259B%25B3%25E3%2581%258C%25E6%259B%25B8%25E3%2581%2591%25E3%2582%258B%25E3%2582%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kanon%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkzZTJiZmRmZjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T03:09:22",
+                "bookmark_count": 424
+            },
+            {
+                "entry_title": "Kanagawa.swiftを開催しました！",
+                "entry_author": "Ryomm",
+                "entry_url": "https://zenn.dev/ryomm/articles/687934050f9adf",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--zSD8QFmd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kanagawa.swift%25E3%2582%2592%25E9%2596%258B%25E5%2582%25AC%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Ryomm%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5ODJhZjNhMDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T17:04:08",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "データベースを止めずにテーブル設計を変更したい",
+                "entry_author": "ゲントク",
+                "entry_url": "https://zenn.dev/praha/articles/abceef00258275",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--q-vAMbqc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%2592%25E6%25AD%25A2%25E3%2582%2581%25E3%2581%259A%25E3%2581%25AB%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2596%25E3%2583%25AB%25E8%25A8%25AD%25E8%25A8%2588%25E3%2582%2592%25E5%25A4%2589%25E6%259B%25B4%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2582%25B2%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25AF%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdiZDIyMmFjMTkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:PrAha%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcxMGE2M2YwYmQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T08:13:52",
+                "bookmark_count": 3
+            },
+            {
+                "entry_title": "TypeScriptで関数を書くときに気をつけている事",
+                "entry_author": "トミー",
+                "entry_url": "https://zenn.dev/chot/articles/05413b79cc0398",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--Zeoyq5DD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TypeScript%25E3%2581%25A7%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E6%259B%25B8%25E3%2581%258F%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E6%25B0%2597%25E3%2582%2592%25E3%2581%25A4%25E3%2581%2591%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E4%25BA%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2583%2588%25E3%2583%259F%25E3%2583%25BC%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAzODVjOWFlYzkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:chot%2520Inc.%2520tech%2520blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSW1uc1FQOHJYaERqWUw3ZU5aTWlJdm1qOEhnNUVBSDZNTE5tR3BmbDZOPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T07:44:29",
+                "bookmark_count": 39
+            },
+            {
+                "entry_title": "技術学習のために1からアプリを開発してみた",
+                "entry_author": "Syumai3",
+                "entry_url": "https://zenn.dev/surume3/articles/4d63ce696e4e06",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--1gJ4Z_I---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%258A%2580%25E8%25A1%2593%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AB1%25E3%2581%258B%25E3%2582%2589%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E9%2596%258B%25E7%2599%25BA%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Syumai3%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI4MzZlZGI2OWIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T07:06:08",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "「Zennのパフォーマンスモニタリングでやっていること」というタイトルで登壇しました",
+                "entry_author": "bisque",
+                "entry_url": "https://zenn.dev/team_zenn/articles/2024-sapporo-it-study-6",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--B9nLYz-d--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258CZenn%25E3%2581%25AE%25E3%2583%2591%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%25A2%25E3%2583%258B%25E3%2582%25BF%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25A7%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%2593%25E3%2581%25A8%25E3%2580%258D%25E3%2581%25A8%25E3%2581%2584%25E3%2581%2586%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25A7%25E7%2599%25BB%25E5%25A3%2587%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:bisque%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYzOTk2NzhlNmIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Zenn%2520Tech%2520Blog%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJmMjYyYmQ5ZTMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T06:53:19",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "🗣️VoiceRAG徹底解説 生成AIとリアルタイム性溢れる会話を楽しむ【gpt-4o-realtime-preview】",
+                "entry_author": "Yusuke Satake",
+                "entry_url": "https://zenn.dev/microsoft/articles/azure_realtime_api",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--u7yntuie--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%2520VoiceRAG%25E5%25BE%25B9%25E5%25BA%2595%25E8%25A7%25A3%25E8%25AA%25AC%2520%25E7%2594%259F%25E6%2588%2590AI%25E3%2581%25A8%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25A0%25E6%2580%25A7%25E6%25BA%25A2%25E3%2582%258C%25E3%2582%258B%25E4%25BC%259A%25E8%25A9%25B1%25E3%2582%2592%25E6%25A5%25BD%25E3%2581%2597%25E3%2582%2580%25E3%2580%2590gpt-4o-realtime-prev...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Yusuke%2520Satake%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzczMjQwNDhhMDkuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T06:28:45",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "今、React Nativeがアツいらしい",
+                "entry_author": "teppeita",
+                "entry_url": "https://zenn.dev/teppeita/articles/1f79c0edd9d51b",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--b9uymaSg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BB%258A%25E3%2580%2581React%2520Native%25E3%2581%258C%25E3%2582%25A2%25E3%2583%2584%25E3%2581%2584%25E3%2582%2589%25E3%2581%2597%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:teppeita%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzIxNDA1ZjViZTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T05:23:20",
+                "bookmark_count": 143
+            },
+            {
+                "entry_title": "Neovim で VS Code みたいにコーディングする",
+                "entry_author": "FORCIA Tech Blog 運営チーム",
+                "entry_url": "https://zenn.dev/forcia_tech/articles/202411_deguchi_neovim",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--GJuKmT6y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Neovim%2520%25E3%2581%25A7%2520VS%2520Code%2520%25E3%2581%25BF%25E3%2581%259F%25E3%2581%2584%25E3%2581%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2587%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:FORCIA%2520Tech%2520Blog%2520%25E9%2581%258B...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2QyMDIwOGYzMDMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:FORCIA%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NkZmRkZTQ5MGUuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T04:00:01",
+                "bookmark_count": 47
+            },
+            {
+                "entry_title": "知らないとハマる Next.js のエラーハンドリング",
+                "entry_author": "nabeliwo",
+                "entry_url": "https://zenn.dev/nabeliwo/articles/02f8cfcc596bb9",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--RZwBOO1V--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%259F%25A5%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E3%2581%25A8%25E3%2583%258F%25E3%2583%259E%25E3%2582%258B%2520Next.js%2520%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2583%258F%25E3%2583%25B3%25E3%2583%2589%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nabeliwo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2l1LXBKeUhiOERIYU05Nmt6cXUyVlZoRGhkOVk2Z3hPWmJONGQ5V1E9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T16:09:27",
+                "bookmark_count": 40
+            },
+            {
+                "entry_title": "C#プログラマーのためのJavaScriptチートシート",
+                "entry_author": "gushwell",
+                "entry_url": "https://zenn.dev/zead/articles/js-cheat-sheet-for-cs",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--5TvJRfv6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:C%2523%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEJavaScript%25E3%2583%2581%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:gushwell%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MzMTI4MzAyMjkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%25B8%25E3%2583%25BC%25E3%2583%2589%2520%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvZy5wbmc=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T12:00:05",
+                "bookmark_count": 32
+            },
+            {
+                "entry_title": "Flutterエンジニアのためのアーキテクチャ入門 - 公式(日本語)",
+                "entry_author": "m",
+                "entry_url": "https://zenn.dev/mk668a/articles/bbfb97a0d146bc",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--sfM1A84r--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Flutter%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2581%25E3%2583%25A3%25E5%2585%25A5%25E9%2596%2580%2520-%2520%25E5%2585%25AC%25E5%25BC%258F%2528%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:m%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkxNGY0NjgzMGIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T15:46:16",
+                "bookmark_count": 74
+            },
+            {
+                "entry_title": "【Slidev 超入門】エンジニアだからこそ作れるつよつよスライドの作り方！",
+                "entry_author": "takuma-ru",
+                "entry_url": "https://zenn.dev/takumaru/articles/3faa75c2f09493",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--CCqakIiw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Slidev%2520%25E8%25B6%2585%25E5%2585%25A5%25E9%2596%2580%25E3%2580%2591%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25A0%25E3%2581%258B%25E3%2582%2589%25E3%2581%2593%25E3%2581%259D%25E4%25BD%259C%25E3%2582%258C%25E3%2582%258B%25E3%2581%25A4%25E3%2582%2588%25E3%2581%25A4%25E3%2582%2588%25E3%2582%25B9%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2589%25E3%2581%25AE%25E4%25BD%259C%25E3%2582%258A%25E6%2596%25B9%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takuma-ru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3YzcxZjBkYzguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T06:25:50",
+                "bookmark_count": 40
+            },
+            {
+                "entry_title": "俺のフロントエンド依存管理ポリシー20241120",
+                "entry_author": "mizchi",
+                "entry_url": "https://zenn.dev/mizchi/articles/frontend-version-policies",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--mXskTB9z--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BF%25BA%25E3%2581%25AE%25E3%2583%2595%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E4%25BE%259D%25E5%25AD%2598%25E7%25AE%25A1%25E7%2590%2586%25E3%2583%259D%25E3%2583%25AA%25E3%2582%25B7%25E3%2583%25BC20241120%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mizchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2liclRHT052Z3d3ay1fNGxlcVk4TGNGSlNuX0FoWnpEWVlKaXJNcWc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T05:40:01",
+                "bookmark_count": 177
+            },
+            {
+                "entry_title": "Cloud Run のログを標準出力に出したらメモリが劇的に節約されてパフォーマンスも良くなった話",
+                "entry_author": "whatasoda",
+                "entry_url": "https://zenn.dev/dinii/articles/c8ca221b3eda5b",
+                "entry_image_url": "https://res.cloudinary.com/zenn/image/upload/s--KkVbCyii--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Run%2520%25E3%2581%25AE%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%2592%25E6%25A8%2599%25E6%25BA%2596%25E5%2587%25BA%25E5%258A%259B%25E3%2581%25AB%25E5%2587%25BA%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E3%2581%258C%25E5%258A%2587%25E7%259A%2584%25E3%2581%25AB%25E7%25AF%2580%25E7%25B4%2584%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2583%2591%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%25E3%2582%25B9%25E3%2582%2582%25E8%2589%25AF%25E3%2581%258F%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:whatasoda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZhNTVhMGJiNDIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Dinii%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdlZWE3MDkzNTkuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T04:22:16",
+                "bookmark_count": 38
+            }
+        ]
+    },
+    {
+        "page_url": "https://news.ycombinator.com/",
+        "feed_url": "https://news.ycombinator.com/rss",
+        "feed_title": "Hacker News",
+        "feed_image": null,
+        "feed_modified": null,
+        "entries": [
+            {
+                "entry_title": "Evidence of oldest known alphabetic writing unearthed in ancient Syrian city",
+                "entry_author": null,
+                "entry_url": "https://hub.jhu.edu/2024/11/21/ancient-alphabet-discovered-syria/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T22:11:22",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Frosted Glass from Games to the Web: HTML glass UI inspired by AAA game dev",
+                "entry_author": null,
+                "entry_url": "https://www.tyleo.com/html-glass.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T02:19:45",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Bocker: Docker implemented in around 100 lines of Bash (2015)",
+                "entry_author": null,
+                "entry_url": "https://github.com/p8952/bocker",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T23:18:51",
+                "bookmark_count": 55
+            },
+            {
+                "entry_title": "How to give a senior leader feedback without getting fired",
+                "entry_author": null,
+                "entry_url": "https://newsletter.weskao.com/p/how-to-give-a-senior-leader-feedback-without-getting-fired",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T19:15:54",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Antenna Diodes in the Pentium Processor",
+                "entry_author": null,
+                "entry_url": "http://www.righto.com/2024/11/antenna-diodes-in-pentium-processor.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T20:35:26",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Highest-resolution images ever captured of the sun’s surface",
+                "entry_author": null,
+                "entry_url": "https://www.smithsonianmag.com/smart-news/check-out-the-highest-resolution-images-ever-captured-of-the-suns-entire-surface-180985518/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T10:01:30",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Supreme Court allows multibillion-dollar class action to proceed against Meta",
+                "entry_author": null,
+                "entry_url": "https://apnews.com/article/supreme-court-meta-facebook-lawsuit-9173ad92e11df4b2a565418e419dfb88",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T05:23:34",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Continuous Integration Dashboard for Apache NuttX RTOS (Prometheus and Grafana)",
+                "entry_author": null,
+                "entry_url": "https://lupyuen.github.io/articles/ci4",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T21:44:10",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Robot Jailbreak: Researchers Trick Bots into Dangerous Tasks",
+                "entry_author": null,
+                "entry_url": "https://spectrum.ieee.org/jailbreak-llm",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T04:47:55",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "32k context length text embedding models",
+                "entry_author": null,
+                "entry_url": "https://blog.voyageai.com/2024/09/18/voyage-3/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T00:42:13",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Foursquare's 104M Points of Interest",
+                "entry_author": null,
+                "entry_url": "https://tech.marksblogg.com/foursquare-open-global-poi-dataset.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T06:57:43",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "A century later, a taped message solves the mystery of a WWI doughboy's death",
+                "entry_author": null,
+                "entry_url": "https://www.washingtonpost.com/history/2024/11/18/foster-stevens-wwi-armistice-belleau-wood-meuse-argonne-offensive/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T13:41:45",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Denmark will plant 1B trees and convert 10% of farmland into forest",
+                "entry_author": null,
+                "entry_url": "https://apnews.com/article/denmark-forest-trees-fertilizer-e55416347fcc385a3ea8e2415726f908",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T05:59:06",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Anti-scale: a response to AI in journalism",
+                "entry_author": null,
+                "entry_url": "https://www.tylerjfisher.com/blog/post/2024/02/01/anti-scale-a-response-to-ai-in-journalism",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T21:47:26",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Three hundred words you can spell on a calculator [pdf]",
+                "entry_author": null,
+                "entry_url": "https://www.mathsquad.com/calculatorwords.pdf",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T11:27:42",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "A short introduction to Interval Tree Clocks",
+                "entry_author": null,
+                "entry_url": "https://blog.separateconcerns.com/2017-05-07-itc.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T10:04:31",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Rust's Two Kinds of 'Assert' Make for Better Code",
+                "entry_author": null,
+                "entry_url": "https://tratt.net/laurie/blog/2023/rusts_two_kinds_of_assert_make_for_better_code.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T07:15:36",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Developing nations blast $300B COP29 climate deal as insufficient",
+                "entry_author": null,
+                "entry_url": "https://www.reuters.com/sustainability/sustainable-finance-reporting/wealthy-countries-back-raising-cop29-climate-deal-300-billion-sources-say-2024-11-23/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T04:32:19",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Ice base melt revealed by multibeam imagery of an Antarctic ice shelf",
+                "entry_author": null,
+                "entry_url": "https://www.science.org/doi/10.1126/sciadv.adn9188",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T23:30:39",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Size and albedo of the largest detected Oort-cloud object",
+                "entry_author": null,
+                "entry_url": "https://arxiv.org/abs/2201.13188",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T15:51:21",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Hundreds More Nazca Lines Emerge in Peru's Desert",
+                "entry_author": null,
+                "entry_url": "https://www.nytimes.com/2024/11/23/science/nazca-lines-peru-ai.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T05:19:43",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Ahmed Mohamed Clock Incident",
+                "entry_author": null,
+                "entry_url": "https://en.wikipedia.org/wiki/Ahmed_Mohamed_clock_incident",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T05:00:36",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "2007 Boston Mooninite Panic",
+                "entry_author": null,
+                "entry_url": "https://en.wikipedia.org/wiki/2007_Boston_Mooninite_panic",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T02:54:02",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "1 Dataset. 100 Visualizations",
+                "entry_author": null,
+                "entry_url": "https://100.datavizproject.com/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T18:35:27",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "Stack Analyser: detect technologies used inside a repo",
+                "entry_author": null,
+                "entry_url": "https://github.com/specfy/stack-analyser",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T10:38:41",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "The remarkable life and astonishing times of Dwight Smith Young",
+                "entry_author": null,
+                "entry_url": "https://historyonthefox.wordpress.com/2014/04/06/the-remarkable-life-and-astonishing-times-of-dwight-smith-young/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T14:02:56",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Using GPS in the Year 1565",
+                "entry_author": null,
+                "entry_url": "https://www.verbeeld.be/2024/11/17/using-gps-in-the-year-1565/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T09:31:31",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "OpenMPTCProuter: Aggregate and encrypt multiple internet connections using MPTCP",
+                "entry_author": null,
+                "entry_url": "https://www.openmptcprouter.com/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T08:58:19",
+                "bookmark_count": 7
+            },
+            {
+                "entry_title": "Music as Language (2019) [pdf]",
+                "entry_author": null,
+                "entry_url": "https://omelkonian.github.io/data/publications/music-grammars.pdf",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T14:33:04",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Quake 3 Source Code Review: Network Model (2012)",
+                "entry_author": null,
+                "entry_url": "https://fabiensanglard.net/quake3/network.php",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T00:55:00",
+                "bookmark_count": 2
+            }
+        ]
+    },
+    {
+        "page_url": "https://www.publickey1.jp/",
+        "feed_url": "https://www.publickey1.jp/atom.xml",
+        "feed_title": "Publickey",
+        "feed_image": null,
+        "feed_modified": "2024-11-20T15:13:12",
+        "entries": [
+            {
+                "entry_title": "Excel上でPythonコードを生成、実行できる「Copilot in Excel with Python」正式版に（米国版のみ）",
+                "entry_author": "jniino",
+                "entry_url": "https://www.publickey1.jp/blog/24/excelpythoncopilot_in_excel_with_python.html",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Office",
+                    "プログラミング言語",
+                    "業務アプリケーション",
+                    "機械学習・AI",
+                    "microsoft",
+                    "python"
+                ],
+                "entry_updated": "2024-11-20T15:13:12",
+                "bookmark_count": 29
+            },
+            {
+                "entry_title": "マイクロソフト、独自のセキュリティモジュール「Azure Integrated HSM」をMicrosoft Azureのサーバに搭載へ",
+                "entry_author": "jniino",
+                "entry_url": "https://www.publickey1.jp/blog/24/azure_integrated_hsmmicrosoft_azure.html",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Microsoft Azure",
+                    "クラウド",
+                    "セキュリティ",
+                    "microsoft"
+                ],
+                "entry_updated": "2024-11-20T15:13:19",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "マイクロソフト、「Azure Local」発表。低スペックのサーバもAzureのエッジとして利用可能に",
+                "entry_author": "jniino",
+                "entry_url": "https://www.publickey1.jp/blog/24/azure_localazure.html",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Microsoft Azure",
+                    "クラウド",
+                    "microsoft",
+                    "ハイブリッドクラウド"
+                ],
+                "entry_updated": "2024-11-20T15:14:20",
+                "bookmark_count": 142
+            },
+            {
+                "entry_title": "［速報］マイクロソフト、クラウドPC専用シンクライアント「Windows 365 Link」発表",
+                "entry_author": "jniino",
+                "entry_url": "https://www.publickey1.jp/blog/24/pcwindows_365_link.html",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Microsoft Azure",
+                    "OS",
+                    "Windows",
+                    "クラウド",
+                    "microsoft"
+                ],
+                "entry_updated": "2024-11-20T15:12:37",
+                "bookmark_count": 120
+            },
+            {
+                "entry_title": "［速報］マイクロソフトが「Windows Hotpatch」発表。Windowsを再起動せずセキュリティ更新を実現へ",
+                "entry_author": "jniino",
+                "entry_url": "https://www.publickey1.jp/blog/24/hotpatch_in_windowswindows.html",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Microsoft Azure",
+                    "OS",
+                    "Windows",
+                    "クラウド",
+                    "運用・監視",
+                    "microsoft"
+                ],
+                "entry_updated": "2024-11-20T15:12:48",
+                "bookmark_count": 272
+            },
+            {
+                "entry_title": "［速報］マイクロソフト、Microsoft 365 Copilotの新機能として音声同時通訳を提供、Teamsで利用可能に",
+                "entry_author": "jniino",
+                "entry_url": "https://www.publickey1.jp/blog/24/microsoft_365_copilotteams.html",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Office",
+                    "業務アプリケーション",
+                    "機械学習・AI",
+                    "microsoft"
+                ],
+                "entry_updated": "2024-11-20T15:13:00",
+                "bookmark_count": 60
+            },
+            {
+                "entry_title": "Google Cloudが開発したPostgreSQL互換ソフトウェア「AlloyDB Omni」がバージョンアップ、より高性能に",
+                "entry_author": "jniino",
+                "entry_url": "https://www.publickey1.jp/blog/24/google_cloudpostgresqlalloydb_omni.html",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Google Cloud",
+                    "PostgreSQL",
+                    "RDB",
+                    "クラウド",
+                    "データベース",
+                    "機械学習・AI"
+                ],
+                "entry_updated": "2024-11-18T14:57:51",
+                "bookmark_count": 15
+            }
+        ]
+    },
+    {
+        "page_url": "https://postd.cc",
+        "feed_url": "https://postd.cc/feed/",
+        "feed_title": "POSTD | ニジボックスが運営するエンジニアに向けたキュレーションメディア",
+        "feed_image": null,
+        "feed_modified": "2024-11-20T02:42:33",
+        "entries": []
+    },
+    {
+        "page_url": "https://thinkit.co.jp/",
+        "feed_url": "https://thinkit.co.jp/rss.xml",
+        "feed_title": "Think IT（シンクイット）",
+        "feed_image": null,
+        "feed_modified": "2024-11-22T00:43:07",
+        "entries": [
+            {
+                "entry_title": "「Krita」と「Python」でクラスの文法を身につけよう",
+                "entry_author": null,
+                "entry_url": "https://thinkit.co.jp/article/37697",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T22:50:53",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "32ビット/64ビットの両方のARM環境で有効なディスアセンブルを妨害するテクニック",
+                "entry_author": null,
+                "entry_url": "https://thinkit.co.jp/article/37677",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T22:49:07",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "【地方創生】あなたの地域でも活用中!? 生成AIで変わる地方自治体",
+                "entry_author": null,
+                "entry_url": "https://thinkit.co.jp/article/37700",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T23:05:14",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "仕様書からテストケースを自動生成! Autify Genesisが変えるソフトウェアテストの未来",
+                "entry_author": null,
+                "entry_url": "https://thinkit.co.jp/article/37666",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T23:04:41",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "「Windows Terminal」を使いこなす",
+                "entry_author": null,
+                "entry_url": "https://thinkit.co.jp/article/37696",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T23:10:08",
+                "bookmark_count": 57
+            },
+            {
+                "entry_title": "英語って本当に必要? 自分に合った「目標設定」と「学び方」",
+                "entry_author": null,
+                "entry_url": "https://thinkit.co.jp/article/37680",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T00:11:47",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "KubeCon China 2024、LLMを用いてロボットの操作をシンプルにするDoraのセッションを紹介",
+                "entry_author": null,
+                "entry_url": "https://thinkit.co.jp/article/37701",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T00:11:15",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "VRヘッドセットのシェアが変化／フォトナのUEFNで一人称視点など",
+                "entry_author": null,
+                "entry_url": "https://thinkit.co.jp/article/37712",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-17T23:53:02",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://gihyo.jp",
+        "feed_url": "https://gihyo.jp/dev/feed/rss1",
+        "feed_title": "gihyo.jp",
+        "feed_image": null,
+        "feed_modified": null,
+        "entries": [
+            {
+                "entry_title": "“時は来た”―ReiserFS、Linux 6.13でカーネルから完全に削除へ",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/daily-linux-241122",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T00:00:00",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "PHP 8.4.1リリース、プロパティフックが利用可能に",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/php-8_4_1",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T00:00:00",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Azure IoT OperationsとUbuntu Core、Ubuntu 20.04 LTSのEOLまで半年",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/admin/clip/01/ubuntu-topics/202411/22",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T00:00:00",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Android 15 QPR2 Beta 1がリリース",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/android-weekly-topics-241121",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T00:00:00",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "FreeCAD Version 1.0、“20年以上の開発期間を経て”リリース",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/freecad-1-0",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T00:00:00",
+                "bookmark_count": 32
+            },
+            {
+                "entry_title": "Debian 13 “Trixie”に向けたアートワーク投票がスタート",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/daily-linux-241120",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T00:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "第839回　Active Directoryへの統合ツールadsysを使う（4）  Ubuntu Proサブスクリプションを必要とするポリシーの紹介",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/admin/serial/01/ubuntu-recipe/0839",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T00:00:00",
+                "bookmark_count": 3
+            },
+            {
+                "entry_title": "CSS Nesting Module/CSSの入れ子指定 ［CSS Modern Features no.4］",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/ride-modern-frontend-04",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T00:00:00",
+                "bookmark_count": 6
+            },
+            {
+                "entry_title": "CEDECへ行こう！ ～CEDEC2024参加レポート",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/cedec2024-report",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T00:00:00",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "「U-22プログラミング・コンテスト2024」最終審査会を開催し各賞が決定",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/u22-procon-2024-result",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T00:00:00",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "PyCon APAC 2024参加レポート",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/pycon-apac-2024",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T00:00:00",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "3Dプリント部品にネジをはやして結合しよう",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/3dp-jungle-09",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T00:00:00",
+                "bookmark_count": 3
+            },
+            {
+                "entry_title": "Linux 6.12リリース、リアルタイムLinux「PREMPT_RT」をサポート",
+                "entry_author": null,
+                "entry_url": "https://gihyo.jp/article/2024/11/daily-linux-241118",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T00:00:00",
+                "bookmark_count": 5
+            }
+        ]
+    },
+    {
+        "page_url": "https://coliss.com",
+        "feed_url": "https://coliss.com/feed/",
+        "feed_title": "コリス",
+        "feed_image": null,
+        "feed_modified": "2024-11-22T00:36:11",
+        "entries": [
+            {
+                "entry_title": "創作者向けの配色本が面白くて、すごい！ イラストやマンガなどの世界観作りにぴったりな配色本 -物語を感じる配色アイデア",
+                "entry_author": "コリス🥦",
+                "entry_url": "https://coliss.com/articles/book-review/isbn-9784295020523.html",
+                "entry_image_url": "https://coliss.com/wp-content/uploads-202404/9784295020523-01@2x.png",
+                "entry_tags": [
+                    "Book Review",
+                    "color",
+                    "インプレス",
+                    "サイト構築 -デザイン"
+                ],
+                "entry_updated": "2024-11-22T00:36:45",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "CSSのwidth: 100%;のより良い代替手段として、stretchキーワードが実はかなり便利です",
+                "entry_author": "コリス🥦",
+                "entry_url": "https://coliss.com/articles/build-websites/operation/css/css-stretch-keyword.html",
+                "entry_image_url": "https://coliss.com/wp-content/uploads-202404/2024110910@2x.png",
+                "entry_tags": [
+                    "サイト構築 -CSS",
+                    "auto",
+                    "width: stretch;"
+                ],
+                "entry_updated": "2024-11-21T00:36:25",
+                "bookmark_count": 278
+            },
+            {
+                "entry_title": "商用利用OKの無料版と有料版が同時リリース！ お蕎麦みたいな線でデザインされた面白いフォント「そばとうどん」",
+                "entry_author": "コリス🥦",
+                "entry_url": "https://coliss.com/articles/freebies/free-font-soba-udon.html",
+                "entry_image_url": "https://coliss.com/wp-content/uploads-202404/2024111601@2x.png",
+                "entry_tags": [
+                    "Freebies",
+                    "font"
+                ],
+                "entry_updated": "2024-11-19T00:36:50",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "アドビのブラックフライデーが開催！ AmazonでCreative Cloud コンプリートプランが驚きの46％オフ、ただし新規購入者に限る",
+                "entry_author": "コリス🥦",
+                "entry_url": "https://coliss.com/articles/products/adobe-cc-amazon-black-friday-2024.html",
+                "entry_image_url": "https://coliss.com/wp-content/uploads-202404/2024111701-01@2x.png",
+                "entry_tags": [
+                    "Products",
+                    "adobe",
+                    "Amazon"
+                ],
+                "entry_updated": "2024-11-18T00:36:56",
+                "bookmark_count": 1
+            }
+        ]
+    },
+    {
+        "page_url": "https://community.aws",
+        "feed_url": "https://community.aws/rss",
+        "feed_title": "Community.aws",
+        "feed_image": null,
+        "feed_modified": "2024-11-24T07:14:14",
+        "entries": [
+            {
+                "entry_title": "Building a Memory Game with AWS and Amazon Q Developer",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pGWuyn8gDqlJOXn9bhohHqRwqy",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T21:16:11",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Redacting PII efficiently using agents",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pFcvmzyygGEpZ2WXB37Ch6J8Wn",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T12:53:15",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "AWS Application Load Balancer introduces header modification to enhance traffic control and security.",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pBWqFE8vV1wIXnt3BCyzKOJ9uZ",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T11:43:27",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Creating Typing Game:",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pFO98dMjTMhhWMVqVBinvDcgm5",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T10:54:58",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Liquid Neurons and Neural Worms: A Cognitive Neuroscience Approach for Advanced Deep Learning and AI",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pFGxH4YdQNerVQT2d8lBBOhy6x",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T09:55:23",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "\"A Comprehensive Review of Analog Circuit Design: Techniques, Components, and Challenges”",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pCoj9msM9Szvb4DOijCui0JhE5",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T05:05:53",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Connect four game made using Amazon Q Developer",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pEY55IRObz8ixYA7hXftjPRqek",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T04:14:27",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "AWS CloudWatch Logging and Live Tail using Python/Boto3 SDK!",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pE7P01nn4HPX26QGTHDyI1L6bY",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T00:48:27",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Amazon WorkSpaces Pools: Secured Contact Center Desktops",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pDlPTJQVmmfHHDWnNzQUtvivBf",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T21:40:02",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "All the new things Q developer can do",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p73nqxh4q5VwCQDA8bQqgaLsdA",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T15:17:57",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "I created a Word-Combining Game",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pCgMhY5G66BObl067IJiqHMDDn",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T11:55:45",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Controlling access to APIs",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2oB6fJqZHy9ZkaohuZQPWQBcoNN",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T07:19:18",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Hands on guide to build & deploy a project management assistant using Generative AI (Part 2)",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pBgVvOWjqVzvNgMIzc4bebTbJs",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T04:32:57",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "AWS User Group Brisbane 2024, A Year in Review",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2pBHexZcx8fJTiZCQWEtnbmQPyn",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T23:52:28",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Revolutionizing AI Development with Generative AI Application Builder on AWS",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2nMCLpP5DhrWh6uiFYOmdZamh3E",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T21:48:43",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Learn Web Scraping with AWS Bedrock Agents",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p9uo3VJaGln3USg4oIB4SdPuTd",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T16:23:54",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Accelerating builds with Amazon Q Developer Agent",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p9mbz4gFuoLsb3XjGu7fj8W6C6",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T16:14:20",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Petite SRE：An Observation on Cloud Infrastructure Design/Delivery in GenAI Era",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p9vPLi8kw60cjSTXcyYxbPNeFM",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T14:27:58",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Implementing Amazon Bedrock Knowledge Bases in support of GDPR (right to be forgotten) requests | S02 EP43 | Lets Talk About Data",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p9pXwznpWR1NUSsJX0zlexEygl",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T11:55:06",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "How to Build a BlueSky RSS-like Bot with AWS Lambda and Terraform",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p9cibXvc7rJ9wpLwknPKfY7EeO",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T10:51:22",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Which Tools are Required in AWS DevOps?",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p9GIFGFoBjfOqcNsZLEb4jopYr",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T06:48:01",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Building Portable Multicloud Applications Without Containers",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p7t4BFfQcDJHtmGxynm1av8Y3C",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T06:27:02",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Automate Monitoring of Available IPs in AWS VPC Subnets",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2ovGKT4VB91O9fe3UOaJV68IgCu",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T06:14:51",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Does Amazon Q Business works in different region compared to organization region where instance of IAM Identity Center created",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p972X7x71oGYgdlnDZ1uAPDJ2N",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T05:29:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "In React, quickly collect form data into a complex JSON object",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p8srEiZV6wI7CLZWSlLWbyu5yT",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T03:42:58",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "EKS InTec GmbH and Alibaba Cloud to Digitalize Manufacturing Industry with Scalable Digital Twin Technology",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p8rthIvyYBHSkr5IgFH1HmDI8h",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T03:20:22",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "What is Amazon EC2?",
+                "entry_author": null,
+                "entry_url": "https://community.aws/content/2p6rhOtIDEHosurqcMlYYT5R3HE",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T02:27:00",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://aws.amazon.com/jp/blogs/news/",
+        "feed_url": "https://aws.amazon.com/jp/blogs/news/feed/",
+        "feed_title": "Amazon Web Services ブログ",
+        "feed_image": null,
+        "feed_modified": "2024-11-24T06:27:24",
+        "entries": [
+            {
+                "entry_title": "Amazon CloudFront VPC オリジンの紹介: アプリケーションのセキュリティ強化と運用の合理化",
+                "entry_author": "Matheus Guimaraes",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/introducing-amazon-cloudfront-vpc-origins-enhanced-security-and-streamlined-operations-for-your-applications/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2024/11/14/vpc-orgin-page.png",
+                "entry_tags": [
+                    "Amazon CloudFront",
+                    "Announcements",
+                    "Featured",
+                    "Launch",
+                    "Networking & Content Delivery",
+                    "News"
+                ],
+                "entry_updated": "2024-11-24T06:27:24",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Amazon CloudFront がアプリケーションの gRPC 呼び出しを受け入れるようになりました",
+                "entry_author": "Sébastien Stormacq",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/amazon-cloudfront-now-accepts-your-applications-grpc-calls/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2023/06/05/2023-06-05_12-36-12.png",
+                "entry_tags": [
+                    "Amazon CloudFront",
+                    "Announcements",
+                    "Featured",
+                    "Launch",
+                    "Networking & Content Delivery",
+                    "News"
+                ],
+                "entry_updated": "2024-11-24T06:13:14",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Amazon Bedrock Agents を使用して堅牢な生成 AI アプリケーションを構築するためのベストプラクティス – Part 2",
+                "entry_author": "Ryosuke Aikawa",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/best-practices-for-building-robust-generative-ai-applications-with-amazon-bedrock-agents-part-2/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2024/11/23/agents_best_practices_alias-2.jpg",
+                "entry_tags": [
+                    "Amazon Bedrock",
+                    "Amazon Bedrock Agents",
+                    "Amazon Machine Learning",
+                    "Artificial Intelligence",
+                    "Best Practices",
+                    "Generative AI",
+                    "Intermediate (200)"
+                ],
+                "entry_updated": "2024-11-23T08:30:03",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "Amazon Bedrock Agents を使用して堅牢な生成 AI アプリケーションを構築するためのベストプラクティス – Part 1",
+                "entry_author": "Ryosuke Aikawa",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/best-practices-for-building-robust-generative-ai-applications-with-amazon-bedrock-agents-part-1/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2024/10/22/Picture1-19.png",
+                "entry_tags": [
+                    "Amazon Bedrock",
+                    "Amazon Bedrock Agents",
+                    "Amazon Machine Learning",
+                    "Artificial Intelligence",
+                    "Best Practices",
+                    "Generative AI",
+                    "Thought Leadership"
+                ],
+                "entry_updated": "2024-11-23T03:26:12",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "Coca-Cola Andina が AWS 上の Thanos でオペレーションの可視性を強化",
+                "entry_author": "Miku Honda",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/coca-cola-andina-boosts-operational-visibility-with-thanos-on-aws/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2024/11/22/Kate-Wiley_headshot-150x150.jpg",
+                "entry_tags": [
+                    "Amazon RDS",
+                    "Amazon SageMaker",
+                    "Amazon Simple Storage Service (S3)",
+                    "AWS Lambda",
+                    "CPG",
+                    "Industries"
+                ],
+                "entry_updated": "2024-11-22T07:44:12",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "生成 AI Frontier Meet Up ～学びと繋がりの場～ 開催報告",
+                "entry_author": "Yoko Tsukamoto",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/gen-ai-frontier-meet-up/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2024/11/22/20241115-Blog-Image-1-1024x355.png",
+                "entry_tags": [
+                    "General"
+                ],
+                "entry_updated": "2024-11-22T05:53:54",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Amazon Bedrockを使用し生成 AI メタデータで AWS Glue Data Catalog を強化する",
+                "entry_author": "Shintaro Watanabe",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/enrich-your-aws-glue-data-catalog-with-generative-ai-metadata-using-amazon-bedrock/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f/2024/11/20/image001-2.jpg",
+                "entry_tags": [
+                    "Amazon Bedrock",
+                    "Amazon Machine Learning",
+                    "Analytics",
+                    "AWS Big Data",
+                    "AWS Glue",
+                    "Generative AI",
+                    "Technical How-to"
+                ],
+                "entry_updated": "2024-11-22T05:44:45",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Amazon Aurora PostgreSQL Limitless Database の一般提供の開始",
+                "entry_author": "Channy Yun (윤석찬)",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/amazon-aurora-postgresql-limitless-database-is-now-generally-available/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2024/10/29/2024-aurora-limitless-database-ga-1-architecture-1.png",
+                "entry_tags": [
+                    "Amazon Aurora",
+                    "Database",
+                    "Featured",
+                    "Launch",
+                    "News",
+                    "PostgreSQL compatible"
+                ],
+                "entry_updated": "2024-11-22T05:19:34",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Amazon VPC Lattice に組み込まれた Amazon ECS サポートを使用して、コンテナアプリケーションネットワーキングを合理化",
+                "entry_author": "Donnie Prakoso",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/streamline-container-application-networking-with-native-amazon-ecs-support-in-amazon-vpc-lattice/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2024/11/05/news_2024_lattice-ecs-17.png",
+                "entry_tags": [
+                    "Amazon Elastic Container Service",
+                    "Amazon VPC",
+                    "Amazon VPC Lattice",
+                    "Announcements",
+                    "Containers",
+                    "Featured",
+                    "Launch",
+                    "News"
+                ],
+                "entry_updated": "2024-11-22T02:32:39",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Python および .NET 関数向けの AWS Lambda SnapStart の一般提供を開始",
+                "entry_author": "Channy Yun (윤석찬)",
+                "entry_url": "https://aws.amazon.com/jp/blogs/news/aws-lambda-snapstart-for-python-and-net-functions-is-now-generally-available/",
+                "entry_image_url": "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2024/11/12/2024-lambda-snapstart-diagram-1.png",
+                "entry_tags": [
+                    "Announcements",
+                    "AWS Lambda",
+                    "Compute",
+                    "Featured",
+                    "Launch",
+                    "News"
+                ],
+                "entry_updated": "2024-11-22T01:29:07",
+                "bookmark_count": 3
+            }
+        ]
+    },
+    {
+        "page_url": "https://aws.amazon.com/jp/about-aws/whats-new/recent/",
+        "feed_url": "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/",
+        "feed_title": "最近の発表",
+        "feed_image": "https://a0.awsstatic.com/main/images/logos/aws_logo_smile_179x109.png",
+        "feed_modified": "2024-11-24T06:29:40",
+        "entries": []
+    },
+    {
+        "page_url": "https://blogs.oracle.com/oracle4engineer",
+        "feed_url": "https://blogs.oracle.com/oracle4engineer/rss",
+        "feed_title": "オラクルエンジニア通信 - 技術資料、マニュアル、セミナー",
+        "feed_image": null,
+        "feed_modified": "2024-11-24T03:45:02",
+        "entries": [
+            {
+                "entry_title": "Oracle Exadata Storage Server 22.1.29.0.0 (2024/11/20)",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/oracle-exadata-storage-server-2212900-20241120",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T07:11:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "日本語技術資料へのアクセス - 2024年11月",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/ja-access-to-tech-wp-nov-2024",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-22T02:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "OCI Kubernetes EngineでOpenId Connectを発表",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/ja-announcing-oidc-in-oke",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T23:30:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "クロス・リージョン・ボリューム・レプリケーションとポリシーベースのバックアップのための顧客管理キーを発表",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/ja-announcing-customer-managed-keys",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T23:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[お客様事例] チエル: OCI Database with PostgreSQLを活用し、コスト削減と運用負荷軽減を実現",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/customer-reference-chieru",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T09:02:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Oracle Exadata Storage Server 23.1.20.0.0 (2024/11/19)",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/oracle-exadata-storage-server-2312000-20241119",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T01:33:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "OCI Public DNSに対するDNSSECのサポートを発表",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/ja-oci-public-dns-support-dnssec",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T23:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Exadata System Software のアップデート-2024年11月",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/ja-software-2024-nov",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T02:56:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Oracle Audit Vault and Database Firewall 20.13.0.0.0 (2024/11/14)",
+                "entry_author": null,
+                "entry_url": "https://blogs.oracle.com/oracle4engineer/post/oracle-audit-vault-and-database-firewall-2013000-20241114",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T05:12:00",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://www.cncf.io",
+        "feed_url": "https://www.cncf.io/feed/",
+        "feed_title": "Cloud Native Computing Foundation",
+        "feed_image": null,
+        "feed_modified": "2024-11-21T12:48:20",
+        "entries": [
+            {
+                "entry_title": "Open source spirit: elevating team collaboration and innovation",
+                "entry_author": "Leo",
+                "entry_url": "https://www.cncf.io/blog/2024/11/22/open-source-spirit-elevating-team-collaboration-and-innovation/",
+                "entry_image_url": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXd3b_n8-xA8e8xk9AsC_t8-OuINlgazlQvPLmTxo_9deKGqrLCJGGxRYno4VmIW1dRzrNSdFZsVjwkwLtCfcSlvCAy-uwQQuLkY7ltLXfVxmUJshkpANgJPfjuotWj3zO7EHfG6sA?key=mAozl6rSoPk1OE0hLM2U09mN",
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-23T04:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Konveyor AI: supporting application modernization",
+                "entry_author": "John Matthews, and Savitha Raghunathan",
+                "entry_url": "https://www.cncf.io/blog/2024/11/22/konveyor-ai-supporting-application-modernization/",
+                "entry_image_url": "https://www.cncf.io/wp-content/uploads/2024/11/migrator1.jpg",
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-22T16:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "How Fastly used Kubernetes to scale our platform engineering practice",
+                "entry_author": "Hannah Aubry",
+                "entry_url": "https://www.cncf.io/blog/2024/11/21/how-fastly-used-kubernetes-to-scale-our-platform-engineering-practice/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-21T16:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Unlock growth and talent: why maintainers should mentor with CNCF",
+                "entry_author": "CNCF",
+                "entry_url": "https://www.cncf.io/blog/2024/11/21/unlock-growth-and-talent-why-maintainers-should-mentor-with-cncf/",
+                "entry_image_url": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfXtJ7-ZOYrBM6hIjfy7LfiWc96YSBZuZOoVXhG-oVMgK0RyYC72eNU_AwHcTOsI0XlJBCWhW9WAt1rkLcSHjPAtBc9QbyWplGCxp9UBYieK7UhAZFKNFFM8LF7kbwY8nqucBhx?key=mwdZhPEihkGqGkzF5BBoIN2N",
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-21T16:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "APIOps and an API gateway: Get your development groove back",
+                "entry_author": "CNCF",
+                "entry_url": "https://www.cncf.io/blog/2024/11/20/apiops-and-an-api-gateway-get-your-development-groove-back/",
+                "entry_image_url": "https://cdn.prod.website-files.com/63ed707844acb1ccf1ccb700/66b286c1b60b98a287f0f729_66b285af1441b55a40167776_blog-APIOps_diagram.png",
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-20T19:56:40",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Cloud Neutral Postgres Databases with Kubernetes and CloudNativePG",
+                "entry_author": "Gabriele Bartolini",
+                "entry_url": "https://www.cncf.io/blog/2024/11/20/cloud-neutral-postgres-databases-with-kubernetes-and-cloudnativepg/",
+                "entry_image_url": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXfdfTuMmNbmTlEmEARAELKsoAWbev0P0pG2dxKIm1Egwp4cchMIZmIhpbMLet_easl7sPs1v3f5BRk2cnHriGazQJWPVwrqGqyRmOtaId6eW2k8-JBnFRlB0IoWQdgjZ49iCJh44Fk995TvyuiRsD_0djdG?key=kyvUORQo6ThNYsIn4EBwrw",
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-20T16:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Emerging trends in the cloud native ecosystem",
+                "entry_author": "Jatinder Singh Purba, Krishnakumar V, Prabhat Kumar, and Shreshta Shyamsundar",
+                "entry_url": "https://www.cncf.io/blog/2024/11/19/emerging-trends-in-the-cloud-native-ecosystem/",
+                "entry_image_url": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXeAHcCxZuzk-ppPi0XwhXD6Z21pg7ElKAbsOwBDRSf8b0xMbqeDtsFlI3IF3s6P-k3Ra71XkBqG-5ukxqYc02IcXFpBo28hQNPAhWGvfublKMuih4vUKqs3KzeMSRfoji-PAFUVUPEKFnSy1KAT2HhBduhdCtK0gBbzS2-F_C3bb63deX1MeGA?key=XYaJuL5yOqeZvEZwbhCpXkFi",
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-20T04:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Kubestronaut in Orbit: Dmitri Telinov",
+                "entry_author": "CNCF",
+                "entry_url": "https://www.cncf.io/blog/2024/11/19/kubestronaut-in-orbit-dmitri-telinov/",
+                "entry_image_url": "https://www.cncf.io/wp-content/uploads/2024/11/Kubestronaut-in-Orbit-10-1.jpg",
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-19T16:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Keycloak completes fuzzing audit",
+                "entry_author": "CNCF",
+                "entry_url": "https://www.cncf.io/blog/2024/11/19/keycloak-completes-fuzzing-audit/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-19T16:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "The technical complexities of externalized authorization",
+                "entry_author": "James Walker",
+                "entry_url": "https://www.cncf.io/blog/2024/11/18/the-technical-complexities-of-externalized-authorization/",
+                "entry_image_url": "https://stylish-appliance-1c1cc1c30d.media.strapiapp.com/cerbos_comic_strip_555a0b1bd0.jpg",
+                "entry_tags": [
+                    "Blog"
+                ],
+                "entry_updated": "2024-11-18T16:00:00",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://www.ipa.go.jp/about/index.html",
+        "feed_url": "https://www.ipa.go.jp/about/newsonly-rss.rdf",
+        "feed_title": "独立行政法人情報処理推進機構（IPA）新着情報RSS",
+        "feed_image": null,
+        "feed_modified": null,
+        "entries": [
+            {
+                "entry_title": "【外部講演情報更新】12月6日開催 東京都中小企業知的財産シンポジウム AI活用 はじめの一歩",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/disc/event.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T15:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "JC-STAR説明会の日程を追加しました",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/security/jc-star/seminar/index.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T15:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "AI事業者ガイドライン検討会ページを公開しました",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/disc/committee/expert-group-on-aigfb.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T15:00:00",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "「DX動向2024-中堅企業のDXの取組についての考察」を公開しました",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/digital/chousa/discussion-paper/dxwp2024-mse.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T15:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "ネットワークスペシャリスト試験における点字による試験の実施について",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/news/2024/shiken_20241120.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T15:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "デジタル人材キャリアインタビューVol.5を公開",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/jinzai/skill-transformation/careerints/interview-05.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T15:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "ITパスポート試験の企業の声を公開しました（ローレルバンクマシン株式会社）",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www3.jitec.ipa.go.jp/JitesCbt/html/about/company18.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T15:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "STAMP/STPAハンズオン教材を更新しました",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/digital/stamp/about.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T15:00:00",
+                "bookmark_count": 8
+            },
+            {
+                "entry_title": "データモデルWGの第7～9回の議事次第及び配布資料を公開しました",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/disc/committee/data-comittee.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T15:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "パソコンに偽のウイルス感染警告を表示させるサポート詐欺に注意を公開しました",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/security/anshin/attention/2024/mgdayori20241119.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T15:00:00",
+                "bookmark_count": 3
+            },
+            {
+                "entry_title": "情報セキュリティマネジメント試験の活用事例を更新しました（株式会社コミチ）",
+                "entry_author": "情報処理推進機構（IPA）",
+                "entry_url": "https://www.ipa.go.jp/shiken/kubun/sg/example/sg-company.html",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-18T15:00:00",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://techblog.lycorp.co.jp",
+        "feed_url": "https://techblog.lycorp.co.jp/ja/feed/index.xml",
+        "feed_title": "LINEヤフー Tech Blog",
+        "feed_image": null,
+        "feed_modified": "2024-11-21T02:05:39",
+        "entries": [
+            {
+                "entry_title": "Tech Week 2024の社内ハッカソン、Hack Dayに参加しました！",
+                "entry_author": null,
+                "entry_url": "https://techblog.lycorp.co.jp/ja/20241121a",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T02:00:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "コード品質向上のテクニック：第51回 確信的な質問",
+                "entry_author": null,
+                "entry_url": "https://techblog.lycorp.co.jp/ja/20241121icq",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-21T02:00:00",
+                "bookmark_count": 72
+            },
+            {
+                "entry_title": "LINE iOSアプリにおけるXcode 16対応への取り組み",
+                "entry_author": null,
+                "entry_url": "https://techblog.lycorp.co.jp/ja/20241120a",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T05:00:00",
+                "bookmark_count": 3
+            },
+            {
+                "entry_title": "LINEヤフーはJSConf JP 2024にPremium Sponsorとして協賛します - 登壇内容とブースコンテンツのお知らせ",
+                "entry_author": null,
+                "entry_url": "https://techblog.lycorp.co.jp/ja/20241120b",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-20T05:00:00",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "大規模ネットワークトポロジーシステムの設計・構築（インターンレポート）",
+                "entry_author": null,
+                "entry_url": "https://techblog.lycorp.co.jp/ja/20241119a",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-19T02:00:00",
+                "bookmark_count": 1
+            }
+        ]
+    },
+    {
+        "page_url": "https://azure.microsoft.com/ja-jp/blog/",
+        "feed_url": "https://azure.microsoft.com/ja-jp/blog/feed/",
+        "feed_title": "Azure のブログ",
+        "feed_image": "https://azure.microsoft.com/ja-jp/blog/wp-content/uploads/sites/8/2024/06/microsoft_logo-150x150.webp",
+        "feed_modified": "2024-08-19T18:38:45",
+        "entries": []
+    },
+    {
+        "page_url": "https://cloud.google.com/blog/ja/products/gcp/",
+        "feed_url": "https://cloudblog.withgoogle.com/ja/products/gcp/rss/",
+        "feed_title": "Google Cloud",
+        "feed_image": "https://cloud.google.com/blog/ja/products/gcp/static/blog/images/google.a51985becaa6.png",
+        "feed_modified": "2024-10-24T06:00:11",
+        "entries": []
+    },
+    {
+        "page_url": "https://developers-jp.googleblog.com/",
+        "feed_url": "https://developers-jp.googleblog.com/feeds/posts/default",
+        "feed_title": "Google Developers Japan",
+        "feed_image": null,
+        "feed_modified": "2024-11-22T04:11:03",
+        "entries": [
+            {
+                "entry_title": "Google 広告の新しいデータ保持ポリシー",
+                "entry_author": "DevRelJP (noreply@blogger.com)",
+                "entry_url": "https://developers-jp.googleblog.com/2024/11/google.html",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Ads",
+                    "data retention"
+                ],
+                "entry_updated": "2024-11-22T04:10:30",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://tech.nri-net.com/",
+        "feed_url": "https://tech.nri-net.com/rss",
+        "feed_title": "NRIネットコムBlog",
+        "feed_image": null,
+        "feed_modified": "2024-11-22T10:46:59",
+        "entries": [
+            {
+                "entry_title": "AI時代のITエンジニアの付加価値について",
+                "entry_author": null,
+                "entry_url": "https://tech.nri-net.com/entry/value_of_it_engineers_in_the_age_of_ai",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/0cc5bbe2aad928705d23769529c43cf02c7a03b1/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Ft%2Ftakurosasaki%2F20241122%2F20241122160431.png",
+                "entry_tags": [
+                    "Technology",
+                    "読み物"
+                ],
+                "entry_updated": "2024-11-22T10:46:59",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "Androidアプリの手書き表現とInk APIについて",
+                "entry_author": null,
+                "entry_url": "https://tech.nri-net.com/entry/handwriting_expression_in_android_apps",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/9134b02c208a6f8ac72d00325bde8b440e911a57/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fa%2Fa-isogawa%2F20241122%2F20241122143003.png",
+                "entry_tags": [
+                    "Technology",
+                    "Technology - Android",
+                    "お役立ち情報"
+                ],
+                "entry_updated": "2024-11-22T05:47:05",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "『データ分析基盤を作ってみよう　～性能設計編～』というタイトルで勉強会を開催しました",
+                "entry_author": null,
+                "entry_url": "https://tech.nri-net.com/entry/2024/11/22/143842",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/ef84d8ce694262ba1c0b9127865137f5630e4db1/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Ft%2Ftakurosasaki%2F20241024%2F20241024165514.png",
+                "entry_tags": [
+                    "Technology",
+                    "Technology - AWS",
+                    "データ分析",
+                    "勉強会",
+                    "TECH AND DESIGN STUDY"
+                ],
+                "entry_updated": "2024-11-22T05:38:42",
+                "bookmark_count": 136
+            },
+            {
+                "entry_title": "VPC LatticeよくわからなかったがECSとネイティブ統合したので試してみた",
+                "entry_author": null,
+                "entry_url": "https://tech.nri-net.com/entry/tried_vpc_lattice",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/4c47d6e5163d94795f9bf1451f697b7f7f0c1ed9/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fn%2Fnnc-k-ozawa%2F20241120%2F20241120181037.png",
+                "entry_tags": [
+                    "Technology",
+                    "Technology - AWS - ECS",
+                    "Technology - AWS"
+                ],
+                "entry_updated": "2024-11-22T02:29:35",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "NRIネットコムBlog Advent Calendar 2024 はじまります！",
+                "entry_author": null,
+                "entry_url": "https://tech.nri-net.com/entry/advent_calendar_2024_start",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/da1e92400840a65f8037463e0b8b35b9d0be390f/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fm%2Fm2-kojima%2F20241122%2F20241122101137.png",
+                "entry_tags": [
+                    "イベント・告知",
+                    "イベント・告知 - アドベントカレンダー"
+                ],
+                "entry_updated": "2024-11-22T01:53:14",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "意外とややこしいAmazon GuardDuty Runtime Monitoring / 一歩進んだAWSのコスト削減～NRIネットコム TECH AND DESIGN STUDY #50～",
+                "entry_author": null,
+                "entry_url": "https://tech.nri-net.com/entry/2024/11/19/101007",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/2ab9a15dd8ff66429f3207f731f4e7c12377741b/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fs%2Fs2_ono%2F20241119%2F20241119092413.png",
+                "entry_tags": [
+                    "Technology",
+                    "Technology - AWS",
+                    "イベント・告知 - TECH AND DESIGN STUDY"
+                ],
+                "entry_updated": "2024-11-19T01:10:07",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://nttdocomo-developers.jp/",
+        "feed_url": "https://nttdocomo-developers.jp/feed",
+        "feed_title": "ENGINEERING BLOG ドコモ開発者ブログ",
+        "feed_image": null,
+        "feed_modified": "2024-11-15T03:00:00",
+        "entries": []
+    },
+    {
+        "page_url": "https://engineers.ntt.com/",
+        "feed_url": "https://engineers.ntt.com/feed",
+        "feed_title": "NTT Communications Engineers' Blog",
+        "feed_image": null,
+        "feed_modified": "2024-11-18T06:54:37",
+        "entries": []
+    },
+    {
+        "page_url": "https://www.ntt-tx.co.jp/column/",
+        "feed_url": "https://www.ntt-tx.co.jp/column/rss.xml",
+        "feed_title": "情報畑でつかまえて | NTTテクノクロス株式会社",
+        "feed_image": "https://www.ntt-tx.co.jp/column/img/blog_logo.png",
+        "feed_modified": "2024-11-11T04:26:44",
+        "entries": []
+    },
+    {
+        "page_url": "https://connpass.com/explore/",
+        "feed_url": "https://connpass.com/explore/ja.atom",
+        "feed_title": "connpass 新着イベント",
+        "feed_image": null,
+        "feed_modified": "2024-11-24T07:06:40",
+        "entries": [
+            {
+                "entry_title": "しっかり学ぶ数理最適化 勉強会 #1",
+                "entry_author": null,
+                "entry_url": "https://math-coding.connpass.com/event/338161/",
+                "entry_image_url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/ff39dcd0-949c-41b3-b83c-d7e49833442a/60445b41-b296-426c-ae73-f5e7b743bf37/image.png",
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T07:06:40",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Shonan.py Python鍋会 #4",
+                "entry_author": null,
+                "entry_url": "https://shonan-py.connpass.com/event/338294/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T06:38:11",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Shonan.py オンラインもくもく会 #42",
+                "entry_author": null,
+                "entry_url": "https://shonan-py.connpass.com/event/338293/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T06:37:55",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "syutaさんキルギス壮行会",
+                "entry_author": null,
+                "entry_url": "https://connpass.com/event/338290/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T07:02:58",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "【大阪】Raspberry Pi & IoTもくもく会・初心者相談会 第16回",
+                "entry_author": null,
+                "entry_url": "https://easyiot.connpass.com/event/338297/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T06:22:52",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "第20回オープンエッジデバイス研究会",
+                "entry_author": null,
+                "entry_url": "https://openedgedevice.connpass.com/event/338296/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T06:20:31",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "仙台 ITエンジニア 勉強会 少人数制！ - 未経験者からベテランまで歓迎",
+                "entry_author": null,
+                "entry_url": "https://connpass.com/event/338292/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T06:01:50",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "気ままに勉強会 #101",
+                "entry_author": null,
+                "entry_url": "https://kimamani.connpass.com/event/338291/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T05:44:20",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "【オンライン開催】fin-pyもくもく会 #87",
+                "entry_author": null,
+                "entry_url": "https://fin-py.connpass.com/event/338288/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T04:52:44",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "CODESYSのExampleProjectを見る会 #04",
+                "entry_author": null,
+                "entry_url": "https://connpass.com/event/338287/",
+                "entry_image_url": null,
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T04:42:35",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://jpaztech.github.io/blog/",
+        "feed_url": "https://jpaztech.github.io/blog/atom.xml",
+        "feed_title": "Japan Azure IaaS Core Support Blog",
+        "feed_image": null,
+        "feed_modified": "2024-11-19T06:43:17",
+        "entries": [
+            {
+                "entry_title": "Azure Firewall のキャパシティに関する問題およびその原因 / 対策について",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/Azure_Firewall-capacity-issue/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Network",
+                    "Azure Firewall",
+                    "capacity"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Azure における有償 Azure テクニカル サポートの対応範囲",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/other/azure_technical_support_explained/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Other",
+                    "Support Explained"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Azure File Sync のログ採取について",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/storage/get-afs-logs/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Storage"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Firewall のパブリック IP と NAT ゲートウェイ併用構成の比較",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/fw-snat/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Network",
+                    "Public IP Address",
+                    "Azure Firewall",
+                    "NAT Gateway"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "Azure CDN Microsoft Standard SKU (クラシック) のリタイアについて",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/mscdn-classic-retire/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Network",
+                    "AzureCDN"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Azure Network 製品について TLS 1.2 以降に移行するアナウンスの補足 (Tracking ID:7_8G-D8Z)",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/tls1.2_migration/",
+                "entry_image_url": "https://jpaztech.github.io/blog/network/tls1.2_migration/appgw_tls_setting.png",
+                "entry_tags": [
+                    "Network"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Azure VM の複製 / 移動方法ついてのまとめ",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/vm/vm-copy-move-scenario/",
+                "entry_image_url": "https://jpaztech.github.io/blog/vm/vm-copy-move-scenario/img001.png",
+                "entry_tags": [
+                    "VM",
+                    "Windows",
+                    "Information",
+                    "Linux",
+                    "HowTo"
+                ],
+                "entry_updated": "2024-11-19T06:43:18",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "オンプレミスと Microsoft サービス間の接続パターン",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/connection-method-between-microsoft-and-on-prem/",
+                "entry_image_url": "https://jpaztech.github.io/blog/network/connection-method-between-microsoft-and-on-prem/connection-method-between-microsoft-and-on-prem-1.png",
+                "entry_tags": [
+                    "Network",
+                    "ExpressRoute",
+                    "Azure Peering Service"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "Azure VM での Windows Server Standard Edition 利用について",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/vm/winsererver-standard-edition/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "VM",
+                    "Windows"
+                ],
+                "entry_updated": "2024-11-19T06:43:18",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Azure Files をマウントするユーザーとアクセスについて",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/vm/azure-files-user-mount/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Windows",
+                    "Azure Files"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Azure Bastion 接続不可の対処方法とよくあるお問い合わせ",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/bastion-troubleshooting/",
+                "entry_image_url": "https://jpaztech.github.io/blog/network/bastion-troubleshooting/resolution-2.jpg",
+                "entry_tags": [
+                    "Network",
+                    "Bastion"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Application Gateway 書き換え規則の事例集",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/appgw-rewrite/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Application Gateway",
+                    "Network"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Application Gateway WAF V2 CRS 3.2 以降で追加された要求本文の検査について",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/appgw-waf-body-file-size/",
+                "entry_image_url": "https://jpaztech.github.io/blog/network/appgw-waf-body-file-size/15.png",
+                "entry_tags": [
+                    "Application Gateway",
+                    "WAF",
+                    "Network"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "可用性セットや可用性ゾーン上の単一 VM インスタンスの可用性について",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/vm/sla-singlevm-availability/",
+                "entry_image_url": "https://jpaztech.github.io/blog/vm/sla-singlevm-availability/img001.png",
+                "entry_tags": [
+                    "VM",
+                    "Information"
+                ],
+                "entry_updated": "2024-11-19T06:43:18",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Application Gateway WAF  の誤検知対応",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/handle-waf-false-positive/",
+                "entry_image_url": "https://jpaztech.github.io/blog/exclusion.png",
+                "entry_tags": [
+                    "Application Gateway",
+                    "WAF",
+                    "Network"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "オンプレミスからのインターネット宛ての通信を Azure 経由にする方法",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/forcetunneling-azure-to-onpre-configuration/",
+                "entry_image_url": "https://jpaztech.github.io/blog/network/forcetunneling-azure-to-onpre-configuration/01.png",
+                "entry_tags": [
+                    "Network",
+                    "ExpressRoute",
+                    "VPN",
+                    "Virtual WAN"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "VM サイズの選定および変更時の注意点について",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/vm/vm-size-change/",
+                "entry_image_url": "https://jpaztech.github.io/blog/vm/vm-size-change/vm-size-change001.png",
+                "entry_tags": [
+                    "VM",
+                    "HowTo"
+                ],
+                "entry_updated": "2024-11-19T06:43:18",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "Azure Front Door (クラシック) のリタイアについて",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/afd-classic-retire/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Network",
+                    "AzureFrontDoor"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "ExpressRoute にデフォルトルートを広報していてオンプレミス以外とも通信したい場合の構成",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/network/expressroute-forced-tunneling-routing/",
+                "entry_image_url": "https://jpaztech.github.io/blog/network/expressroute-forced-tunneling-routing/scenario1.png",
+                "entry_tags": [
+                    "Network",
+                    "ExpressRoute"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 2
+            },
+            {
+                "entry_title": "VM イメージ バージョンを指定して VM を作成する方法について",
+                "entry_author": null,
+                "entry_url": "https://jpaztech.github.io/blog/vm/create-vm-specific-version/",
+                "entry_image_url": "https://jpaztech.github.io/blog/vm/create-vm-specific-version/img001.png",
+                "entry_tags": [
+                    "VM"
+                ],
+                "entry_updated": "2024-11-19T06:43:17",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://news.microsoft.com/ja-jp/category/blog/",
+        "feed_url": "https://news.microsoft.com/ja-jp/category/blog/feed/",
+        "feed_title": "Microsoft Japan Blog Archives - News Center Japan",
+        "feed_image": "https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/img/site-icon.png",
+        "feed_modified": "2024-11-22T08:52:35",
+        "entries": [
+            {
+                "entry_title": "安全な未来に向けた AI イノベーションを Microsoft Ignite で発表",
+                "entry_author": "Japan News Center",
+                "entry_url": "https://news.microsoft.com/ja-jp/2024/11/22/241122-ai-innovations-for-a-more-secure-future-unveiled-at-microsoft-ignite/",
+                "entry_image_url": "https://pub-c2c1d9230f0b4abb9b0d2d95e06fd4ef.r2.dev/sites/47/2024/11/CLO22_SecOps_002-e1731717764102-1853x2048-1-200x200.jpg",
+                "entry_tags": [
+                    "Microsoft Japan Blog",
+                    "Recent News",
+                    "Security"
+                ],
+                "entry_updated": "2024-11-22T01:10:36",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Microsoft Ignite 2024: 仕事を支える Windows の未来",
+                "entry_author": "Japan News Center",
+                "entry_url": "https://news.microsoft.com/ja-jp/2024/11/21/241121-microsoft-ignite-2024-embracing-the-future-of-windows-at-work/",
+                "entry_image_url": "https://pub-c2c1d9230f0b4abb9b0d2d95e06fd4ef.r2.dev/sites/47/2024/11/WLL_Security_Diagram_no-shadow-1.png",
+                "entry_tags": [
+                    "Microsoft Japan Blog",
+                    "Recent News",
+                    "Security",
+                    "Windows",
+                    "生成AI"
+                ],
+                "entry_updated": "2024-11-21T00:59:50",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Ignite 2024: なぜ Fortune 500 企業の約 70% が Microsoft 365 Copilot を使用しているのか",
+                "entry_author": "Japan News Center",
+                "entry_url": "https://news.microsoft.com/ja-jp/2024/11/20/241120-ignite-2024-why-nearly-70-of-the-fortune-500-now-use-microsoft-365-copilot/",
+                "entry_image_url": null,
+                "entry_tags": [
+                    "Microsoft Japan Blog",
+                    "Recent News",
+                    "Azure",
+                    "Corporate News",
+                    "Microsoft 365",
+                    "Windows",
+                    "人工知能 (AI)"
+                ],
+                "entry_updated": "2024-11-20T00:30:04",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "IDC による 2024 年 AI 活用機会に関する調査: 注目すべき5 つの AI トレンド",
+                "entry_author": "Japan News Center",
+                "entry_url": "https://news.microsoft.com/ja-jp/2024/11/19/241119-idcs-2024-ai-opportunity-study-top-five-ai-trends-to-watch/",
+                "entry_image_url": "https://pub-c2c1d9230f0b4abb9b0d2d95e06fd4ef.r2.dev/sites/47/2024/11/OMB-IDC_Social-Stat-2_1080x1920.jpg",
+                "entry_tags": [
+                    "Microsoft Japan Blog",
+                    "Recent News",
+                    "人工知能 (AI)"
+                ],
+                "entry_updated": "2024-11-19T02:00:20",
+                "bookmark_count": 1
+            }
+        ]
+    },
+    {
+        "page_url": "https://blogs.windows.com/japan/",
+        "feed_url": "http://blogs.windows.com/japan/feed/",
+        "feed_title": "Windows Blog for Japan",
+        "feed_image": "https://blogs.windows.com/wp-content/uploads/prod/sites/31/2021/06/cropped-c8f4afe7ce5d24813496a977c7ee0a88-32x32.jpg",
+        "feed_modified": "2024-11-21T05:05:42",
+        "entries": [
+            {
+                "entry_title": "AI で変わる働き方 ― マイクロソフトの取り組み",
+                "entry_author": "Japan Windows Blog",
+                "entry_url": "https://blogs.windows.com/japan/2024/11/21/ai-is-already-changing-work-microsoft-included/",
+                "entry_image_url": "https://blogs.windows.com/wp-content/uploads/prod/sites/31/2024/11/cbcb2cf5e8b556d29912fec315125e27.jpg",
+                "entry_tags": [
+                    "Copilot"
+                ],
+                "entry_updated": "2024-11-21T05:05:42",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "AI の最新データ: AI 使用の実態調査で得られた 3 つの重要な知見",
+                "entry_author": "Japan Windows Blog",
+                "entry_url": "https://blogs.windows.com/japan/2024/11/19/ai-data-drop-3-key-insights-from-real-world-research-on-ai-usage/",
+                "entry_image_url": "https://blogs.windows.com/wp-content/uploads/prod/sites/31/2024/11/3d607a23b17d1429af16bbb932b0e8a2.jpg",
+                "entry_tags": [
+                    "Copilot"
+                ],
+                "entry_updated": "2024-11-19T06:54:18",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "充実感を持って働くカギは AI へのスマートなアプローチ",
+                "entry_author": "Japan Windows Blog",
+                "entry_url": "https://blogs.windows.com/japan/2024/11/19/the-key-to-a-thriving-workforce-is-a-smart-approach-to-ai/",
+                "entry_image_url": "https://blogs.windows.com/wp-content/uploads/prod/sites/31/2024/11/833ba366dfb0d4936c5b2f8fa8daa3a8.jpg",
+                "entry_tags": [
+                    "Copilot"
+                ],
+                "entry_updated": "2024-11-19T06:53:54",
+                "bookmark_count": 0
+            }
+        ]
+    },
+    {
+        "page_url": "https://techblog.zozo.com/",
+        "feed_url": "https://techblog.zozo.com/feed",
+        "feed_title": "ZOZO TECH BLOG",
+        "feed_image": null,
+        "feed_modified": "2024-11-22T02:00:00",
+        "entries": [
+            {
+                "entry_title": "Aurora Blue/Green Deploymentsによるダウンタイムを最小限に抑えたメジャーアップグレードの実現",
+                "entry_author": "vasilyjp",
+                "entry_url": "https://techblog.zozo.com/entry/aurora-blue-green-deployments",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/d993039bdfcbdd2a62065eeb75a379bd15049f3d/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fv%2Fvasilyjp%2F20241121%2F20241121151530.jpg",
+                "entry_tags": [
+                    "AWS",
+                    "Aurora",
+                    "MySQL",
+                    "CloudFormation"
+                ],
+                "entry_updated": "2024-11-22T02:00:00",
+                "bookmark_count": 46
+            },
+            {
+                "entry_title": "SLOの導入は早ければ早いほどよい 〜FAANSの事例とその効果〜",
+                "entry_author": "vasilyjp",
+                "entry_url": "https://techblog.zozo.com/entry/slo-practice-in-faans",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/42ebbf02f679e5294adb3db229f27440d9eedb43/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fv%2Fvasilyjp%2F20241119%2F20241119160826.jpg",
+                "entry_tags": [
+                    "運用改善",
+                    "監視",
+                    "品質管理"
+                ],
+                "entry_updated": "2024-11-20T02:00:01",
+                "bookmark_count": 59
+            },
+            {
+                "entry_title": "ZOZOTOWNのDBRE活動に開発メンバーを招いた経緯とその結果",
+                "entry_author": "vasilyjp",
+                "entry_url": "https://techblog.zozo.com/entry/dbre-wg",
+                "entry_image_url": "https://cdn.image.st-hatena.com/image/scale/0ac8b19a7714102bb1209ed0389a736a6bfee57a/backend=imagemagick;height=1300;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fv%2Fvasilyjp%2F20241118%2F20241118110629.jpg",
+                "entry_tags": [
+                    "Database",
+                    "チームビルディング",
+                    "運用改善"
+                ],
+                "entry_updated": "2024-11-19T02:00:00",
+                "bookmark_count": 24
+            }
+        ]
+    },
+    {
+        "page_url": "https://speakerdeck.com",
+        "feed_url": "https://speakerdeck.com/c/programming.atom",
+        "feed_title": "Programming - Speaker Deck",
+        "feed_image": null,
+        "feed_modified": "2024-11-18T10:00:45",
+        "entries": [
+            {
+                "entry_title": "Panduan untuk mempublikasikan kode ke publik",
+                "entry_author": "Irfan Maulana (@mazipan)",
+                "entry_url": "https://speakerdeck.com/mazipan/panduan-untuk-mempublikasikan-kode-ke-publik",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/d0afb716c817428593eaf50ac0800717/preview_slide_0.jpg?32750975",
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T02:04:45",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Recomposition Roundup: All You Need to Know",
+                "entry_author": "Harun Wangereka (@wangerekaharun)",
+                "entry_url": "https://speakerdeck.com/wangerekaharun/recomposition-roundup-all-you-need-to-know",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/8024caeee7214f4785911e06e525bcd4/preview_slide_0.jpg?32751196",
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T04:39:35",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "WebAssembly Unleashed: Powering Server-Side Applications",
+                "entry_author": "Chris Fuentes (@chrisft25)",
+                "entry_url": "https://speakerdeck.com/chrisft25/webassembly-unleashed-powering-server-side-applications",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/214c8e1878c14db7b417b7e4b07a6ecb/preview_slide_0.jpg?32751082",
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T02:53:28",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "The Debt Metaphor -�Ward Cunningham �in his 2009 YouTube video",
+                "entry_author": "Philip Schwarz (@philipschwarz)",
+                "entry_url": "https://speakerdeck.com/philipschwarz/the-debt-metaphor-ward-cunningham-in-his-2009-youtube-video",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/f2e690bf34804ae49d136a52623a5a85/preview_slide_0.jpg?32749571",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T23:13:16",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Developing Kubernetes Operators with Golang and Operator SDK",
+                "entry_author": "Aykut Bulgu (@mabulgu)",
+                "entry_url": "https://speakerdeck.com/mabulgu/developing-kubernetes-operators-with-golang-and-operator-sdk",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/9076dd5afeb04cb0a52c95219a78cbb2/preview_slide_0.jpg?32749058",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T19:36:00",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Building high quality, performant apps that run across all form factors",
+                "entry_author": "Mpiima Rodney Ezra (@mpiima)",
+                "entry_url": "https://speakerdeck.com/mpiima/building-high-quality-performant-apps-that-run-across-all-form-factors",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/b2cd04de20534f318a91b6f53985126e/preview_slide_0.jpg?32747431",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T14:10:39",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Embrace the Grind",
+                "entry_author": "Shrayas Rajagopal (@shrayasr)",
+                "entry_url": "https://speakerdeck.com/shrayasr/embrace-the-grind",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/3e41e33e80fb4b64809bf3dc80bdc6fc/preview_slide_0.jpg?32747292",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T13:24:35",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "From Android to Multiplatform and beyond | DevFest Berlin",
+                "entry_author": "Marco Gomiero (@prof18)",
+                "entry_url": "https://speakerdeck.com/prof18/from-android-to-multiplatform-and-beyond-devfest-berlin",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/e11874e958c746d7ab122940bf687bc1/preview_slide_0.jpg?32746651",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T11:37:46",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "イマのCSSでできる インタラクション最前線 + CSS最新情報",
+                "entry_author": "Yasunobu Ikeda (@clockmaker)",
+                "entry_url": "https://speakerdeck.com/clockmaker/imanocssdedekiru-intarakusiyonzui-qian-xian-plus-csszui-xin-qing-bao",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/e2fe56be6ae74322b0ae7693ca9bea4a/preview_slide_0.jpg?32745183",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T08:27:09",
+                "bookmark_count": 176
+            },
+            {
+                "entry_title": "Develop iOS apps with Neovim / vimconf_2024",
+                "entry_author": "uhooi (@uhooi)",
+                "entry_url": "https://speakerdeck.com/uhooi/vimconf-2024",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/54ce8eceaeac4930ad531cb8afdbddb3/preview_slide_0.jpg?32745099",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T08:10:56",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "デザインパターンで理解するLLMエージェントの作り方 / How to develop an LLM agent using agentic design patterns",
+                "entry_author": "r-kagaya (@rkaga)",
+                "entry_url": "https://speakerdeck.com/rkaga/how-to-develop-an-llm-agent-using-agentic-design-patterns",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/4b3b8eb767e14d96bf94490f1ac5966c/preview_slide_0.jpg?32744535",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T06:45:03",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Modular Monolith Monorepo ～シンプルさを保ちながらmonorepoのメリットを最大化する～",
+                "entry_author": "Yui Sakamoto (@yuisakamoto)",
+                "entry_url": "https://speakerdeck.com/yuisakamoto/modular-monolith-monorepo-sinpurusawobao-tinagaramonoreponomeritutowozui-da-hua-suru",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/26087f47d3104cd1b87eb70a55386580/preview_slide_0.jpg?32743189",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T05:38:43",
+                "bookmark_count": 6
+            },
+            {
+                "entry_title": "我々のデザインシステムは Chakra v3 にアップデートします",
+                "entry_author": "Shunya078 (@shunya078)",
+                "entry_url": "https://speakerdeck.com/shunya078/wo-nodezainsisutemuha-chakra-v3-niatupudetosimasu",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/b082b753f4954d76a8f2eb0d85de9246/preview_slide_0.jpg?32741265",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T07:38:39",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Tips for Navigating and Exploring Vim's Help",
+                "entry_author": "Satoru Kitaguchi (@satorunooshie)",
+                "entry_url": "https://speakerdeck.com/satorunooshie/tips-for-navigating-and-exploring-vims-help",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/fb81fcac869d407a8c9f6f11b17a9e97/preview_slide_0.jpg?32737886",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T05:18:52",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Missing parts when designing and implementing Android UI",
+                "entry_author": "Eric Li (@ericksli)",
+                "entry_url": "https://speakerdeck.com/ericksli/missing-parts-when-designing-and-implementing-android-ui",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/4e00bbedfc0b422e814053153fd5b413/preview_slide_0.jpg?32748121",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T16:00:20",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Streamhouse Architecture with Flink and Paimon",
+                "entry_author": "Alexey Novakov (@alexeyn)",
+                "entry_url": "https://speakerdeck.com/alexeyn/streamhouse-architecture-with-flink-and-paimon",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/b130a3f3c8674a99ac75a63f3dcdfea3/preview_slide_0.jpg?32746469",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T11:07:48",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "React への依存を最小にするフロントエンド設計",
+                "entry_author": "ONDA, Takashi (@takonda)",
+                "entry_url": "https://speakerdeck.com/takonda/minimize-framework-dependency-in-frontend",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/001a570b52274791b464dd5191a5e4d8/preview_slide_0.jpg?32739316",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T02:56:43",
+                "bookmark_count": 146
+            },
+            {
+                "entry_title": "React CompilerとFine Grained Reactivityと宣言的UIのこれから / The next chapter of declarative UI",
+                "entry_author": "TOMIKAWA Sotaro (@ssssota)",
+                "entry_url": "https://speakerdeck.com/ssssota/the-next-chapter-of-declarative-ui",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/c2d800c9e26c4761a5411c74c7412dd8/preview_slide_0.jpg?32738719",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T02:35:19",
+                "bookmark_count": 1
+            }
+        ]
+    },
+    {
+        "page_url": "https://speakerdeck.com",
+        "feed_url": "https://speakerdeck.com/c/technology.atom",
+        "feed_title": "Technology - Speaker Deck",
+        "feed_image": null,
+        "feed_modified": "2024-11-24T00:07:30",
+        "entries": [
+            {
+                "entry_title": "2024-11-20_mabl Experience 2024｜ここがポイント！テスト自動化ツール導入で失敗しないための成功戦略.",
+                "entry_author": "TechVan ENGINEERS (@techvan_engineers)",
+                "entry_url": "https://speakerdeck.com/techvan_engineers/2024-11-20-mabl-experience-2024-kokogapointo-tesutozi-dong-hua-turudao-ru-deshi-bai-sinaitamenocheng-gong-zhan-lue",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/2de9c66667ec4e49ab34261472e80aa9/preview_slide_0.jpg?32750260",
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T00:09:57",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "GraphAI - Full-Stack TypeScript Tool for AI Applications",
+                "entry_author": "Isamu Arimoto (@isamu)",
+                "entry_url": "https://speakerdeck.com/isamu/graphai-full-stack-typescript-tool-for-ai-applications",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/f5519758ad30489cb65fab62ad172309/preview_slide_0.jpg?32749505",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T21:06:04",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "ラン仲間のグループチャットで使うLINEボットを作った話",
+                "entry_author": "Masanori KAJI (@quwaji)",
+                "entry_url": "https://speakerdeck.com/quwaji/ranzhong-jian-noguruputiyatutodeshi-ulinebotutowozuo-tutahua",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/b57a4b0d65104b05b64441ee8d051e13/preview_slide_0.jpg?32748793",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T17:55:43",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Who Owns Your Digital Identity 誰掌握你的數位身分？",
+                "entry_author": "denkeni (@denkeni)",
+                "entry_url": "https://speakerdeck.com/denkeni/who-owns-your-digital-identity-shui-zhang-wo-ni-de-shu-wei-shen-fen",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/4017e70638de4e5fb235d83799c83259/preview_slide_0.jpg?32748465",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T16:47:33",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "[DevFestMilano]Enhancing Flutter Apps UX for Global Users",
+                "entry_author": "Kenichi Kambara (@korodroid)",
+                "entry_url": "https://speakerdeck.com/korodroid/devfestmilano-enhancing-flutter-apps-ux-for-global-users",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/e1e5afdcb0304b36b6caf9968c761aa2/preview_slide_0.jpg?32747873",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T14:54:34",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "今年がんばったこと",
+                "entry_author": "Tiny Mouse (@tinymouse)",
+                "entry_url": "https://speakerdeck.com/tinymouse/jin-nian-ganbatutakoto-e7855f56-62b5-44ea-ba13-ad8be0d99632",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/17eca42da15b4cbabcabcefecfad50dd/preview_slide_0.jpg?32751269",
+                "entry_tags": [],
+                "entry_updated": "2024-11-24T06:20:17",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "あなたはどの球団顔？",
+                "entry_author": "のりまき (@n0rimakisan)",
+                "entry_url": "https://speakerdeck.com/n0rimakisan/anatahadonoqiu-tuan-yan",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/1bc72233fbe644888da74a43fc0e3db4/preview_slide_0.jpg?32747033",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T12:44:52",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "【平成レトロ】へぇボタンハック👨🔧",
+                "entry_author": "Van (@vanchan2625)",
+                "entry_url": "https://speakerdeck.com/vanchan2625/ping-cheng-retoro-heebotanhatuku",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/b7038ef9c618443184272d9276020611/preview_slide_0.jpg?32746981",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T12:33:09",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Ollamaを使ったLocal Language Model活用法",
+                "entry_author": "masa-ita (@itagakim)",
+                "entry_url": "https://speakerdeck.com/itagakim/ollamawoshi-tutalocal-language-modelhuo-yong-fa",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/c4df86ee88e246cf93b1f7314cec7d08/preview_slide_0.jpg?32746839",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T12:02:59",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "LLMOps: Eval-Centric を前提としたMLOps",
+                "entry_author": "Asei Sugiyama (@asei)",
+                "entry_url": "https://speakerdeck.com/asei/llmops-eval-centric-woqian-ti-tositamlops",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/6f7a622e052a4b89a86e80c322cfa23e/preview_slide_0.jpg?32746813",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T12:01:36",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "生成AIはじめの一歩",
+                "entry_author": "tatsuya1970 (@tatsuya1970)",
+                "entry_url": "https://speakerdeck.com/tatsuya1970/sheng-cheng-aihazimeno-bu",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/61b8fb59398c4d3a9208964da6070f70/preview_slide_0.jpg?32745459",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T08:46:47",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "静的解析で実現した効率的なi18n対応の仕組みづくり",
+                "entry_author": "minako-ph (@minako__ph)",
+                "entry_url": "https://speakerdeck.com/minako__ph/jing-de-jie-xi-deshi-xian-sitaxiao-lu-de-nai18ndui-ying-noshi-zu-midukuri",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/255ff17c0d394009bfda7d443cf14bc8/preview_slide_0.jpg?32745117",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T08:15:48",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "Next.jsとNuxtが混在？ iframeでなんとかする！",
+                "entry_author": "ypresto (@ypresto)",
+                "entry_url": "https://speakerdeck.com/ypresto/nuxt-inside-nextjs-with-iframe",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/edb194c02fab46978ffdf4808eaa4f7c/preview_slide_0.jpg?32744905",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T07:52:48",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "JAWS UG 青森（弘前）クラウド・AWS入門",
+                "entry_author": "平賀博司 (@hiragahh)",
+                "entry_url": "https://speakerdeck.com/hiragahh/jaws-ug-qing-sen-hong-qian-kuraudoawsru-men",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/88939a5ffbe249b187be72ebff186000/preview_slide_0.jpg?32744735",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T07:22:52",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "クラウドインフラ構築における.NETとその他IaCの比較",
+                "entry_author": "Kento.Yamada (@ymd65536)",
+                "entry_url": "https://speakerdeck.com/ymd65536/kuraudoinhuragou-zhu-niokeru-dot-nettosonota-iacnobi-jiao",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/d6e57032072e466fbfc3213b561161a2/preview_slide_0.jpg?32744365",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T06:39:19",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "Behind the scenes of  24-hour global online event  “JAWS PANKRATION 2024”",
+                "entry_author": "Shun Yoshie (@syoshie)",
+                "entry_url": "https://speakerdeck.com/syoshie/behind-the-scenes-of-24-hour-global-online-event-jaws-pankration-2024",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/4b0dd653a024409d85b794d05a4f9401/preview_slide_0.jpg?32743378",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T06:04:40",
+                "bookmark_count": 0
+            },
+            {
+                "entry_title": "電話を切らさない技術 電話自動応答サービスを支える フロントエンド",
+                "entry_author": "sagawa / barometrica (@barometrica)",
+                "entry_url": "https://speakerdeck.com/barometrica/dian-hua-woqie-rasanaiji-shu-dian-hua-zi-dong-ying-da-sabisuwozhi-eru-hurontoendo",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/a456c2ddae5143a9875f418de25ab42b/preview_slide_0.jpg?32742678",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T05:37:15",
+                "bookmark_count": 1
+            },
+            {
+                "entry_title": "LINEヤフーにおけるPrerender技術の導入とその効果",
+                "entry_author": "narirou (@narirou)",
+                "entry_url": "https://speakerdeck.com/narirou/lineyahuniokeruprerenderji-shu-nodao-ru-tosonoxiao-guo",
+                "entry_image_url": "https://files.speakerdeck.com/presentations/96a86e3bf68946ffb5ee2efe3e01547b/preview_slide_0.jpg?32742555",
+                "entry_tags": [],
+                "entry_updated": "2024-11-23T05:15:28",
+                "bookmark_count": 1
+            }
+        ]
+    }
+]

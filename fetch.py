@@ -177,7 +177,7 @@ def to_entries(feed_url: str):
             'entry_image_url': get_entry_image(entry),
             'entry_tags': [tag.get('term') for tag in entry.get('tags', []) ],
             "entry_updated": get_updated_isoformat(entry)
-        } for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=31))])
+        } for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=7))])
     }
 
 
@@ -222,93 +222,6 @@ def main():
 
     save_as_json('result.json', [to_entries(feed_url) for feed_url in feed_urls])
 
-    save_as_json('result-ranking.json', duckdb.sql("""
-    with e as (
-        select
-            *,
-            ROW_NUMBER() OVER (
-               PARTITION BY page_url
-               ORDER BY
-                    bookmark_count DESC,
-                    entry_updated DESC
-            ) as rank,
-            SUM(bookmark_count) OVER (
-               PARTITION BY page_url
-            ) as total_bookmark_count
-        from (
-            select
-               feed_title,
-               page_url,
-               unnest(entries, recursive := true)
-            from './frontend/public/result.json'
-        ) as i
-    )
-    select
-        feed_title,
-        page_url,
-        cast(total_bookmark_count as integer) as total_bookmark_count,
-        entry_title as top_entry_title,
-        entry_url as top_entry_url,
-        cast(bookmark_count as integer) as top_bookmark_count
-    from e
-    where
-        rank = 1
-    order by
-        total_bookmark_count desc,
-        entry_updated desc
-    """).to_df().to_dict(orient="records"))
-
-    save_as_json('result-activity.json', duckdb.sql("""
-    with e as (
-        select
-            feed_title,
-            page_url,
-            unnest(entries, recursive := true)
-        from './frontend/public/result.json'
-    )
-    select
-        feed_title,
-        page_url,
-        max(entry_updated) as newest_entry_updated,
-        min(entry_updated) as oldest_entry_updated,
-        count(*) as entry_count
-    from e
-    group by
-        feed_title,
-        page_url
-    order by
-        newest_entry_updated desc,
-        entry_count desc,
-        oldest_entry_updated asc
-    """).to_df().to_dict(orient="records"))
-
-    save_as_json('result-images.json', duckdb.sql("""
-    with e as (
-        select
-            *,
-            unnest(entries, recursive := true)
-        from './frontend/public/result.json'
-    )
-    select
-        feed_title,
-        entry_title,
-        entry_url,
-        entry_image_url
-    from (
-        select
-            *,
-            row_number() over (
-                partition by feed_title
-                order by entry_updated desc
-            ) as rank
-        from
-            e
-        where
-            entry_image_url IS NOT NULL
-    ) as e
-    where
-        e.rank == 1
-    """).to_df().to_dict(orient='records'))
 
 if __name__ == "__main__":
     main()

@@ -140,7 +140,7 @@ def to_entries(feed_url: str):
 
 
 def save_to_json(name, data):
-    path = os.path.join(os.path.dirname(__file__), "frontend", "public", name)
+    path = os.path.join(os.path.dirname(__file__), "public", name)
     with open(path, mode='w', encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 

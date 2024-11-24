@@ -46,6 +46,8 @@ function App() {
     }
   }, [loadQuery, db]);
 
+  // TODO サイドバーでページ切り替えできるようにする
+
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <Card className="w-full h-full">

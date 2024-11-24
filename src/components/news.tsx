@@ -178,10 +178,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                               {
                                 entry.bookmark_count ?
                                   <CardDescription>
-                                    <img
-                                      src={`https://b.hatena.ne.jp/bc/de/${entry.entry_url}`}
-                                      alt="はてなブックマーク数"
-                                      title="はてなブックマーク数" />
+                                    {entry.bookmark_count} bookmarks
                                   </CardDescription>
                                   : <></>
                               }

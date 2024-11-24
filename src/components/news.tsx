@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { format } from "@formkit/tempo";
 import { Badge } from "./ui/badge";
+import { BookMarked, Clock, UserPen } from "lucide-react";
 
 
 export function News({ db }: { db: duckdb.AsyncDuckDB }) {
@@ -114,7 +115,9 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
       </CardDescription>
       {
         feed.feed_bookmark_count ?
-          <CardDescription>{feed.feed_bookmark_count} bookmarks</CardDescription>
+          <CardDescription className="flex items-center">
+            <BookMarked className="mr-0.5 w-4" />{feed.feed_bookmark_count} bookmarks
+          </CardDescription>
           : <></>
       }
     </CardHeader>
@@ -155,7 +158,8 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                             }}>
                             <CardHeader className="text-left">
                               <CardTitle className="text-sm">{entry.entry_title}</CardTitle>
-                              <CardDescription>
+                              <CardDescription className="flex items-center">
+                                <Clock className="mr-0.5 w-4" />
                                 {
                                   format({
                                     date: entry.entry_updated,
@@ -170,15 +174,15 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                               </CardDescription>
                               {
                                 entry.entry_author ?
-                                  <CardDescription>
-                                    {entry.entry_author}
+                                  <CardDescription className="flex items-center">
+                                    <UserPen className="mr-0.5 w-4" />{entry.entry_author}
                                   </CardDescription>
                                   : <></>
                               }
                               {
                                 entry.bookmark_count ?
-                                  <CardDescription>
-                                    {entry.bookmark_count} bookmarks
+                                  <CardDescription className="flex items-center">
+                                    <BookMarked className="mr-0.5 w-4" />{entry.bookmark_count} bookmarks
                                   </CardDescription>
                                   : <></>
                               }

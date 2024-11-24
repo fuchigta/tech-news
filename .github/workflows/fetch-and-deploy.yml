@@ -36,10 +36,10 @@ jobs:
           cache: npm          
 
       - name: Install Packages
-        run: cd ./frontend && npm install
+        run: npm install
 
       - name: Build
-        run: cd ./frontend && npm run build
+        run: npm run build
 
       - name: Push to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

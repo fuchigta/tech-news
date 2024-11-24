@@ -22,7 +22,6 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5.3.0
         with:
-          python-version: 3.13
           cache: pip          
 
       - name: Install Requirements
@@ -30,6 +29,14 @@ jobs:
 
       - name: Fetch
         run: python ./fetch.py
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.1.0
+        with:
+          cache: npm          
+
+      - name: Install Packages
+        run: cd ./frontend && npm install
 
       - name: Build
         run: cd ./frontend && npm run build

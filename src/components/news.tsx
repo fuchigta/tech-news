@@ -141,7 +141,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                           }
                         </CardHeader> : renderFeedHeader(feed)
                     }
-                    <CardContent className={`grid grid-cols-${Math.min(5, feed.entries.length)} gap-2`}>
+                    <CardContent className={`grid grid-cols-5 gap-2`}>
                       {
                         feed.entries.toArray().map((entry) => (
                           <Card

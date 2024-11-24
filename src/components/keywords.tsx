@@ -107,7 +107,7 @@ export function Keywords({ db }: { db: duckdb.AsyncDuckDB }) {
       <CardHeader className="text-left">
         <CardTitle>注目キーワード</CardTitle>
       </CardHeader>
-      <CardContent className="grow grid grid-cols-2 gap-2">
+      <CardContent className="grow grid grid-cols-3 gap-2">
         {
           result ? (
             <>

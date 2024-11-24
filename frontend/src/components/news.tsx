@@ -35,16 +35,15 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
       feed_image,
       cast(feed_bookmark_count as integer) as feed_bookmark_count,
       array_agg({
-        rank: cast(rank as integer),
         entry_title: entry_title,
         entry_url: entry_url,
         entry_image_url: entry_image_url,
         entry_updated: entry_updated,
+        entry_author: entry_author,
         entry_tags: entry_tags,
         bookmark_count: cast(bookmark_count as integer)
       } order by
-        bookmark_count desc,
-        entry_updated desc
+        rank
       ) as entries
     from (
       select
@@ -75,11 +74,11 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
     ['feed_image']: Utf8
     ['feed_bookmark_count']: Int32
     ['entries']: List<Struct<{
-      ['rank']: Int32,
       ['entry_title']: Utf8,
       ['entry_url']: Utf8,
       ['entry_image_url']: Utf8,
       ['entry_updated']: Utf8,
+      ['entry_author']: Utf8,
       ['entry_tags']: List<Utf8>,
       ['bookmark_count']: Int32,
     }>>
@@ -170,6 +169,13 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                                 }
                               </CardDescription>
                               {
+                                entry.entry_author ?
+                                  <CardDescription>
+                                    {entry.entry_author}
+                                  </CardDescription>
+                                  : <></>
+                              }
+                              {
                                 entry.bookmark_count ?
                                   <CardDescription>
                                     <img
@@ -185,7 +191,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                                     <>
                                       {
                                         (entry.entry_tags.toArray() as unknown as Array<string>).map((tag) => (
-                                          <Badge variant="secondary" className="m-1 text-xs">{tag.toString()}</Badge>)
+                                          <Badge key={tag} variant="secondary" className="m-1 text-xs">{tag.toString()}</Badge>)
                                         )
                                       }
                                     </>
@@ -199,6 +205,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                                   <img
                                     src={entry.entry_image_url}
                                     alt="画像"
+                                    className="max-w-fit"
                                     onError={(e: any) => e.target.style.display = 'none'} />
                                 ) : (
                                   <></>

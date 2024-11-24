@@ -6,6 +6,7 @@ import { ThemeProvider } from './components/theme-provider';
 import { Card, CardContent, CardHeader } from './components/ui/card';
 import { ModeToggle } from './components/mode-toggle';
 import { News } from './components/news';
+import { Keywords } from './components/keywords';
 
 function App() {
   const [initialized, setInitialized] = useState(false);
@@ -53,7 +54,10 @@ function App() {
         </CardHeader>
         <CardContent className='grid grid-cols-1 gap-4'>
           {db && loaded ? (
-            <News db={db} />
+            <>
+              <News db={db} />
+              <Keywords db={db} />
+            </>
           ) : (
             <p>Loading...</p>
           )}

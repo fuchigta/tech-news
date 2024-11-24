@@ -6,6 +6,7 @@ from urllib.parse import urlparse, urlunparse
 import warnings
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 import feedparser
+import pandas as pd
 import requests
 import math
 
@@ -139,10 +140,9 @@ def to_entries(feed_url: str):
     }
 
 
-def save_to_json(name, data):
+def save_to_parquet(name, data):
     path = os.path.join(os.path.dirname(__file__), "public", name)
-    with open(path, mode='w', encoding="utf-8") as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
+    pd.DataFrame(data).to_parquet(path, engine="pyarrow")
 
 
 def load_from_json(name):
@@ -152,7 +152,7 @@ def load_from_json(name):
 
 
 def main():
-    save_to_json('result.json', [to_entries(feed_url) for feed_url in load_from_json('feed.json')])
+    save_to_parquet('result.parquet', [to_entries(feed_url) for feed_url in load_from_json('feed.json')])
 
 
 if __name__ == "__main__":

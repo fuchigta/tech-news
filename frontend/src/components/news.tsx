@@ -133,7 +133,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                     {
                       feed.feed_image ?
                         <CardHeader className="flex flex-row">
-                          <img src={feed.feed_image} className="object-cover max-w-40 h-auto self-center" />
+                          <img src={feed.feed_image} className="max-w-40 self-center" />
                           {
                             renderFeedHeader(feed)
                           }
@@ -142,12 +142,15 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                     <CardContent className={`grid grid-cols-${Math.min(5, feed.entries.length)} gap-2`}>
                       {
                         feed.entries.toArray().map((entry) => (
-                          <Card key={entry.entry_url} className="col-span-1 cursor-pointer flex flex-col justify-between" onClick={() => {
-                            const w = window.open(entry.entry_url, '_blank', 'noopener,noreferrer')
-                            if (w) {
-                              w.opener = null
-                            }
-                          }}>
+                          <Card
+                            key={entry.entry_url}
+                            className="cursor-pointer flex flex-col"
+                            onClick={() => {
+                              const w = window.open(entry.entry_url, '_blank', 'noopener,noreferrer')
+                              if (w) {
+                                w.opener = null
+                              }
+                            }}>
                             <CardHeader className="text-left">
                               <CardTitle className="text-sm">{entry.entry_title}</CardTitle>
                               <CardDescription>
@@ -179,7 +182,6 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                                 entry.entry_image_url ? (
                                   <img
                                     src={entry.entry_image_url}
-                                    className="object-cover h-auto max-w-full"
                                     alt="画像"
                                     onError={(e: any) => e.target.style.display = 'none'} />
                                 ) : (

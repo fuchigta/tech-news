@@ -14,34 +14,21 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 
 def get_entry_image(entry) -> str:
-    """
-    feedparserのentryオブジェクトから画像URLを抽出する
-    
-    Args:
-        entry: feedparserのentryオブジェクト
-    
-    Returns:
-        str: 見つかった画像URL
-    """
-    # 1. メディアコンテンツをチェック
     if 'media_content' in entry:
         for media in entry['media_content']:
             if 'url' in media:
                 return media['url']
     
-    # 2. メディアサムネイルをチェック
     if 'media_thumbnail' in entry:
         for media in entry['media_thumbnail']:
             if 'url' in media:
                 return media['url']
     
-    # 3. エンクロージャーをチェック
     if 'enclosures' in entry:
         for enclosure in entry['enclosures']:
             if 'type' in enclosure and enclosure['type'].startswith('image/'):
                 return enclosure['href']
     
-    # 4. コンテンツ内のimg要素を解析
     if 'content' in entry:
         for content in entry['content']:
             if 'value' in content:
@@ -50,7 +37,6 @@ def get_entry_image(entry) -> str:
                     if img.get('src'):
                         return img['src']
     
-    # 5. descriptionからimg要素を解析
     if 'description' in entry:
         soup = BeautifulSoup(entry.description, 'html.parser')
         for img in soup.find_all('img'):
@@ -61,16 +47,6 @@ def get_entry_image(entry) -> str:
 
 
 def is_within(date: datetime.datetime, n: datetime.timedelta) -> bool:
-    """
-    指定された日付が範囲内かどうかを判定する
-    
-    Args:
-        date: チェックする日付（datetime型）
-        n: チェックする範囲（timedelta型）
-    
-    Returns:
-        範囲内の場合True、そうでない場合False
-    """
     if date is None:
         return False
     now = datetime.datetime.now()
@@ -78,52 +54,33 @@ def is_within(date: datetime.datetime, n: datetime.timedelta) -> bool:
 
 
 def remove_query_params(url: str) -> str:
-    """URLからクエリパラメータを除去する関数"""
     parsed = urlparse(url)
     clean = parsed._replace(query='', fragment='')
     return urlunparse(clean)
 
 
 def fetch_bookmark_counts(items: list[dict[str, str]], url_key: str = 'entry_url', batch_size: int = 50) -> list[dict[str, any]]:
-    """
-    URLのリストに対してはてなブックマーク数を取得し、元のデータに追加する関数
-    
-    Args:
-        items: idとurlを含む辞書のリスト
-        batch_size: 1回のAPIリクエストで取得するURL数（最大50）
-    
-    Returns:
-        bookmark_countを追加した辞書のリスト
-    """
-    # APIのベースURL
     API_URL = "https://bookmark.hatenaapis.com/count/entries"
     
-    # 結果を格納するリスト
     results = []
     
-    # バッチ数を計算
     batch_count = math.ceil(len(items) / batch_size)
     
-    # バッチごとに処理
     for i in range(batch_count):
         start_idx = i * batch_size
         end_idx = min((i + 1) * batch_size, len(items))
         batch_items = items[start_idx:end_idx]
         
-        # URLパラメータの構築
         params = []
         for item in batch_items:
             params.append(('url', item[url_key]))
         
         try:
-            # APIリクエスト実行
             response = requests.get(API_URL, params=params)
             response.raise_for_status()
             
-            # レスポンスのJSONを取得
             bookmark_counts = response.json()
             
-            # 結果をマージ
             for item in batch_items:
                 item_with_count = item.copy()
                 item_with_count['bookmark_count'] = bookmark_counts.get(item[url_key], 0)
@@ -131,7 +88,6 @@ def fetch_bookmark_counts(items: list[dict[str, str]], url_key: str = 'entry_url
                 
         except requests.RequestException as e:
             print(f"Error fetching bookmark counts: {e}")
-            # エラー時は bookmark_count を 0 として追加
             for item in batch_items:
                 item_with_count = item.copy()
                 item_with_count['bookmark_count'] = 0

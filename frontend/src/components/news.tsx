@@ -3,6 +3,7 @@ import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { format } from "@formkit/tempo";
+import { Badge } from "./ui/badge";
 
 
 export function News({ db }: { db: duckdb.AsyncDuckDB }) {
@@ -39,6 +40,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
         entry_url: entry_url,
         entry_image_url: entry_image_url,
         entry_updated: entry_updated,
+        entry_tags: entry_tags,
         bookmark_count: cast(bookmark_count as integer)
       } order by
         bookmark_count desc,
@@ -78,6 +80,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
       ['entry_url']: Utf8,
       ['entry_image_url']: Utf8,
       ['entry_updated']: Utf8,
+      ['entry_tags']: List<Utf8>,
       ['bookmark_count']: Int32,
     }>>
   }
@@ -173,6 +176,19 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                                       src={`https://b.hatena.ne.jp/bc/de/${entry.entry_url}`}
                                       alt="はてなブックマーク数"
                                       title="はてなブックマーク数" />
+                                  </CardDescription>
+                                  : <></>
+                              }
+                              {
+                                entry.entry_tags.length ?
+                                  <CardDescription>
+                                    <>
+                                      {
+                                        (entry.entry_tags.toArray() as unknown as Array<string>).map((tag) => (
+                                          <Badge variant="secondary" className="m-1 text-xs">{tag.toString()}</Badge>)
+                                        )
+                                      }
+                                    </>
                                   </CardDescription>
                                   : <></>
                               }

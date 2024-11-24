@@ -116,7 +116,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
       {
         feed.feed_bookmark_count ?
           <CardDescription className="flex items-center">
-            <BookMarked className="mr-0.5 w-4" />{feed.feed_bookmark_count} bookmarks
+            <Badge variant={"destructive"} className="px-1 py-0.25 rounded-sm"><BookMarked className="mr-0.5 w-4" />{feed.feed_bookmark_count} bookmarks</Badge>
           </CardDescription>
           : <></>
       }
@@ -182,7 +182,9 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                               {
                                 entry.bookmark_count ?
                                   <CardDescription className="flex items-center">
-                                    <BookMarked className="mr-0.5 w-4" />{entry.bookmark_count} bookmarks
+                                    <Badge variant={"destructive"} className="px-1 py-0.25 rounded-sm">
+                                      <BookMarked className="mr-0.5 w-4" />{entry.bookmark_count} bookmarks
+                                    </Badge>
                                   </CardDescription>
                                   : <></>
                               }
@@ -192,7 +194,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                                     <>
                                       {
                                         (entry.entry_tags.toArray() as unknown as Array<string>).map((tag) => (
-                                          <Badge key={tag} variant="secondary" className="m-1 text-xs">{tag.toString()}</Badge>)
+                                          <Badge key={tag} variant="secondary" className="mr-1 mb-1 text-xs px-1.5 rounded-sm">{tag.toString()}</Badge>)
                                         )
                                       }
                                     </>

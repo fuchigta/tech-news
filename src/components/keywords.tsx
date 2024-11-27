@@ -5,9 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "./ui/chart";
 import { Label, Pie, PieChart } from "recharts";
+import { format } from "date-fns";
 
 
-export function Keywords({ db }: { db: duckdb.AsyncDuckDB }) {
+export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
   const query = `
     with e as (
       select
@@ -61,6 +62,10 @@ export function Keywords({ db }: { db: duckdb.AsyncDuckDB }) {
           e
         where
           entry_tags <> '[]'
+          ${from ?
+      to ? `and cast(entry_updated as date) between cast('${format(from, "yyyy-MM-dd")}' as date) and cast('${format(to, "yyyy-MM-dd")}' as date)`
+        : `and cast(entry_updated as date) >= cast('${format(from, "yyyy-MM-dd")}' as date)`
+      : ""}
       ) as t
     ) as tt
     group by
@@ -107,7 +112,7 @@ export function Keywords({ db }: { db: duckdb.AsyncDuckDB }) {
       <CardHeader className="text-left">
         <CardTitle>注目キーワード</CardTitle>
       </CardHeader>
-      <CardContent className="grow grid grid-cols-3 gap-2">
+      <CardContent className="grow grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
         {
           result ? (
             <>
@@ -117,7 +122,7 @@ export function Keywords({ db }: { db: duckdb.AsyncDuckDB }) {
                     <CardHeader>
                       <CardTitle><Badge variant="secondary" className="text-lg">{tag.entry_tag}</Badge></CardTitle>
                     </CardHeader>
-                    <CardContent className="grow">
+                    <CardContent className="grow flex items-center">
                       <ChartContainer
                         config={{
                           ...tag.feeds.toArray().reduce((prev, cur, i) => ({
@@ -132,7 +137,7 @@ export function Keywords({ db }: { db: duckdb.AsyncDuckDB }) {
                             },
                           })
                         }}
-                        className="w-full h-full"
+                        className="w-full h-80"
                       >
                         <PieChart>
                           <ChartTooltip
@@ -141,10 +146,7 @@ export function Keywords({ db }: { db: duckdb.AsyncDuckDB }) {
                           />
                           <ChartLegend
                             content={<ChartLegendContent />}
-                            layout="vertical"
-                            verticalAlign="bottom"
-                            align="right"
-                            className="flex flex-col items-start" />
+                            verticalAlign="bottom" />
                           <Pie
                             data={tag.feeds.toArray().map((f, i) => ({ ...f, fill: `hsl(var(--chart-${i + 1}))` }))}
                             dataKey="feed_tag_count"

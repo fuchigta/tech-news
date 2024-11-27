@@ -2,12 +2,12 @@ import * as duckdb from "@duckdb/duckdb-wasm";
 import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { format } from "@formkit/tempo";
 import { Badge } from "./ui/badge";
 import { BookMarked, Clock, UserPen } from "lucide-react";
+import { format } from "date-fns";
 
 
-export function News({ db }: { db: duckdb.AsyncDuckDB }) {
+export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
   const query = `
     with ranking as (
       select
@@ -56,6 +56,11 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
         ranking
       where
         rank <= 10
+        ${from ?
+      to ? `and cast(entry_updated as date) between cast('${format(from, "yyyy-MM-dd")}' as date) and cast('${format(to, "yyyy-MM-dd")}' as date)`
+        : `and cast(entry_updated as date) >= cast('${format(from, "yyyy-MM-dd")}' as date)`
+      : ""
+    }
     ) as ranking
     group by
       feed_title,
@@ -128,7 +133,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
       <CardHeader className="text-left">
         <CardTitle>人気のRSSエントリ</CardTitle>
       </CardHeader>
-      <CardContent className="grow grid grid-cols-1 gap-4">
+      <CardContent className="grow grid grid-cols-1 gap-2 md:gap-4">
         {
           result ? (
             <>
@@ -144,7 +149,7 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                           }
                         </CardHeader> : renderFeedHeader(feed)
                     }
-                    <CardContent className={`grid grid-cols-5 gap-2`}>
+                    <CardContent className={`grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4`}>
                       {
                         feed.entries.toArray().map((entry) => (
                           <Card
@@ -161,15 +166,10 @@ export function News({ db }: { db: duckdb.AsyncDuckDB }) {
                               <CardDescription className="flex items-center">
                                 <Clock className="mr-0.5 w-4" />
                                 {
-                                  format({
-                                    date: entry.entry_updated,
-                                    format: {
-                                      date: "long",
-                                      time: "short"
-                                    },
-                                    locale: "ja",
-                                    tz: "Asia/Tokyo"
-                                  })
+                                  format(
+                                    entry.entry_updated,
+                                    "yyyy年MM月dd日 HH時mm分"
+                                  )
                                 }
                               </CardDescription>
                               {

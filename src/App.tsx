@@ -7,6 +7,14 @@ import { Card, CardContent, CardHeader } from './components/ui/card';
 import { ModeToggle } from './components/mode-toggle';
 import { News } from './components/news';
 import { Keywords } from './components/keywords';
+import { Popover, PopoverContent, PopoverTrigger } from './components/ui/popover';
+import { cn } from './lib/utils';
+import { Button } from './components/ui/button';
+import { CalendarIcon } from 'lucide-react';
+import { format } from 'date-fns';
+import { Calendar } from './components/ui/calendar';
+import { DateRange } from 'react-day-picker';
+import { ja } from 'date-fns/locale';
 
 function App() {
   const [initialized, setInitialized] = useState(false);
@@ -46,19 +54,70 @@ function App() {
     }
   }, [loadQuery, db]);
 
+  const [date, setDate] = useState<DateRange | undefined>({
+    from: new Date()
+  })
+
   // TODO サイドバーでページ切り替えできるようにする
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <Card className="w-full h-full">
-        <CardHeader className='items-end'>
+        <CardHeader className='flex flex-row justify-between'>
+          <div className={"grid gap-2"}>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  id="date"
+                  variant={"outline"}
+                  className={cn(
+                    "w-[300px] justify-start text-left font-normal",
+                    !date && "text-muted-foreground"
+                  )}
+                >
+                  <CalendarIcon />
+                  {date?.from ? (
+                    date.to ? (
+                      <>
+                        {format(date.from, "yyyy年MM月dd日", { locale: ja })} -{" "}
+                        {format(date.to, "yyyy年MM月dd日", { locale: ja })}
+                      </>
+                    ) : (
+                      format(date.from, "yyyy年MM月dd日", { locale: ja })
+                    )
+                  ) : (
+                    <span>Pick a date</span>
+                  )}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="start">
+                <Calendar
+                  initialFocus
+                  mode="range"
+                  defaultMonth={date?.from}
+                  selected={date}
+                  onSelect={setDate}
+                  numberOfMonths={1}
+                  disabled={{
+                    after: new Date()
+                  }}
+                  locale={ja}
+                  formatters={{
+                    formatCaption: (date, options) => {
+                      return format(date, "yyyy年MM月", { locale: options?.locale });
+                    }
+                  }}
+                />
+              </PopoverContent>
+            </Popover>
+          </div>
           <ModeToggle />
         </CardHeader>
-        <CardContent className='grid grid-cols-1 gap-4'>
+        <CardContent className='grid grid-cols-1 gap-2 md:gap-4'>
           {db && loaded ? (
             <>
-              <News db={db} />
-              <Keywords db={db} />
+              <News db={db} from={date?.from} to={date?.to} />
+              <Keywords db={db} from={date?.from} to={date?.to} />
             </>
           ) : (
             <p>Loading...</p>

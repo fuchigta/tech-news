@@ -6,9 +6,13 @@ import { Badge } from "./ui/badge";
 import { ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "./ui/chart";
 import { Label, Pie, PieChart } from "recharts";
 import { format } from "date-fns";
+import { Input } from "./ui/input";
+import { Label as InputLabel } from "./ui/label";
 
 
 export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
+  const [minMentions, setMinMentions] = useState<number>(1)
+
   const query = `
     with e as (
       select
@@ -72,7 +76,7 @@ export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date
       entry_tag,
       entry_tag_count,
     having
-      count(distinct feed_title) > 1
+      count(distinct feed_title) > ${minMentions}
     order by
       count(distinct feed_title) desc,
       entry_tag_count desc
@@ -111,6 +115,20 @@ export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date
     <Card className="flex flex-col justify-center">
       <CardHeader className="text-left">
         <CardTitle>注目キーワード</CardTitle>
+        <div className="flex items-center gap-1.5">
+          <InputLabel htmlFor="minMentions">Minimum mentions feed</InputLabel>
+          <Input id="minMentions" type="number" className="ml-2 w-16" value={minMentions.toString()} onChange={(e) => {
+            if (isNaN(e.target.valueAsNumber)) {
+              return
+            }
+
+            if (e.target.valueAsNumber < 0) {
+              setMinMentions(0);
+              return;
+            }
+            setMinMentions(e.target.valueAsNumber)
+          }} />
+        </div>
       </CardHeader>
       <CardContent className="grow grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
         {
@@ -176,7 +194,7 @@ export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date
                                         y={(viewBox.cy || 0) + 24}
                                         className="fill-muted-foreground"
                                       >
-                                        Mentions
+                                        Mentions entry
                                       </tspan>
                                     </text>
                                   )

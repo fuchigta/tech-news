@@ -16,29 +16,19 @@ jobs:
         with:
           ref: main
 
-      - name: Setup Python
+      - name: Python task
         uses: actions/setup-python@v5.3.0
         with:
           cache: pip          
-
-      - name: Install Requirements
         run: pip install -r ./requirements.txt
-
-      - name: Fetch
         run: python ./fetch.py
 
-      - name: Setup Node.js environment
+      - name: Node.js task
         uses: actions/setup-node@v4.1.0
         with:
           cache: npm          
-
-      - name: Install Packages
         run: npm install
-
-      - name: Build
         run: npm run build
-
-      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ./dist                

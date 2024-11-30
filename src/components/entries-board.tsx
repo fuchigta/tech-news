@@ -16,9 +16,10 @@ enum OrderBy {
 }
 
 
-export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
+export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
   const [orderBy, setOrderBy] = useState<OrderBy>(OrderBy.BookmarkCount)
   const [rankN, setRankN] = useState<number>(3)
+  const [minBookmarkCount, setMinBookmarkCount] = useState<number>(1)
 
   const query = `
     with ranking as (
@@ -28,10 +29,12 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
           order by
             ${orderBy == OrderBy.EntryUpdated ? `
                 entry_updated desc,
-                bookmark_count desc
+                bookmark_count desc,
+                entry_url
             ` : `
                 bookmark_count desc,
-                entry_updated desc
+                entry_updated desc,
+                entry_url
             `}
         ) as rank,
         e.*
@@ -72,12 +75,10 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
       from
         ranking
       where
+        bookmark_count >= ${minBookmarkCount}
         ${rankN ? `
-          rank <= ${rankN}
-        ` : `
-          true
-        `}
-        
+          and rank <= ${rankN}
+        ` : ""}
         ${from ?
       to ? `and cast(entry_updated as date) between cast('${format(from, "yyyy-MM-dd")}' as date) and cast('${format(to, "yyyy-MM-dd")}' as date)`
         : `and cast(entry_updated as date) >= cast('${format(from, "yyyy-MM-dd")}' as date)`
@@ -160,9 +161,9 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
   return (
     <Card className="flex flex-col justify-center">
       <CardHeader className="text-left">
-        <CardTitle>人気のRSSエントリ</CardTitle>
+        <CardTitle>人気エントリ</CardTitle>
         <div>
-          <Label htmlFor="orderBy">Ranking order by</Label>
+          <Label htmlFor="orderBy">並び順</Label>
           <Select onValueChange={(value) => {
             setOrderBy(value as OrderBy)
           }} defaultValue={orderBy}>
@@ -170,13 +171,13 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
               <SelectValue placeholder="Order By" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value={OrderBy.EntryUpdated}>entry updated</SelectItem>
-              <SelectItem value={OrderBy.BookmarkCount}>bookmark count</SelectItem>
+              <SelectItem value={OrderBy.EntryUpdated}>更新日順</SelectItem>
+              <SelectItem value={OrderBy.BookmarkCount}>ブックマーク数順</SelectItem>
             </SelectContent>
           </Select>
         </div>
         <div>
-          <Label htmlFor="rankN">Top</Label>
+          <Label htmlFor="rankN">フィードごとの表示エントリ数</Label>
           <Input id="rankN" type="number" className="w-16" value={rankN.toString()} onChange={(e) => {
             if (isNaN(e.target.valueAsNumber)) {
               return
@@ -186,7 +187,23 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
               setRankN(0);
               return;
             }
+
             setRankN(e.target.valueAsNumber)
+          }} />
+        </div>
+        <div>
+          <Label htmlFor="minBookmarkCount">ブックマーク数がN件以上を表示</Label>
+          <Input id="minBookmarkCount" type="number" className="w-16" value={minBookmarkCount.toString()} onChange={(e) => {
+            if (isNaN(e.target.valueAsNumber)) {
+              return
+            }
+
+            if (e.target.valueAsNumber < 0) {
+              setMinBookmarkCount(0);
+              return;
+            }
+
+            setMinBookmarkCount(e.target.valueAsNumber)
           }} />
         </div>
       </CardHeader>
@@ -211,7 +228,7 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
                         feed.entries.toArray().map((entry) => (
                           <Card
                             key={entry.entry_url}
-                            className="cursor-pointer flex flex-col"
+                            className="cursor-pointer flex flex-col hover:bg-muted/50"
                             onClick={() => {
                               const w = window.open(entry.entry_url, '_blank', 'noopener,noreferrer')
                               if (w) {

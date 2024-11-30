@@ -5,8 +5,8 @@ import * as duckdb from "@duckdb/duckdb-wasm";
 import { ThemeProvider } from './components/theme-provider';
 import { Card, CardContent, CardHeader } from './components/ui/card';
 import { ModeToggle } from './components/mode-toggle';
-import { News } from './components/news';
-import { Keywords } from './components/keywords';
+import { EntriesBoard } from './components/entries-board';
+import { TagsBoard } from './components/tags-board';
 import { Popover, PopoverContent, PopoverTrigger } from './components/ui/popover';
 import { cn } from './lib/utils';
 import { Button } from './components/ui/button';
@@ -116,8 +116,8 @@ function App() {
         <CardContent className='grid grid-cols-1 gap-2 md:gap-4'>
           {db && loaded ? (
             <>
-              <News db={db} from={date?.from} to={date?.to} />
-              <Keywords db={db} from={date?.from} to={date?.to} />
+              <EntriesBoard db={db} from={date?.from} to={date?.to} />
+              <TagsBoard db={db} from={date?.from} to={date?.to} />
             </>
           ) : (
             <p>Loading...</p>

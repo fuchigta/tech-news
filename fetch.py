@@ -147,7 +147,7 @@ def to_entries(feed_info: FeedInfo):
             'entries': []
         }
     
-    entries = [entry for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=7)) and is_tags_matched(entry, feed_info.get('tags', []))]
+    entries = [entry for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=30)) and is_tags_matched(entry, feed_info.get('tags', []))]
 
     return {
         'page_url': res.feed.link,

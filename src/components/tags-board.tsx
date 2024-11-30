@@ -10,8 +10,8 @@ import { Input } from "./ui/input";
 import { Label as InputLabel } from "./ui/label";
 
 
-export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
-  const [minMentions, setMinMentions] = useState<number>(1)
+export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
+  const [minTagged, setminTagged] = useState<number>(1)
 
   const query = `
     with e as (
@@ -76,7 +76,7 @@ export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date
       entry_tag,
       entry_tag_count,
     having
-      count(distinct feed_title) > ${minMentions}
+      count(distinct feed_title) > ${minTagged}
     order by
       count(distinct feed_title) desc,
       entry_tag_count desc
@@ -114,19 +114,19 @@ export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date
   return (
     <Card className="flex flex-col justify-center">
       <CardHeader className="text-left">
-        <CardTitle>注目キーワード</CardTitle>
-        <div className="flex items-center gap-1.5">
-          <InputLabel htmlFor="minMentions">Minimum mentions feed</InputLabel>
-          <Input id="minMentions" type="number" className="ml-2 w-16" value={minMentions.toString()} onChange={(e) => {
+        <CardTitle>人気タグ</CardTitle>
+        <div>
+          <InputLabel htmlFor="minTagged">タグ付けされたエントリを含むフィード数がN件以上</InputLabel>
+          <Input id="minTagged" type="number" className="w-16" value={minTagged.toString()} onChange={(e) => {
             if (isNaN(e.target.valueAsNumber)) {
               return
             }
 
             if (e.target.valueAsNumber < 0) {
-              setMinMentions(0);
+              setminTagged(0);
               return;
             }
-            setMinMentions(e.target.valueAsNumber)
+            setminTagged(e.target.valueAsNumber)
           }} />
         </div>
       </CardHeader>
@@ -194,7 +194,7 @@ export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date
                                         y={(viewBox.cy || 0) + 24}
                                         className="fill-muted-foreground"
                                       >
-                                        Mentions entry
+                                        エントリ
                                       </tspan>
                                     </text>
                                   )

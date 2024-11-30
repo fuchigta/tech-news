@@ -5,17 +5,34 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 import { Badge } from "./ui/badge";
 import { BookMarked, Clock, UserPen } from "lucide-react";
 import { format } from "date-fns";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+
+
+enum OrderBy {
+  EntryUpdated = "EntryUpdated",
+  BookmarkCount = "BookmarkCount"
+}
 
 
 export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
+  const [orderBy, setOrderBy] = useState<OrderBy>(OrderBy.BookmarkCount)
+  const [rankN, setRankN] = useState<number>(3)
+
   const query = `
     with ranking as (
       select
         row_number() over (
           partition by feed_title
           order by
-            entry_updated desc,
-            bookmark_count desc
+            ${orderBy == OrderBy.EntryUpdated ? `
+                entry_updated desc,
+                bookmark_count desc
+            ` : `
+                bookmark_count desc,
+                entry_updated desc
+            `}
         ) as rank,
         e.*
       from (
@@ -55,7 +72,12 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
       from
         ranking
       where
-        rank <= 10
+        ${rankN ? `
+          rank <= ${rankN}
+        ` : `
+          true
+        `}
+        
         ${from ?
       to ? `and cast(entry_updated as date) between cast('${format(from, "yyyy-MM-dd")}' as date) and cast('${format(to, "yyyy-MM-dd")}' as date)`
         : `and cast(entry_updated as date) >= cast('${format(from, "yyyy-MM-dd")}' as date)`
@@ -69,8 +91,13 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
       feed_image,
       feed_bookmark_count
     order by
-      feed_bookmark_count desc,
-      max(entry_updated) desc
+      ${orderBy == OrderBy.EntryUpdated ? `
+          max(entry_updated) desc,
+          feed_bookmark_count desc
+      ` : `
+          feed_bookmark_count desc,
+          max(entry_updated) desc
+      `}
     ;
   `;
   type queryType = {
@@ -132,6 +159,34 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
     <Card className="flex flex-col justify-center">
       <CardHeader className="text-left">
         <CardTitle>人気のRSSエントリ</CardTitle>
+        <div>
+          <Label htmlFor="orderBy">Ranking order by</Label>
+          <Select onValueChange={(value) => {
+            setOrderBy(value as OrderBy)
+          }} defaultValue={orderBy}>
+            <SelectTrigger id="orderBy" className="w-[160px]">
+              <SelectValue placeholder="Order By" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value={OrderBy.EntryUpdated}>entry updated</SelectItem>
+              <SelectItem value={OrderBy.BookmarkCount}>bookmark count</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div>
+          <Label htmlFor="rankN">Top</Label>
+          <Input id="rankN" type="number" className="w-16" value={rankN.toString()} onChange={(e) => {
+            if (isNaN(e.target.valueAsNumber)) {
+              return
+            }
+
+            if (e.target.valueAsNumber < 0) {
+              setRankN(0);
+              return;
+            }
+            setRankN(e.target.valueAsNumber)
+          }} />
+        </div>
       </CardHeader>
       <CardContent className="grow grid grid-cols-1 gap-2 md:gap-4">
         {
@@ -142,7 +197,7 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
                   <Card key={feed.feed_url}>
                     {
                       feed.feed_image ?
-                        <CardHeader className="flex flex-row">
+                        <CardHeader className="flex flex-col md:flex-row">
                           <img src={feed.feed_image} className="max-w-40 self-center" />
                           {
                             renderFeedHeader(feed)

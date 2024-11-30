@@ -61,6 +61,10 @@ def remove_query_params(url: str) -> str:
     return urlunparse(clean)
 
 
+def normalize(s: str) -> str:
+    return unicodedata.normalize('NFKC', s)
+
+
 def fetch_bookmark_infos(
         items: list[dict[str, str]],
         url_key: str = 'entry_url',
@@ -85,8 +89,7 @@ def fetch_bookmark_infos(
             
             copied = item.copy()
             copied['bookmark_count'] = info.get('count', 0)
-            copied[tags_key] = copied[tags_key] + list(set(
-                [unicodedata.normalize('NFKC', tag) for bookmark in info.get('bookmarks', []) for tag in bookmark.get('tags', [])]))
+            copied[tags_key] = set(copied[tags_key] + [normalize(tag.lower()) for bookmark in info.get('bookmarks', []) for tag in bookmark.get('tags', [])])
             if copied.get(image_url_key) is None and not info.get('screenshot', '').endswith("noimage.png"):
                 copied[image_url_key] = info.get('screenshot')
             results.append(copied)
@@ -137,7 +140,7 @@ def to_entries(feed_url: str):
             'entry_author': entry.get('author'),
             'entry_url': remove_query_params(entry.get('link')),
             'entry_image_url': get_entry_image(entry),
-            'entry_tags': [tag.get('term') for tag in entry.get('tags', []) ],
+            'entry_tags': [normalize(tag.get('term').lower()) for tag in entry.get('tags', []) if tag.get('term') is not None],
             "entry_updated": get_updated_isoformat(entry)
         } for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=7))])
     }

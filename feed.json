@@ -1,31 +1,100 @@
 [
-    "https://qiita.com/popular-items/feed",
-    "https://dev.classmethod.jp/feed/",
-    "https://zenn.dev/feed",
-    "https://news.ycombinator.com/rss",
-    "https://www.publickey1.jp/atom.xml",
-    "https://postd.cc/feed/",
-    "https://thinkit.co.jp/rss.xml",
-    "https://gihyo.jp/dev/feed/rss1",
-    "https://coliss.com/feed/",
-    "https://community.aws/rss",
-    "https://aws.amazon.com/jp/blogs/news/feed/",
-    "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/",
-    "https://blogs.oracle.com/oracle4engineer/rss",
-    "https://www.cncf.io/feed/",
-    "https://www.ipa.go.jp/about/newsonly-rss.rdf",
-    "https://techblog.lycorp.co.jp/ja/feed/index.xml",
-    "https://azure.microsoft.com/ja-jp/blog/feed/",
-    "https://cloudblog.withgoogle.com/ja/products/gcp/rss/",
-    "https://developers-jp.googleblog.com/feeds/posts/default",
-    "https://tech.nri-net.com/rss",
-    "https://nttdocomo-developers.jp/feed",
-    "https://engineers.ntt.com/feed",
-    "https://www.ntt-tx.co.jp/column/rss.xml",
-    "https://jpaztech.github.io/blog/atom.xml",
-    "https://news.microsoft.com/ja-jp/category/blog/feed/",
-    "http://blogs.windows.com/japan/feed/",
-    "https://techblog.zozo.com/feed",
-    "https://speakerdeck.com/c/programming.atom",
-    "https://speakerdeck.com/c/technology.atom"
+    {
+        "url": "https://qiita.com/popular-items/feed"
+    },
+    {
+        "url": "https://dev.classmethod.jp/feed/"
+    },
+    {
+        "url": "https://zenn.dev/feed"
+    },
+    {
+        "url": "https://news.ycombinator.com/rss"
+    },
+    {
+        "url": "https://www.publickey1.jp/atom.xml"
+    },
+    {
+        "url": "https://postd.cc/feed/"
+    },
+    {
+        "url": "https://thinkit.co.jp/rss.xml"
+    },
+    {
+        "url": "https://gihyo.jp/dev/feed/rss1"
+    },
+    {
+        "url": "https://coliss.com/feed/"
+    },
+    {
+        "url": "https://community.aws/rss"
+    },
+    {
+        "url": "https://aws.amazon.com/jp/blogs/news/feed/"
+    },
+    {
+        "url": "https://aws.amazon.com/jp/about-aws/whats-new/recent/feed/"
+    },
+    {
+        "url": "https://blogs.oracle.com/oracle4engineer/rss"
+    },
+    {
+        "url": "https://www.cncf.io/feed/"
+    },
+    {
+        "url": "https://www.ipa.go.jp/about/newsonly-rss.rdf"
+    },
+    {
+        "url": "https://techblog.lycorp.co.jp/ja/feed/index.xml"
+    },
+    {
+        "url": "https://azure.microsoft.com/ja-jp/blog/feed/"
+    },
+    {
+        "url": "https://cloudblog.withgoogle.com/ja/products/gcp/rss/"
+    },
+    {
+        "url": "https://developers-jp.googleblog.com/feeds/posts/default"
+    },
+    {
+        "url": "https://tech.nri-net.com/rss"
+    },
+    {
+        "url": "https://nttdocomo-developers.jp/feed"
+    },
+    {
+        "url": "https://engineers.ntt.com/feed"
+    },
+    {
+        "url": "https://www.ntt-tx.co.jp/column/rss.xml"
+    },
+    {
+        "url": "https://jpaztech.github.io/blog/atom.xml"
+    },
+    {
+        "url": "https://news.microsoft.com/ja-jp/category/blog/feed/"
+    },
+    {
+        "url": "http://blogs.windows.com/japan/feed/"
+    },
+    {
+        "url": "https://techblog.zozo.com/feed"
+    },
+    {
+        "url": "https://speakerdeck.com/c/programming.atom"
+    },
+    {
+        "url": "https://speakerdeck.com/c/technology.atom"
+    },
+    {
+        "url": "https://gigazine.net/news/rss_atom/",
+        "tags": [
+            "ソフトウェア",
+            "ネットサービス",
+            "ウェブアプリ",
+            "モバイル",
+            "ハードウェア",
+            "セキュリティ"
+        ]
+    }
 ]

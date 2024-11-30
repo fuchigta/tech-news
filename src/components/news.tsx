@@ -148,7 +148,9 @@ export function News({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to
       {
         feed.feed_bookmark_count ?
           <CardDescription className="flex items-center">
-            <Badge variant={"destructive"} className="px-1 py-0.25 rounded-sm"><BookMarked className="mr-0.5 w-4" />{feed.feed_bookmark_count} bookmarks</Badge>
+            <Badge variant={"destructive"} className="px-1 py-0.25 rounded-sm">
+              <BookMarked className="mr-0.5 w-4" />Total {feed.feed_bookmark_count} bookmarks
+            </Badge>
           </CardDescription>
           : <></>
       }

@@ -2,6 +2,7 @@
 import datetime
 import json
 import os
+from typing import TypedDict
 import unicodedata
 from urllib.parse import urlparse, urlunparse
 import warnings
@@ -119,19 +120,38 @@ def get_updated_isoformat(entry: dict[str, any]) -> str:
     return updated.isoformat()
 
 
-def to_entries(feed_url: str):
-    res = feedparser.parse(feed_url)
+class FeedInfo(TypedDict):
+    url: str
+    tags: list[str]
+
+
+def is_tags_matched(entry: dict, tags: list[str]) -> bool:
+    if len(tags) == 0:
+        return True
+    
+    entry_tags = [entry_tag.get('term') for entry_tag in entry.get('tags', []) if entry_tag.get('term') is not None]
+
+    if len(entry_tags) == 0:
+        return True
+    
+    return not set(entry_tags).isdisjoint(set(tags))
+
+
+def to_entries(feed_info: FeedInfo):
+    res = feedparser.parse(feed_info["url"])
 
     if res.get('status') != 200:
-        print(f"parse failed: url={feed_url}, status={res.get('status')}, headers={res.get('headers')}, exception={res.get('bozo_exception')}")
+        print(f"parse failed: url={feed_info["url"]}, status={res.get('status')}, headers={res.get('headers')}, exception={res.get('bozo_exception')}")
         return {
-            'feed_url': feed_url,
+            'feed_url': feed_info["url"],
             'entries': []
         }
+    
+    entries = [entry for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=7)) and is_tags_matched(entry, feed_info.get('tags', []))]
 
     return {
         'page_url': res.feed.link,
-        'feed_url': feed_url,
+        'feed_url': feed_info["url"],
         'feed_title': res.feed.get('title'),
         'feed_image': res.feed.get('image', {}).get('href'),
         'feed_modified': res.get('modifed', get_updated_isoformat(res.feed)),
@@ -142,7 +162,7 @@ def to_entries(feed_url: str):
             'entry_image_url': get_entry_image(entry),
             'entry_tags': [normalize(tag.get('term').lower()) for tag in entry.get('tags', []) if tag.get('term') is not None],
             "entry_updated": get_updated_isoformat(entry)
-        } for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=7))])
+        } for entry in entries])
     }
 
 
@@ -158,7 +178,7 @@ def load_from_json(name):
 
 
 def main():
-    save_to_parquet('result.parquet', [to_entries(feed_url) for feed_url in load_from_json('feed.json')])
+    save_to_parquet('result.parquet', [to_entries(feed_info) for feed_info in load_from_json('feed.json')])
 
 
 if __name__ == "__main__":

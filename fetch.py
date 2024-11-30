@@ -2,6 +2,7 @@
 import datetime
 import json
 import os
+import unicodedata
 from urllib.parse import urlparse, urlunparse
 import warnings
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
@@ -60,39 +61,41 @@ def remove_query_params(url: str) -> str:
     return urlunparse(clean)
 
 
-def fetch_bookmark_counts(items: list[dict[str, str]], url_key: str = 'entry_url', batch_size: int = 50) -> list[dict[str, any]]:
-    API_URL = "https://bookmark.hatenaapis.com/count/entries"
+def fetch_bookmark_infos(
+        items: list[dict[str, str]],
+        url_key: str = 'entry_url',
+        tags_key: str = 'entry_tags',
+        image_url_key: str = 'entry_image_url'
+) -> list[dict[str, any]]:
+    API_URL = "https://b.hatena.ne.jp/entry/json/"
     
     results = []
-    
-    batch_count = math.ceil(len(items) / batch_size)
-    
-    for i in range(batch_count):
-        start_idx = i * batch_size
-        end_idx = min((i + 1) * batch_size, len(items))
-        batch_items = items[start_idx:end_idx]
-        
-        params = []
-        for item in batch_items:
-            params.append(('url', item[url_key]))
-        
+
+    for item in items:
         try:
-            response = requests.get(API_URL, params=params)
+            response = requests.get(API_URL, params={'url': item[url_key]})
             response.raise_for_status()
             
-            bookmark_counts = response.json()
+            info = response.json()
+            if info is None:
+                copied = item.copy()
+                copied['bookmark_count'] = 0
+                results.append(copied)
+                continue
             
-            for item in batch_items:
-                item_with_count = item.copy()
-                item_with_count['bookmark_count'] = bookmark_counts.get(item[url_key], 0)
-                results.append(item_with_count)
+            copied = item.copy()
+            copied['bookmark_count'] = info.get('count', 0)
+            copied[tags_key] = copied[tags_key] + list(set(
+                [unicodedata.normalize('NFKC', tag) for bookmark in info.get('bookmarks', []) for tag in bookmark.get('tags', [])]))
+            if copied.get(image_url_key) is None and not info.get('screenshot', '').endswith("noimage.png"):
+                copied[image_url_key] = info.get('screenshot')
+            results.append(copied)
                 
-        except requests.RequestException as e:
+        except Exception as e:
             print(f"Error fetching bookmark counts: {e}")
-            for item in batch_items:
-                item_with_count = item.copy()
-                item_with_count['bookmark_count'] = 0
-                results.append(item_with_count)
+            copied = item.copy()
+            copied['bookmark_count'] = 0
+            results.append(copied)
     
     return results
 
@@ -129,7 +132,7 @@ def to_entries(feed_url: str):
         'feed_title': res.feed.get('title'),
         'feed_image': res.feed.get('image', {}).get('href'),
         'feed_modified': res.get('modifed', get_updated_isoformat(res.feed)),
-        'entries': fetch_bookmark_counts([{
+        'entries': fetch_bookmark_infos([{
             'entry_title': entry.get('title'),
             'entry_author': entry.get('author'),
             'entry_url': remove_query_params(entry.get('link')),

@@ -163,7 +163,7 @@ export function Keywords({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date
                             content={<ChartTooltipContent hideLabel />}
                           />
                           <ChartLegend
-                            content={<ChartLegendContent />}
+                            content={<ChartLegendContent className="flex-wrap" />}
                             verticalAlign="bottom" />
                           <Pie
                             data={tag.feeds.toArray().map((f, i) => ({ ...f, fill: `hsl(var(--chart-${i + 1}))` }))}

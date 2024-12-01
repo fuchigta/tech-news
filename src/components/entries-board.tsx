@@ -1,7 +1,7 @@
 import * as duckdb from "@duckdb/duckdb-wasm";
 import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
 import { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { BookMarked, Clock, UserPen } from "lucide-react";
 import { format } from "date-fns";
@@ -229,13 +229,13 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
                           <Card
                             key={entry.entry_url}
                             className="cursor-pointer flex flex-col hover:bg-muted/50"
-                            onClick={() => {
+                          >
+                            <CardHeader className="text-left" onClick={() => {
                               const w = window.open(entry.entry_url, '_blank', 'noopener,noreferrer')
                               if (w) {
                                 w.opener = null
                               }
                             }}>
-                            <CardHeader className="text-left">
                               <CardTitle className="text-sm">{entry.entry_title}</CardTitle>
                               <CardDescription className="flex items-center">
                                 <Clock className="mr-0.5 w-4" />
@@ -276,19 +276,33 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
                                   : <></>
                               }
                             </CardHeader>
-                            <CardContent className="grow flex flex-col justify-start">
-                              {
-                                entry.entry_image_url ? (
-                                  <img
-                                    src={entry.entry_image_url}
-                                    alt="画像"
-                                    className="max-w-fit"
-                                    onError={(e: any) => e.target.style.display = 'none'} />
-                                ) : (
-                                  <></>
-                                )
-                              }
-                            </CardContent>
+                            {entry.entry_image_url ?
+                              <CardContent className="grow flex flex-col justify-start" onClick={() => {
+                                const w = window.open(entry.entry_url, '_blank', 'noopener,noreferrer')
+                                if (w) {
+                                  w.opener = null
+                                }
+                              }} >
+                                <img
+                                  src={entry.entry_image_url}
+                                  alt="画像"
+                                  className="max-w-fit"
+                                  onError={(e: any) => e.target.style.display = 'none'} />
+                              </CardContent>
+                              : <></>
+                            }
+                            <CardFooter>
+                              <a
+                                href={`https://b.hatena.ne.jp/entry/${entry.entry_url.replace('https://', 's/').replace('http://', '')}`}
+                                target="_blank"
+                                title="このエントリーをはてなブックマークに追加"
+                              >
+                                <img
+                                  src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
+                                  alt="このエントリーをはてなブックマークに追加"
+                                  width="25" height="25" />
+                              </a>
+                            </CardFooter>
                           </Card>
                         ))
                       }

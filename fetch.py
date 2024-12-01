@@ -104,16 +104,16 @@ def fetch_bookmark_infos(
     return results
 
 
-def get_updated(entry: dict[str, any]) -> datetime.datetime:
+def get_updated(entry: dict[str, any], default_date: datetime.datetime=None) -> datetime.datetime:
     updated = entry.get('updated_parsed', entry.get('published_parsed'))
     if updated is None:
-        return None
+        return default_date
     
     return datetime.datetime(*updated[:6])
 
 
-def get_updated_isoformat(entry: dict[str, any]) -> str:
-    updated = get_updated(entry)
+def get_updated_isoformat(entry: dict[str, any], default_date: datetime.datetime=None) -> str:
+    updated = get_updated(entry, default_date)
     if updated is None:
         return None
     
@@ -147,7 +147,9 @@ def to_entries(feed_info: FeedInfo):
             'entries': []
         }
     
-    entries = [entry for entry in res.entries if is_within(get_updated(entry), datetime.timedelta(days=30)) and is_tags_matched(entry, feed_info.get('tags', []))]
+    feed_updated = get_updated(res.feed)
+
+    entries = [entry for entry in res.entries if is_within(get_updated(entry, feed_updated), datetime.timedelta(days=30)) and is_tags_matched(entry, feed_info.get('tags', []))]
 
     return {
         'page_url': res.feed.link,
@@ -161,7 +163,7 @@ def to_entries(feed_info: FeedInfo):
             'entry_url': remove_query_params(entry.get('link')),
             'entry_image_url': get_entry_image(entry),
             'entry_tags': [normalize(tag.get('term').lower()) for tag in entry.get('tags', []) if tag.get('term') is not None],
-            "entry_updated": get_updated_isoformat(entry)
+            "entry_updated": get_updated_isoformat(entry, feed_updated)
         } for entry in entries])
     }
 

@@ -99,5 +99,23 @@
     },
     {
         "url": "https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml"
+    },
+    {
+        "url": "https://mshibanami.github.io/GitHubTrendingRSS/weekly/all.xml"
+    },
+    {
+        "url": "https://rss.itmedia.co.jp/rss/2.0/topstory.xml"
+    },
+    {
+        "url": "https://rss.itmedia.co.jp/rss/2.0/ait.xml"
+    },
+    {
+        "url": "https://www.gizmodo.jp/index.xml",
+        "tags": [
+            "PRODUCT",
+            "TECHNOLOGY",
+            "BUSINESS",
+            "NEWS"
+        ]
     }
 ]

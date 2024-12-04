@@ -11,7 +11,7 @@ import { Popover, PopoverContent, PopoverTrigger } from './components/ui/popover
 import { cn } from './lib/utils';
 import { Button } from './components/ui/button';
 import { CalendarIcon } from 'lucide-react';
-import { format } from 'date-fns';
+import { addDays, format } from 'date-fns';
 import { Calendar } from './components/ui/calendar';
 import { DateRange } from 'react-day-picker';
 import { ja } from 'date-fns/locale';
@@ -55,7 +55,8 @@ function App() {
   }, [loadQuery, db]);
 
   const [date, setDate] = useState<DateRange | undefined>({
-    from: new Date()
+    from: addDays(new Date(), -1),
+    to: new Date()
   })
 
   // TODO サイドバーでページ切り替えできるようにする

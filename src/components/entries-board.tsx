@@ -3,36 +3,17 @@ import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { BookMarked, Clipboard, ClipboardCheck, Clock, UserPen } from "lucide-react";
+import { BookMarked, Clock, UserPen } from "lucide-react";
 import { format } from "date-fns";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-import { Button } from "./ui/button";
+import { CopyToClipboardButton } from "./copy-to-clipboard-button";
 
 
 enum OrderBy {
   EntryUpdated = "EntryUpdated",
   BookmarkCount = "BookmarkCount"
-}
-
-type CopyToClipboardButtonProps = {
-  onClick: () => void
-  className?: string
-  title?: string
-}
-
-function CopyToClipboardButton({ onClick, className, title }: CopyToClipboardButtonProps) {
-  const [checked, setChecked] = useState(false)
-  return (
-    <Button type="button" className={className} title={title} onClick={() => {
-      onClick();
-      setChecked(true);
-      setTimeout(() => {
-        setChecked(false)
-      }, 2000)
-    }}>{checked ? <ClipboardCheck /> : <Clipboard />}</Button>
-  )
 }
 
 
@@ -243,7 +224,7 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
                           }
                         </CardHeader> : renderFeedHeader(feed)
                     }
-                    <CardContent className={`grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4`}>
+                    <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
                       {
                         feed.entries.toArray().map((entry) => (
                           <Card

@@ -3,16 +3,36 @@ import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { BookMarked, Clock, UserPen } from "lucide-react";
+import { BookMarked, Clipboard, ClipboardCheck, Clock, UserPen } from "lucide-react";
 import { format } from "date-fns";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Button } from "./ui/button";
 
 
 enum OrderBy {
   EntryUpdated = "EntryUpdated",
   BookmarkCount = "BookmarkCount"
+}
+
+type CopyToClipboardButtonProps = {
+  onClick: () => void
+  className?: string
+  title?: string
+}
+
+function CopyToClipboardButton({ onClick, className, title }: CopyToClipboardButtonProps) {
+  const [checked, setChecked] = useState(false)
+  return (
+    <Button type="button" className={className} title={title} onClick={() => {
+      onClick();
+      setChecked(true);
+      setTimeout(() => {
+        setChecked(false)
+      }, 2000)
+    }}>{checked ? <ClipboardCheck /> : <Clipboard />}</Button>
+  )
 }
 
 
@@ -295,13 +315,19 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
                               <a
                                 href={`https://b.hatena.ne.jp/entry/${entry.entry_url.replace('https://', 's/').replace('http://', '')}`}
                                 target="_blank"
-                                title="このエントリーをはてなブックマークに追加"
+                                title="このエントリをはてなブックマークに追加"
                               >
                                 <img
                                   src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
-                                  alt="このエントリーをはてなブックマークに追加"
-                                  width="25" height="25" />
+                                  alt="このエントリをはてなブックマークに追加"
+                                  width="25" height="25"
+                                  className="transition duration-150 ease-in-out" />
                               </a>
+                              <CopyToClipboardButton className="w-[25px] h-[25px] ml-2 p-0 rounded-sm" title="このエントリをマークダウン形式でクリップボードにコピー" onClick={() => {
+                                window.navigator.clipboard.writeText(
+                                  `[${entry.entry_title}](${entry.entry_url}) (**${entry.bookmark_count}** bookmarks)${entry.entry_image_url ? `\n![image](${entry.entry_image_url})` : ""}\nタグ：${Array.from(entry.entry_tags).map(tag => `「[${tag}](https://b.hatena.ne.jp/q/${tag})」`).join("")}`
+                                )
+                              }} />
                             </CardFooter>
                           </Card>
                         ))

@@ -12,14 +12,22 @@ import { Label as InputLabel } from "./ui/label";
 
 export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
   const [minTagged, setminTagged] = useState<number>(1)
+  const [excludeTags, setExcludeTags] = useState<string>("あとで読む *あとで読む 未分類")
 
   const query = `
     with e as (
       select
-        *,
-        unnest(entries, recursive := true)
-      from
-        result
+        distinct on (entry_url)
+        *
+      from (
+        select
+          *,
+          unnest(entries, recursive := true)
+        from
+          result
+      )
+      order by
+        feed_url
     )
     select
       entry_tag,
@@ -72,6 +80,10 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
       : ""}
       ) as t
     ) as tt
+    ${excludeTags.trim() ? `
+    where
+      entry_tag not in (${excludeTags.split(/[\s,]+/).map(e => e.trim()).filter(e => e.length).map(e => `'${e}'`).join(',')})
+    `: ""}
     group by
       entry_tag,
       entry_tag_count,
@@ -126,6 +138,12 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
               return;
             }
             setminTagged(e.target.valueAsNumber)
+          }} />
+        </div>
+        <div>
+          <InputLabel htmlFor="excludeTags">除外するタグ</InputLabel>
+          <Input id="excludeTags" type="text" className="w-full" value={excludeTags} onChange={(e) => {
+            setExcludeTags(e.target.value.trim())
           }} />
         </div>
       </CardHeader>

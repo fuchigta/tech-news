@@ -41,13 +41,20 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
         e.*
       from (
         select
-          feed_title,
-          page_url,
-          feed_url,
-          feed_image,
-          unnest(entries, recursive := true)
-        from
-          result
+          distinct on (entry_url)
+          *
+        from (
+          select
+            feed_title,
+            page_url,
+            feed_url,
+            feed_image,
+            unnest(entries, recursive := true)
+          from
+            result
+        )
+        order by
+          feed_title
       ) as e
     )
     select

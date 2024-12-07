@@ -1,13 +1,16 @@
 import * as duckdb from "@duckdb/duckdb-wasm";
 import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
-import { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Badge } from "./ui/badge";
-import { ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "./ui/chart";
-import { Label, Pie, PieChart } from "recharts";
 import { format } from "date-fns";
+import { useEffect, useState } from "react";
+import { Label, Pie, PieChart } from "recharts";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "./ui/chart";
+import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTrigger } from "./ui/drawer";
 import { Input } from "./ui/input";
 import { Label as InputLabel } from "./ui/label";
+import { ScrollArea } from "./ui/scroll-area";
 
 
 export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
@@ -35,6 +38,9 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
       array_agg(
         distinct {
           feed_title: feed_title,
+          page_url: page_url,
+          feed_url: feed_url,
+          feed_image: feed_image,
           feed_tag_count: cast(feed_tag_count as integer)
         } order by feed_tag_count desc
       ) as feeds,
@@ -64,6 +70,9 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
         select
           unnest(e.entry_tags) as entry_tag,
           feed_title,
+          page_url,
+          feed_url,
+          feed_image,
           entry_title,
           entry_url,
           entry_updated,
@@ -98,6 +107,9 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
     ['entry_tag_count']: Int32
     ['feeds']: List<Struct<{
       ['feed_title']: Utf8,
+      ['page_url']: Utf8,
+      ['feed_url']: Utf8,
+      ['feed_image']: Utf8,
       ['feed_tag_count']: Int32
     }>>
     ['entries']: List<Struct<{
@@ -155,7 +167,69 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
                 result.map((tag) => (
                   <Card key={tag.entry_tag} className="flex flex-col" >
                     <CardHeader>
-                      <CardTitle><Badge variant="secondary" className="text-lg">{tag.entry_tag}</Badge></CardTitle>
+                      <Drawer data-vaul-no-drag={true}>
+                        <DrawerTrigger>
+                          <CardTitle className="flex items-start">
+                            <Badge variant="secondary" className="text-lg hover:bg-muted/50">{tag.entry_tag}</Badge>
+                          </CardTitle>
+                        </DrawerTrigger>
+                        <DrawerContent data-vaul-no-drag={true} className="[&>*:first-child]:hidden">
+                          <DrawerHeader>
+                            <DrawerClose>
+                              <Button variant="outline" className="w-full">Close</Button>
+                            </DrawerClose>
+                          </DrawerHeader>
+                          <ScrollArea className="h-[300px]">
+                            <div className="w-full grid grid-cols-1 gap-2 md:gap-4">
+                              {
+                                tag.feeds.toArray().map(f => (
+                                  <Card>
+                                    <div className="flex flex-col md:flex-row items-center">
+                                      {
+                                        f.feed_image ? (
+                                          <CardHeader>
+                                            <img
+                                              src={f.feed_image}
+                                              className="h-[40px] w-auto max-w-fit"
+                                              onError={(e: any) => e.target.style.display = 'none'} />
+                                          </CardHeader>
+                                        ) : <></>
+                                      }
+                                      <CardHeader>
+                                        <CardTitle>{f.feed_title}</CardTitle>
+                                      </CardHeader>
+                                    </div>
+                                    <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
+                                      {
+                                        tag.entries.toArray().filter(e => e.feed_title == f.feed_title).map((e) => (
+                                          <Card className="flex flex-col md:flex-row hover:bg-muted/50 cursor-pointer" onClick={() => {
+                                            const w = window.open(e.entry_url, '_blank', 'noopener,noreferrer')
+                                            if (w) {
+                                              w.opener = null
+                                            }
+                                          }}>
+                                            {e.entry_image_url ? (
+                                              <CardHeader>
+                                                <img
+                                                  src={e.entry_image_url}
+                                                  className="h-[40px] w-auto max-w-fit"
+                                                  onError={(e: any) => e.target.style.display = 'none'} />
+                                              </CardHeader>
+                                            ) : <></>}
+                                            <CardHeader>
+                                              <CardTitle>{e.entry_title}</CardTitle>
+                                            </CardHeader>
+                                          </Card>
+                                        ))
+                                      }
+                                    </CardContent>
+                                  </Card>
+                                ))
+                              }
+                            </div>
+                          </ScrollArea>
+                        </DrawerContent>
+                      </Drawer>
                     </CardHeader>
                     <CardContent className="grow flex items-center">
                       <ChartContainer
@@ -172,7 +246,7 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
                             },
                           })
                         }}
-                        className="w-full h-80"
+                        className="w-full h-auto"
                       >
                         <PieChart>
                           <ChartTooltip

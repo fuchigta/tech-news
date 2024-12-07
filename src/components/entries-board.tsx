@@ -225,7 +225,7 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
                     {
                       feed.feed_image ?
                         <CardHeader className="flex flex-col md:flex-row">
-                          <img src={feed.feed_image} className="max-w-40 self-center" />
+                          <img src={feed.feed_image} className="max-w-40 self-center" onError={(e: any) => e.target.style.display = 'none'} />
                           {
                             renderFeedHeader(feed)
                           }

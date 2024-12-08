@@ -123,5 +123,17 @@
     },
     {
         "url": "https://b.hatena.ne.jp/hotentry/it.rss"
+    },
+    {
+        "url": "https://feed.infoq.com/jp"
+    },
+    {
+        "url": "https://ja.react.dev/rss.xml"
+    },
+    {
+        "url": "https://blog.vuejs.org/feed.rss"
+    },
+    {
+        "url": "https://blog.angular.dev/feed"
     }
 ]

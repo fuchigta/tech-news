@@ -153,5 +153,23 @@
     },
     {
         "url": "https://www.dataengineeringweekly.com/feed"
+    },
+    {
+        "url": "https://backspace.fm/feeds/blog/"
+    },
+    {
+        "url": "https://anchor.fm/s/dd122784/podcast/rss"
+    },
+    {
+        "url": "https://agileradio.github.io/feed.xml"
+    },
+    {
+        "url": "https://api.robotstart.jp/api/v1/feeds/35ac047a/get-feeds/podcast"
+    },
+    {
+        "url": "https://anchor.fm/s/ef411668/podcast/rss"
+    },
+    {
+        "url": "https://shirokane-kougyou.github.io/feed.xml"
     }
 ]

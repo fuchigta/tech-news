@@ -301,7 +301,7 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
                             }
                             <CardFooter>
                               <a
-                                href={`https://b.hatena.ne.jp/entry/${String(entry.entry_url).replace('https://', 's/').replace('http://', '')}`}
+                                href={`https://b.hatena.ne.jp/entry/${entry.entry_url.replace('https://', 's/').replace('http://', '')}`}
                                 target="_blank"
                                 title="このエントリをはてなブックマークに追加"
                               >

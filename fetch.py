@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 import feedparser
 import pandas as pd
 import requests
-import math
 
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
@@ -149,7 +148,7 @@ def to_entries(feed_info: FeedInfo):
     
     feed_updated = get_updated(res.feed)
 
-    entries = [entry for entry in res.entries if is_within(get_updated(entry, feed_updated), datetime.timedelta(days=30)) and is_tags_matched(entry, feed_info.get('tags', []))]
+    entries = [entry for entry in res.entries if len(entry.get('link', '')) > 0 and is_within(get_updated(entry, feed_updated), datetime.timedelta(days=30)) and is_tags_matched(entry, feed_info.get('tags', []))]
 
     return {
         'page_url': res.feed.link,

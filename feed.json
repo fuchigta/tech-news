@@ -135,5 +135,26 @@
     },
     {
         "url": "https://blog.angular.dev/feed"
+    },
+    {
+        "url": "https://feeds.rebuild.fm/rebuildfm"
+    },
+    {
+        "url": "https://rss.art19.com/fukabori"
+    },
+    {
+        "url": "https://texta.pixta.jp/feed/category/texta.fm"
+    },
+    {
+        "url": "https://developer.hatenastaff.com/feed/category/Backyard%20Hatena"
+    },
+    {
+        "url": "https://engineerteam.note.jp/m/m81c19215ba05/rss"
+    },
+    {
+        "url": "https://github.blog/feed/"
+    },
+    {
+        "url": "https://www.dataengineeringweekly.com/feed"
     }
 ]

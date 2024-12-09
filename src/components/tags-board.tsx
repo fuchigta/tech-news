@@ -1,7 +1,8 @@
+import { useQuery } from "@/hooks/use-query";
 import * as duckdb from "@duckdb/duckdb-wasm";
-import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
+import { Int32, List, Struct, Utf8 } from "apache-arrow";
 import { format } from "date-fns";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Label, Pie, PieChart } from "recharts";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -122,17 +123,7 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
       ['bookmark_count']: Int32
     }>>
   }
-  const [result, setResult] = useState<StructRowProxy<queryType>[] | null>(null);
-
-  useEffect(() => {
-    const loadResult = async () => {
-      const conn = await db.connect();
-      const results = await conn.query<queryType>(query);
-      setResult(results.toArray());
-      await conn.close();
-    };
-    loadResult();
-  }, [db, query]);
+  const { result } = useQuery<queryType>(db, query);
 
   return (
     <Card className="flex flex-col justify-center">
@@ -183,7 +174,7 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
                             <div className="w-full grid grid-cols-1 gap-2 md:gap-4">
                               {
                                 tag.feeds.toArray().map(f => (
-                                  <Card>
+                                  <Card key={f.feed_url}>
                                     <div className="flex flex-col md:flex-row items-center">
                                       {
                                         f.feed_image ? (
@@ -202,7 +193,7 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
                                     <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
                                       {
                                         tag.entries.toArray().filter(e => e.feed_title == f.feed_title).map((e) => (
-                                          <Card className="flex flex-col md:flex-row hover:bg-muted/50 cursor-pointer" onClick={() => {
+                                          <Card key={e.entry_url} className="flex flex-col md:flex-row hover:bg-muted/50 cursor-pointer" onClick={() => {
                                             const w = window.open(e.entry_url, '_blank', 'noopener,noreferrer')
                                             if (w) {
                                               w.opener = null

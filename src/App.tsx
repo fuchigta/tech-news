@@ -1,26 +1,22 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import { initDuckDB } from './lib/init-duckdb';
-import * as duckdb from "@duckdb/duckdb-wasm";
-import { ThemeProvider } from './components/theme-provider';
-import { Card, CardContent, CardHeader } from './components/ui/card';
-import { ModeToggle } from './components/mode-toggle';
-import { EntriesBoard } from './components/entries-board';
-import { TagsBoard } from './components/tags-board';
-import { Popover, PopoverContent, PopoverTrigger } from './components/ui/popover';
-import { cn } from './lib/utils';
-import { Button } from './components/ui/button';
-import { CalendarIcon } from 'lucide-react';
 import { addDays, format } from 'date-fns';
-import { Calendar } from './components/ui/calendar';
-import { DateRange } from 'react-day-picker';
 import { ja } from 'date-fns/locale';
+import { CalendarIcon } from 'lucide-react';
+import { useState } from 'react';
+import { DateRange } from 'react-day-picker';
+import './App.css';
+import { EntriesBoard } from './components/entries-board';
+import { ModeToggle } from './components/mode-toggle';
+import { TagsBoard } from './components/tags-board';
+import { ThemeProvider } from './components/theme-provider';
+import { Button } from './components/ui/button';
+import { Calendar } from './components/ui/calendar';
+import { Card, CardContent, CardHeader } from './components/ui/card';
+import { Popover, PopoverContent, PopoverTrigger } from './components/ui/popover';
+import { useDuckDB } from './hooks/use-duck-db';
+import { useQuery } from './hooks/use-query';
+import { cn } from './lib/utils';
 
 function App() {
-  const [initialized, setInitialized] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-  const [db, setDB] = useState<duckdb.AsyncDuckDB | null>(null);
-
   const origin = window.location.origin;
   const path = window.location.pathname;
   let basename = origin;
@@ -28,31 +24,14 @@ function App() {
     basename = origin + path;
   }
 
-  const loadQuery = `
+  const query = `
     CREATE TABLE IF NOT EXISTS result AS SELECT * FROM '${basename}/result.parquet';
   `;
 
-  useEffect(() => {
-    const initialize = async () => {
-      await initDuckDB(setDB);
-      setInitialized(true);
-    }
-    if (!initialized) {
-      initialize()
-    }
-  }, [initialized]);
-
-  useEffect(() => {
-    const loadDuckDB = async (db: duckdb.AsyncDuckDB) => {
-      const conn = await db.connect();
-      await conn.query(loadQuery);
-      await conn.close();
-      setLoaded(true);
-    };
-    if (db) {
-      loadDuckDB(db);
-    }
-  }, [loadQuery, db]);
+  const { db } = useDuckDB();
+  const {
+    result: loaded
+  } = useQuery(db, query);
 
   const [date, setDate] = useState<DateRange | undefined>({
     from: addDays(new Date(), -1),

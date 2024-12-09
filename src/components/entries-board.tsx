@@ -1,14 +1,15 @@
+import { useQuery } from "@/hooks/use-query";
 import * as duckdb from "@duckdb/duckdb-wasm";
 import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
-import { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
-import { Badge } from "./ui/badge";
-import { BookMarked, Clock, UserPen } from "lucide-react";
 import { format } from "date-fns";
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { BookMarked, Clock, UserPen } from "lucide-react";
+import { useState } from "react";
 import { CopyToClipboardButton } from "./copy-to-clipboard-button";
+import { Badge } from "./ui/badge";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 
 enum OrderBy {
@@ -110,32 +111,23 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
     ;
   `;
   type queryType = {
-    ['feed_title']: Utf8
-    ['page_url']: Utf8
-    ['feed_url']: Utf8
-    ['feed_image']: Utf8
-    ['feed_bookmark_count']: Int32
-    ['entries']: List<Struct<{
-      ['entry_title']: Utf8,
-      ['entry_url']: Utf8,
-      ['entry_image_url']: Utf8,
-      ['entry_updated']: Utf8,
-      ['entry_author']: Utf8,
-      ['entry_tags']: List<Utf8>,
-      ['bookmark_count']: Int32,
+    feed_title: Utf8
+    page_url: Utf8
+    feed_url: Utf8
+    feed_image: Utf8
+    feed_bookmark_count: Int32
+    entries: List<Struct<{
+      entry_title: Utf8,
+      entry_url: Utf8,
+      entry_image_url: Utf8,
+      entry_updated: Utf8,
+      entry_author: Utf8,
+      entry_tags: List<Utf8>,
+      bookmark_count: Int32,
     }>>
   }
-  const [result, setResult] = useState<StructRowProxy<queryType>[] | null>(null);
 
-  useEffect(() => {
-    const loadResult = async () => {
-      const conn = await db.connect();
-      const results = await conn.query<queryType>(query);
-      setResult(results.toArray());
-      await conn.close();
-    };
-    loadResult();
-  }, [db, query]);
+  const { result } = useQuery<queryType>(db, query);
 
   const renderFeedHeader = (feed: StructRowProxy<queryType>) => (
     <CardHeader className="text-left">

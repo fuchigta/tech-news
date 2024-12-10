@@ -9,6 +9,7 @@ export default defineConfig(({ command }) => {
   const base = command === 'build' ? '/tech-news/' : '/';
 
   return ({
+    base: base,
     css: {
       postcss: {
         plugins: [tailwindcss, autoprefixer],

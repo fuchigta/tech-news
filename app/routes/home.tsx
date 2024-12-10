@@ -22,16 +22,6 @@ export function meta({ }: Route.MetaArgs) {
   ];
 }
 
-export function links() {
-  return [
-    {
-      rel: "icon",
-      href: "/icons8-rss-48.png",
-      type: "image/png",
-    },
-  ];
-}
-
 export default function Home() {
   const path = window.location.pathname;
   let basename = origin;

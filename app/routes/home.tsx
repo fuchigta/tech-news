@@ -1,23 +1,38 @@
-import { addDays, format } from 'date-fns';
+import { ThemeProvider } from "~/components/theme-provider";
+import type { Route } from "./+types/home";
+import { Card, CardContent, CardHeader } from "~/components/ui/card";
+import { addDays, format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { EntriesBoard } from "~/components/entries-board";
+import { ModeToggle } from "~/components/mode-toggle";
+import { TagsBoard } from "~/components/tags-board";
+import { Button } from "~/components/ui/button";
+import { cn } from "~/lib/utils";
+import { Popover, PopoverTrigger, PopoverContent } from "@radix-ui/react-popover";
+import { useDuckDB } from "~/hooks/use-duck-db";
+import { useQuery } from "~/hooks/use-query";
+import { useState } from "react";
+import type { DateRange } from 'react-day-picker';
 import { ja } from 'date-fns/locale';
-import { CalendarIcon } from 'lucide-react';
-import { useState } from 'react';
-import { DateRange } from 'react-day-picker';
-import './App.css';
-import { EntriesBoard } from './components/entries-board';
-import { ModeToggle } from './components/mode-toggle';
-import { TagsBoard } from './components/tags-board';
-import { ThemeProvider } from './components/theme-provider';
-import { Button } from './components/ui/button';
-import { Calendar } from './components/ui/calendar';
-import { Card, CardContent, CardHeader } from './components/ui/card';
-import { Popover, PopoverContent, PopoverTrigger } from './components/ui/popover';
-import { useDuckDB } from './hooks/use-duck-db';
-import { useQuery } from './hooks/use-query';
-import { cn } from './lib/utils';
+import { Calendar } from "~/components/ui/calendar";
 
-function App() {
-  const origin = window.location.origin;
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "人気のRSSエントリ" },
+  ];
+}
+
+export function links() {
+  return [
+    {
+      rel: "icon",
+      href: "/icons8-rss-48.png",
+      type: "image/png",
+    },
+  ];
+}
+
+export default function Home() {
   const path = window.location.pathname;
   let basename = origin;
   if (path !== "/") {
@@ -37,8 +52,6 @@ function App() {
     from: addDays(new Date(), -1),
     to: new Date()
   })
-
-  // TODO サイドバーでページ切り替えできるようにする
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
@@ -105,7 +118,5 @@ function App() {
         </CardContent>
       </Card>
     </ThemeProvider>
-  )
+  );
 }
-
-export default App

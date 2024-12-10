@@ -1,17 +1,24 @@
 import path from "path"
-import react from "@vitejs/plugin-react"
-import { defineConfig } from "vite"
+import { reactRouter } from "@react-router/dev/vite";
+import autoprefixer from "autoprefixer";
+import tailwindcss from "tailwindcss";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(({ command }) => {
-  const base = command === 'build' ? '/tech-news/' : '/'
+  const base = command === 'build' ? '/tech-news/' : '/';
 
-  return {
-    base,
-    plugins: [react()],
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "./src"),
+  return ({
+    css: {
+      postcss: {
+        plugins: [tailwindcss, autoprefixer],
       },
     },
-  }
-})
+    plugins: [reactRouter(), tsconfigPaths()],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./app"),
+      },
+    },
+  })
+});

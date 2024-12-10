@@ -1,5 +1,5 @@
 import * as duckdb from "@duckdb/duckdb-wasm";
-import { StructRowProxy, TypeMap } from "apache-arrow";
+import type { StructRowProxy, TypeMap } from "apache-arrow";
 import { useEffect, useState } from "react";
 
 export function useQuery<Row extends TypeMap>(db: duckdb.AsyncDuckDB | null, query: string) {

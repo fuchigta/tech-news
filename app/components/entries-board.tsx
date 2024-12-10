@@ -1,15 +1,15 @@
-import { useQuery } from "@/hooks/use-query";
+import { useQuery } from "~/hooks/use-query";
 import * as duckdb from "@duckdb/duckdb-wasm";
-import { Int32, List, Struct, StructRowProxy, Utf8 } from "apache-arrow";
+import { Int32, List, Struct, Utf8, type StructRowProxy } from "apache-arrow";
 import { format } from "date-fns";
 import { BookMarked, Clock, UserPen } from "lucide-react";
 import { useState } from "react";
-import { CopyToClipboardButton } from "./copy-to-clipboard-button";
-import { Badge } from "./ui/badge";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Badge } from "~/components/ui/badge";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/components/ui/card";
+import { Input } from "~/components/ui/input";
+import { Label } from "~/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "~/components/ui/select";
+import { CopyToClipboardButton } from "~/components/copy-to-clipboard-button";
 
 
 enum OrderBy {

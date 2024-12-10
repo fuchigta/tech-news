@@ -1,17 +1,17 @@
-import { useQuery } from "@/hooks/use-query";
+import { useQuery } from "~/hooks/use-query";
 import * as duckdb from "@duckdb/duckdb-wasm";
 import { Int32, List, Struct, Utf8 } from "apache-arrow";
 import { format } from "date-fns";
 import { useState } from "react";
 import { Label, Pie, PieChart } from "recharts";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "./ui/chart";
-import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTrigger } from "./ui/drawer";
-import { Input } from "./ui/input";
-import { Label as InputLabel } from "./ui/label";
-import { ScrollArea } from "./ui/scroll-area";
+import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
+import { ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "~/components/ui/chart";
+import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTrigger } from "~/components/ui/drawer";
+import { Input } from "~/components/ui/input";
+import { Label as InputLabel } from "~/components/ui/label";
+import { ScrollArea } from "~/components/ui/scroll-area";
 
 
 export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {

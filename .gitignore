@@ -5,5 +5,15 @@
 /.react-router/
 /build/
 
+# Python
 /venv
+__pycache__/
+*.pyc
 *.parquet
+
+# Environment
+.env
+/cache/
+
+# Logs
+*.log

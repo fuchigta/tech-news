@@ -1,4 +1,4 @@
-import { ThemeProvider } from "~/components/theme-provider";
+import { ThemeProvider } from "~/providers/theme-provider";
 import type { Route } from "./+types/home";
 import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { addDays, format } from "date-fns";

@@ -104,6 +104,9 @@
         "url": "https://mshibanami.github.io/GitHubTrendingRSS/weekly/all.xml"
     },
     {
+        "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml"
+    },
+    {
         "url": "https://rss.itmedia.co.jp/rss/2.0/topstory.xml"
     },
     {

@@ -1,15 +1,16 @@
-import { useQuery } from "~/hooks/use-query";
-import * as duckdb from "@duckdb/duckdb-wasm";
 import { Int32, List, Struct, Utf8, type StructRowProxy } from "apache-arrow";
 import { format } from "date-fns";
 import { BookMarked, Clock, UserPen } from "lucide-react";
 import { useState } from "react";
+import { CopyToClipboardButton } from "~/components/copy-to-clipboard-button";
 import { Badge } from "~/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "~/components/ui/select";
-import { CopyToClipboardButton } from "~/components/copy-to-clipboard-button";
+import { useQuery } from "~/hooks/use-query";
+import { useDashboardContext } from "~/routes/dashboard";
+import type { Route } from "./+types/entries";
 
 
 enum OrderBy {
@@ -18,7 +19,15 @@ enum OrderBy {
 }
 
 
-export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "人気のRSSエントリ" },
+  ];
+}
+
+
+export default function EntriesBoard() {
+  const { db, from, to } = useDashboardContext();
   const [orderBy, setOrderBy] = useState<OrderBy>(OrderBy.BookmarkCount)
   const [rankN, setRankN] = useState<number>(3)
   const [minBookmarkCount, setMinBookmarkCount] = useState<number>(1)
@@ -159,7 +168,7 @@ export function EntriesBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: 
   )
 
   return (
-    <Card className="flex flex-col justify-center">
+    <Card className="flex flex-col justify-center h-full w-full">
       <CardHeader className="text-left">
         <CardTitle>人気エントリ</CardTitle>
         <div>

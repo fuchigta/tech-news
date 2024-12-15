@@ -1,5 +1,4 @@
 import { useQuery } from "~/hooks/use-query";
-import * as duckdb from "@duckdb/duckdb-wasm";
 import { Int32, List, Struct, Utf8 } from "apache-arrow";
 import { format } from "date-fns";
 import { useState } from "react";
@@ -12,9 +11,18 @@ import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTrigger } from 
 import { Input } from "~/components/ui/input";
 import { Label as InputLabel } from "~/components/ui/label";
 import { ScrollArea } from "~/components/ui/scroll-area";
+import { useDashboardContext } from "~/routes/dashboard";
+import type { Route } from "./+types/tags";
 
 
-export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Date, to?: Date }) {
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "人気のタグ" },
+  ];
+}
+
+export default function TagsBoard() {
+  const { db, from, to } = useDashboardContext();
   const [minTagged, setminTagged] = useState<number>(1)
   const [excludeTags, setExcludeTags] = useState<string>("あとで読む *あとで読む 未分類")
 
@@ -126,7 +134,7 @@ export function TagsBoard({ db, from, to }: { db: duckdb.AsyncDuckDB, from?: Dat
   const { result } = useQuery<queryType>(db, query);
 
   return (
-    <Card className="flex flex-col justify-center">
+    <Card className="flex flex-col justify-center h-full w-full">
       <CardHeader className="text-left">
         <CardTitle>人気タグ</CardTitle>
         <div>

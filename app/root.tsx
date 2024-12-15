@@ -7,6 +7,9 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { AppSidebar } from "~/components/app-sidebar";
+import { SidebarProvider, SidebarTrigger } from "~/components/ui/sidebar";
+import { ThemeProvider } from "~/providers/theme-provider";
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 
@@ -34,7 +37,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+          <SidebarProvider className="flex" defaultOpen={false}>
+            <AppSidebar />
+            <main className="flex-1">
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarProvider>
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

@@ -71,8 +71,8 @@ export default function Dashboard({
 
   return (
     <div className="mx-6">
-      <header className='flex flex-row justify-between items-center mb-6'>
-        <div className="grid gap-2 z-50">
+      <header className='flex flex-row justify-end items-center mb-6'>
+        <div className="grid gap-2 mr-2 bg-card">
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -98,7 +98,7 @@ export default function Dashboard({
                 )}
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
+            <PopoverContent className="w-auto p-0 bg-popover border" align="start">
               <Calendar
                 initialFocus
                 mode="range"

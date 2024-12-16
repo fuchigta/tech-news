@@ -314,7 +314,7 @@ export default function EntriesBoard() {
                               </a>
                               <CopyToClipboardButton className="w-[25px] h-[25px] ml-2 p-0 rounded-sm" title="このエントリをマークダウン形式でクリップボードにコピー" onClick={() => {
                                 window.navigator.clipboard.writeText(
-                                  `[${entry.entry_title}](${entry.entry_url}) (**${entry.bookmark_count}** bookmarks)${entry.entry_image_url ? `\n![image](${entry.entry_image_url})` : ""}\nタグ：${Array.from(entry.entry_tags).map(tag => `「[${tag}](https://b.hatena.ne.jp/q/${tag})」`).join("")}`
+                                  `[${entry.entry_title}](${entry.entry_url})`
                                 )
                               }} />
                             </CardFooter>

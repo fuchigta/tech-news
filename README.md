@@ -21,5 +21,6 @@ https://fuchigta.github.io/tech-news/
 
 - RSS/AtomのURLと、エントリのタグで絞り込みたい場合はタグを記述してください。
   - ここで言うタグははてブのタグではなく、RSS/Atomのエントリについているやつです。
-    - 例：`<category term="ネットサービス" scheme="https://gigazine.net/news/C5/" label="ネットサービス"/>`
+  - 例：`<category term="ネットサービス" scheme="https://gigazine.net/news/C5/" label="ネットサービス"/>`
+    - この場合は「ネットサービス」と設定しておくと抽出されます。
 - 取得するスケジュールは好みで設定してください。

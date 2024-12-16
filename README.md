@@ -13,7 +13,7 @@ https://fuchigta.github.io/tech-news/
 
 - :bookmark: あとで読めるようにはてブに追加するボタンを付けてます。
 
-- :clipboard: SlackやMattermostに共有できるようにマークダウン形式でクリップボードにコピーするボタンを付けています。
+- :clipboard: Slackなどに共有しやすいようにマークダウン形式でクリップボードにコピーするボタンを付けてます。
 
 # 自分用のニュースサイトを作るには
 

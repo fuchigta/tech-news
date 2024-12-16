@@ -1,100 +1,25 @@
-# Welcome to React Router!
+# これはなに？
 
-A modern, production-ready template for building full-stack React applications using React Router.
+RSSフィードを`feed.json`に書いておくと、Github Pagesにニュースサイトとしてまとめてくれるものです。
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+https://fuchigta.github.io/tech-news/
 
-## Features
+- :rocket: 素早く最新の情報をキャッチアップすることを目的としています。
+  - RSSリーダーに未読がたまっていくのは精神衛生上よくないので…
+  - デフォルトで以下の挙動にしています。
+    - 前日・当日分のエントリを表示します。
+    - はてブ数が多い順にエントリを表示します。
+    - はてブ数が1以上のエントリのみを表示します。
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- :bookmark: あとで読めるようにはてブに追加するボタンを付けてます。
 
-## Getting Started
+- :clipboard: SlackやMattermostに共有できるようにマークダウン形式でクリップボードにコピーするボタンを付けています。
 
-### Installation
+# 自分用のニュースサイトを作るには
 
-Install the dependencies:
+フォークして、Github Pagesを有効にして、`feed.json`をいじってもらえればすぐに使えると思います。
 
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-This template includes three Dockerfiles optimized for different package managers:
-
-- `Dockerfile` - for npm
-- `Dockerfile.pnpm` - for pnpm
-- `Dockerfile.bun` - for bun
-
-To build and run using Docker:
-
-```bash
-# For npm
-docker build -t my-app .
-
-# For pnpm
-docker build -f Dockerfile.pnpm -t my-app .
-
-# For bun
-docker build -f Dockerfile.bun -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+- RSS/AtomのURLと、エントリのタグで絞り込みたい場合はタグを記述してください。
+  - ここで言うタグははてブのタグではなく、RSS/Atomのエントリについているやつです。
+    - 例：`<category term="ネットサービス" scheme="https://gigazine.net/news/C5/" label="ネットサービス"/>`
+- 取得するスケジュールは好みで設定してください。

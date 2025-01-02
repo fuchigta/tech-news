@@ -177,5 +177,8 @@
     },
     {
         "url": "https://connpass.com/explore/ja.atom"
-    }
+    },
+    {
+        "url": "http://feed.japan.cnet.com/rss/index.rdf"
+    }    
 ]

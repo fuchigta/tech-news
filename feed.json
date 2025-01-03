@@ -180,5 +180,8 @@
     },
     {
         "url": "http://feed.japan.cnet.com/rss/index.rdf"
-    }    
+    },
+    {
+        "url": "https://pyconjp.blogspot.com/feeds/posts/default"
+    }
 ]

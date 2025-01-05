@@ -64,7 +64,8 @@ export default function EntriesBoard() {
             result
         )
         order by
-          feed_title
+          feed_title,
+          entry_updated desc
       ) as e
     )
     select
@@ -83,7 +84,7 @@ export default function EntriesBoard() {
         bookmark_count: cast(bookmark_count as integer)
       } order by
         rank
-      ) as entries
+      )${rankN ? `[:${rankN}]` : ""} as entries
     from (
       select
         sum(bookmark_count) over (
@@ -94,12 +95,8 @@ export default function EntriesBoard() {
         ranking
       where
         bookmark_count >= ${minBookmarkCount}
-        ${rankN ? `
-          and rank <= ${rankN}
-        ` : ""}
-        ${from ?
-      to ? `and cast(entry_updated as date) between cast('${format(from, "yyyy-MM-dd")}' as date) and cast('${format(to, "yyyy-MM-dd")}' as date)`
-        : `and cast(entry_updated as date) >= cast('${format(from, "yyyy-MM-dd")}' as date)`
+        ${from ? to ? `and cast(entry_updated as date) between cast('${format(from, "yyyy-MM-dd")}' as date) and cast('${format(to, "yyyy-MM-dd")}' as date)`
+      : `and cast(entry_updated as date) >= cast('${format(from, "yyyy-MM-dd")}' as date)`
       : ""
     }
     ) as ranking

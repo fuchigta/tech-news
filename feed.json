@@ -186,5 +186,17 @@
     },
     {
         "url": "https://morningstarsecurity.com/feed"
+    },
+    {
+        "url": "https://securityboulevard.com/feed/"
+    },
+    {
+        "url": "https://www.helpnetsecurity.com/feed/"
+    },
+    {
+        "url": "https://www.bleepingcomputer.com/feed/"
+    },
+    {
+        "url": "https://therecord.media/feed"
     }
 ]

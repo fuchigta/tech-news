@@ -51,7 +51,6 @@ export default function EntriesBoard() {
         e.*
       from (
         select
-          distinct on (entry_url)
           *
         from (
           select
@@ -63,9 +62,6 @@ export default function EntriesBoard() {
           from
             result
         )
-        order by
-          feed_title,
-          entry_updated desc
       ) as e
     )
     select
@@ -87,6 +83,7 @@ export default function EntriesBoard() {
       )${rankN ? `[:${rankN}]` : ""} as entries
     from (
       select
+        distinct on (entry_url)
         sum(bookmark_count) over (
           partition by feed_title
         ) as feed_bookmark_count,
@@ -99,6 +96,8 @@ export default function EntriesBoard() {
       : `and cast(entry_updated as date) >= cast('${format(from, "yyyy-MM-dd")}' as date)`
       : ""
     }
+      order by
+        feed_bookmark_count
     ) as ranking
     group by
       feed_title,

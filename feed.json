@@ -210,5 +210,8 @@
     },
     {
         "url": "http://feeds.japan.zdnet.com/rss/zdnet/all.rdf"
+    },
+    {
+        "url": "https://logmi.jp/RSS/feed.xml"
     }
 ]

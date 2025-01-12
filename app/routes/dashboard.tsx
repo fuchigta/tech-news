@@ -51,8 +51,6 @@ export async function clientLoader({
     path: `${basename}/result.parquet`
   }
 
-  console.log(res);
-
   return res;
 }
 

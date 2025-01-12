@@ -4,10 +4,12 @@ import { BookMarked, Clock, UserPen } from "lucide-react";
 import { useState } from "react";
 import { CopyToClipboardButton } from "~/components/copy-to-clipboard-button";
 import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "~/components/ui/select";
+import { useLocalStorage } from "~/hooks/use-local-storage";
 import { useQuery } from "~/hooks/use-query";
 import { useDashboardContext } from "~/routes/dashboard";
 import type { Route } from "./+types/entries";
@@ -18,19 +20,33 @@ enum OrderBy {
   BookmarkCount = "BookmarkCount"
 }
 
-
 export function meta({ }: Route.MetaArgs) {
   return [
     { title: "人気のRSSエントリ" },
   ];
 }
 
+const STORAGE_KEY = "entries-setting";
+const DEFAULT_ORDER_BY = OrderBy.BookmarkCount;
+const DEFAULT_RANK_N = 3;
+const DEFAULT_MIN_BOOKMARK_COUNT = 1;
+
+interface Setting {
+  orderBy: OrderBy
+  rankN: number
+  minBookmarkCount: number
+}
 
 export default function EntriesBoard() {
   const { db, from, to } = useDashboardContext();
-  const [orderBy, setOrderBy] = useState<OrderBy>(OrderBy.BookmarkCount)
-  const [rankN, setRankN] = useState<number>(3)
-  const [minBookmarkCount, setMinBookmarkCount] = useState<number>(1)
+  const [setting, setSetting] = useLocalStorage<Setting>(STORAGE_KEY, {
+    orderBy: DEFAULT_ORDER_BY,
+    rankN: DEFAULT_RANK_N,
+    minBookmarkCount: DEFAULT_MIN_BOOKMARK_COUNT
+  })
+  const [orderBy, setOrderBy] = useState<OrderBy>(setting.orderBy)
+  const [rankN, setRankN] = useState<number>(setting.rankN)
+  const [minBookmarkCount, setMinBookmarkCount] = useState<number>(setting.minBookmarkCount)
 
   const query = `
     with ranking as (
@@ -170,7 +186,12 @@ export default function EntriesBoard() {
         <div>
           <Label htmlFor="orderBy">並び順</Label>
           <Select onValueChange={(value) => {
-            setOrderBy(value as OrderBy)
+            setOrderBy(value as OrderBy);
+            setSetting({
+              orderBy: value as OrderBy,
+              rankN,
+              minBookmarkCount
+            });
           }} defaultValue={orderBy}>
             <SelectTrigger id="orderBy" className="w-[160px]">
               <SelectValue placeholder="Order By" />
@@ -193,7 +214,12 @@ export default function EntriesBoard() {
               return;
             }
 
-            setRankN(e.target.valueAsNumber)
+            setRankN(e.target.valueAsNumber);
+            setSetting({
+              orderBy,
+              rankN: e.target.valueAsNumber,
+              minBookmarkCount
+            });
           }} />
         </div>
         <div>
@@ -208,8 +234,31 @@ export default function EntriesBoard() {
               return;
             }
 
-            setMinBookmarkCount(e.target.valueAsNumber)
+            setMinBookmarkCount(e.target.valueAsNumber);
+            setSetting({
+              orderBy,
+              rankN,
+              minBookmarkCount: e.target.valueAsNumber
+            });
           }} />
+        </div>
+        <div className="self-end">
+          <div>
+            <Button
+              type="button"
+              variant="destructive"
+              className="w-[80px]"
+              onClick={() => {
+                setSetting({
+                  orderBy: DEFAULT_ORDER_BY,
+                  rankN: DEFAULT_RANK_N,
+                  minBookmarkCount: DEFAULT_MIN_BOOKMARK_COUNT
+                });
+                setOrderBy(DEFAULT_ORDER_BY);
+                setRankN(DEFAULT_RANK_N);
+                setMinBookmarkCount(DEFAULT_MIN_BOOKMARK_COUNT);
+              }}>リセット</Button>
+          </div>
         </div>
       </CardHeader>
       <CardContent className="grow grid grid-cols-1 gap-2 md:gap-4">

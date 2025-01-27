@@ -178,59 +178,63 @@ def is_tags_matched(entry: dict, tags: list[str]) -> bool:
 
 
 def to_entries(feed_info: FeedInfo, session: requests.Session):
-    response = session.get(
-        feed_info["url"],
-        allow_redirects=True,
-        timeout=config.api.REQUEST_TIMEOUT,
-    )
-
-    if response.status_code != 200:
-        logger.error(
-            f"HTTP get failed: url={feed_info['url']}, "
-            f"status={response.status_code}, "
-            f"headers={response.headers} "
+    try:
+        response = session.get(
+            feed_info["url"],
+            allow_redirects=True,
+            timeout=config.api.REQUEST_TIMEOUT,
         )
+
+        if response.status_code != 200:
+            logger.error(
+                f"HTTP get failed: url={feed_info['url']}, "
+                f"status={response.status_code}, "
+                f"headers={response.headers} "
+            )
+            return {"feed_url": feed_info["url"], "entries": []}
+
+        res = feedparser.parse(response.text)
+
+        feed_updated = get_updated(res.feed)
+        expiry_delta = datetime.timedelta(days=config.feed.ENTRY_EXPIRY_DAYS)
+
+        entries = [
+            entry
+            for entry in res.entries[: config.feed.MAX_ENTRIES_PER_FEED]
+            if len(entry.get("link", "")) > 0
+            and is_within(get_updated(entry, feed_updated), expiry_delta)
+            and is_tags_matched(entry, feed_info.get("tags", []))
+        ]
+
+        logger.info(f"Fetched {len(entries)} entries from {feed_info['url']}")
+
+        return {
+            "page_url": res.feed.link,
+            "feed_url": feed_info["url"],
+            "feed_title": res.feed.get("title"),
+            "feed_image": res.feed.get("image", {}).get("href"),
+            "feed_modified": res.get("modifed", get_updated_isoformat(res.feed)),
+            "entries": fetch_bookmark_infos(
+                [
+                    {
+                        "entry_title": entry.get("title"),
+                        "entry_author": entry.get("author"),
+                        "entry_url": remove_query_params(entry.get("link")),
+                        "entry_image_url": get_entry_image(entry),
+                        "entry_tags": [
+                            normalize(tag.get("term").lower())
+                            for tag in entry.get("tags", [])
+                            if tag.get("term") is not None
+                        ],
+                        "entry_updated": get_updated_isoformat(entry, feed_updated),
+                    }
+                    for entry in entries
+                ]
+            ),
+        }
+    except Exception as e:
+        logger.error(f"Error: url={feed_info['url']}, error={e}")
         return {"feed_url": feed_info["url"], "entries": []}
-
-    res = feedparser.parse(response.text)
-
-    feed_updated = get_updated(res.feed)
-    expiry_delta = datetime.timedelta(days=config.feed.ENTRY_EXPIRY_DAYS)
-
-    entries = [
-        entry
-        for entry in res.entries[: config.feed.MAX_ENTRIES_PER_FEED]
-        if len(entry.get("link", "")) > 0
-        and is_within(get_updated(entry, feed_updated), expiry_delta)
-        and is_tags_matched(entry, feed_info.get("tags", []))
-    ]
-
-    logger.info(f"Fetched {len(entries)} entries from {feed_info['url']}")
-
-    return {
-        "page_url": res.feed.link,
-        "feed_url": feed_info["url"],
-        "feed_title": res.feed.get("title"),
-        "feed_image": res.feed.get("image", {}).get("href"),
-        "feed_modified": res.get("modifed", get_updated_isoformat(res.feed)),
-        "entries": fetch_bookmark_infos(
-            [
-                {
-                    "entry_title": entry.get("title"),
-                    "entry_author": entry.get("author"),
-                    "entry_url": remove_query_params(entry.get("link")),
-                    "entry_image_url": get_entry_image(entry),
-                    "entry_tags": [
-                        normalize(tag.get("term").lower())
-                        for tag in entry.get("tags", [])
-                        if tag.get("term") is not None
-                    ],
-                    "entry_updated": get_updated_isoformat(entry, feed_updated),
-                }
-                for entry in entries
-            ]
-        ),
-    }
 
 
 def save_to_parquet(name: str, data: list):

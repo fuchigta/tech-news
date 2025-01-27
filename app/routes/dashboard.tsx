@@ -1,10 +1,14 @@
 import type { AsyncDuckDB } from "@duckdb/duckdb-wasm";
-import { Popover, PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@radix-ui/react-popover";
 import { addDays, format } from "date-fns";
-import { ja } from 'date-fns/locale';
+import { ja } from "date-fns/locale";
 import { CalendarIcon } from "lucide-react";
 import { useState } from "react";
-import type { DateRange } from 'react-day-picker';
+import type { DateRange } from "react-day-picker";
 import { Outlet, useOutletContext } from "react-router";
 import { ModeToggle } from "~/components/mode-toggle";
 import { Button } from "~/components/ui/button";
@@ -21,11 +25,10 @@ import duckdb_wasm from "@duckdb/duckdb-wasm/dist/duckdb-mvp.wasm?url";
 import type { Route } from "./+types/dashboard";
 
 interface DashboardContext {
-  db: AsyncDuckDB
-  from?: Date
-  to?: Date
+  db: AsyncDuckDB;
+  from?: Date;
+  to?: Date;
 }
-
 
 const MANUAL_BUNDLES: duckdb.DuckDBBundles = {
   mvp: {
@@ -38,9 +41,7 @@ const MANUAL_BUNDLES: duckdb.DuckDBBundles = {
   },
 };
 
-export async function clientLoader({
-  params,
-}: Route.ClientLoaderArgs) {
+export async function clientLoader({ params }: Route.ClientLoaderArgs) {
   const path = window.location.pathname;
   let basename = origin;
   if (path !== "/") {
@@ -48,28 +49,29 @@ export async function clientLoader({
   }
 
   const res = {
-    path: `${basename}/result.parquet`
-  }
+    path: `${basename}/result.parquet`,
+  };
 
   return res;
 }
 
-export default function Dashboard({
-  loaderData,
-}: Route.ComponentProps) {
+export default function Dashboard({ loaderData }: Route.ComponentProps) {
   const { db } = useDuckDB();
-  const { result: loaded } = useQuery(db, `
+  const { result: loaded } = useQuery(
+    db,
+    `
     CREATE TABLE IF NOT EXISTS result AS SELECT * FROM '${loaderData.path}';
-  `)
+  `
+  );
 
   const [date, setDate] = useState<DateRange | undefined>({
     from: addDays(new Date(), -1),
-    to: new Date()
-  })
+    to: new Date(),
+  });
 
   return (
     <div className="mx-6">
-      <header className='flex flex-row justify-end items-center mb-6'>
+      <header className="flex flex-row justify-end items-center mb-6">
         <div className="grid gap-2 mr-2 bg-card">
           <Popover>
             <PopoverTrigger asChild>
@@ -96,7 +98,10 @@ export default function Dashboard({
                 )}
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0 bg-popover border" align="start">
+            <PopoverContent
+              className="w-auto p-0 bg-popover border"
+              align="start"
+            >
               <Calendar
                 initialFocus
                 mode="range"
@@ -105,27 +110,34 @@ export default function Dashboard({
                 onSelect={setDate}
                 numberOfMonths={1}
                 disabled={{
-                  after: new Date()
+                  after: new Date(),
                 }}
                 locale={ja}
                 formatters={{
                   formatCaption: (date, options) => {
-                    return format(date, "yyyy年MM月", { locale: options?.locale });
-                  }
+                    return format(date, "yyyy年MM月", {
+                      locale: options?.locale,
+                    });
+                  },
                 }}
               />
             </PopoverContent>
           </Popover>
         </div>
         <ModeToggle />
-      </header >
+      </header>
       <main>
-        {db && loaded ?
-          <Outlet context={{ db, from: date?.from, to: date?.to } satisfies DashboardContext} />
-          : <>Loading...</>
-        }
+        {db && loaded ? (
+          <Outlet
+            context={
+              { db, from: date?.from, to: date?.to } satisfies DashboardContext
+            }
+          />
+        ) : (
+          <>Loading...</>
+        )}
       </main>
-    </div >
+    </div>
   );
 }
 

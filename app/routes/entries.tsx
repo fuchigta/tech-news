@@ -26,6 +26,7 @@ import { useLocalStorage } from "~/hooks/use-local-storage";
 import { useQuery } from "~/hooks/use-query";
 import { useDashboardContext } from "~/routes/dashboard";
 import type { Route } from "./+types/entries";
+import { MultiSelect } from "~/components/ui/multi-select";
 
 enum OrderBy {
   EntryUpdated = "EntryUpdated",
@@ -59,6 +60,7 @@ export default function EntriesBoard() {
   const [minBookmarkCount, setMinBookmarkCount] = useState<number>(
     setting.minBookmarkCount
   );
+  const [filterTags, setFilterTags] = useState<string[]>([]);
 
   const query = `
     with ranking as (
@@ -217,6 +219,21 @@ export default function EntriesBoard() {
     </CardHeader>
   );
 
+  const tags = result
+    ? result
+        .flatMap((row) => row.entries.toArray())
+        .flatMap(
+          (entry) => entry.entry_tags.toArray() as unknown as Array<string>
+        )
+        .reduce(
+          (prev, cur) => ({
+            ...prev,
+            [cur]: prev[cur] ? prev[cur] + 1 : 1,
+          }),
+          {} as { [key: string]: number }
+        )
+    : {};
+
   return (
     <Card className="flex flex-col justify-center h-full w-full">
       <CardHeader className="text-left">
@@ -299,6 +316,17 @@ export default function EntriesBoard() {
             }}
           />
         </div>
+        <div>
+          <Label htmlFor="filterTags">タグフィルタ</Label>
+          <MultiSelect
+            id="filterTags"
+            options={Object.keys(tags)
+              .sort((l, r) => tags[r] - tags[l])
+              .map((tag) => ({ label: tag, value: tag }))}
+            onValueChange={(values) => setFilterTags(values)}
+            className="w-[300px]"
+          ></MultiSelect>
+        </div>
         <div className="self-end">
           <div>
             <Button
@@ -339,78 +367,22 @@ export default function EntriesBoard() {
                   renderFeedHeader(feed)
                 )}
                 <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
-                  {feed.entries.toArray().map((entry) => (
-                    <Card
-                      key={entry.entry_url}
-                      className="cursor-pointer flex flex-col hover:bg-muted/50"
-                    >
-                      <CardHeader
-                        className="text-left"
-                        onClick={() => {
-                          const w = window.open(
-                            entry.entry_url,
-                            "_blank",
-                            "noopener,noreferrer"
-                          );
-                          if (w) {
-                            w.opener = null;
-                          }
-                        }}
+                  {feed.entries
+                    .toArray()
+                    .filter(
+                      (entry) =>
+                        !filterTags.length ||
+                        (
+                          entry.entry_tags.toArray() as unknown as Array<string>
+                        ).some((tag) => filterTags.includes(tag))
+                    )
+                    .map((entry) => (
+                      <Card
+                        key={entry.entry_url}
+                        className="cursor-pointer flex flex-col hover:bg-muted/50"
                       >
-                        <CardTitle className="text-sm">
-                          {entry.entry_title}
-                        </CardTitle>
-                        <CardDescription className="flex items-center">
-                          <Clock className="mr-0.5 w-4" />
-                          {format(
-                            entry.entry_updated,
-                            "yyyy年MM月dd日 HH時mm分"
-                          )}
-                        </CardDescription>
-                        {entry.entry_author ? (
-                          <CardDescription className="flex items-center">
-                            <UserPen className="mr-0.5 w-4" />
-                            {entry.entry_author}
-                          </CardDescription>
-                        ) : (
-                          <></>
-                        )}
-                        {entry.bookmark_count ? (
-                          <CardDescription className="flex items-center">
-                            <Badge
-                              variant={"destructive"}
-                              className="px-1 py-0.25 rounded-sm"
-                            >
-                              <BookMarked className="mr-0.5 w-4" />
-                              {entry.bookmark_count} bookmarks
-                            </Badge>
-                          </CardDescription>
-                        ) : (
-                          <></>
-                        )}
-                        {entry.entry_tags.length ? (
-                          <CardDescription>
-                            <>
-                              {(
-                                entry.entry_tags.toArray() as unknown as Array<string>
-                              ).map((tag) => (
-                                <Badge
-                                  key={tag}
-                                  variant="secondary"
-                                  className="mr-1 mb-1 text-xs px-1.5 rounded-sm"
-                                >
-                                  {tag.toString()}
-                                </Badge>
-                              ))}
-                            </>
-                          </CardDescription>
-                        ) : (
-                          <></>
-                        )}
-                      </CardHeader>
-                      {entry.entry_image_url ? (
-                        <CardContent
-                          className="grow flex flex-col justify-start"
+                        <CardHeader
+                          className="text-left"
                           onClick={() => {
                             const w = window.open(
                               entry.entry_url,
@@ -422,46 +394,111 @@ export default function EntriesBoard() {
                             }
                           }}
                         >
-                          <img
-                            src={entry.entry_image_url}
-                            alt="画像"
-                            className="max-w-fit"
-                            onError={(e: any) =>
-                              (e.target.style.display = "none")
-                            }
+                          <CardTitle className="text-sm">
+                            {entry.entry_title}
+                          </CardTitle>
+                          <CardDescription className="flex items-center">
+                            <Clock className="mr-0.5 w-4" />
+                            {format(
+                              entry.entry_updated,
+                              "yyyy年MM月dd日 HH時mm分"
+                            )}
+                          </CardDescription>
+                          {entry.entry_author ? (
+                            <CardDescription className="flex items-center">
+                              <UserPen className="mr-0.5 w-4" />
+                              {entry.entry_author}
+                            </CardDescription>
+                          ) : (
+                            <></>
+                          )}
+                          {entry.bookmark_count ? (
+                            <CardDescription className="flex items-center">
+                              <Badge
+                                variant={"destructive"}
+                                className="px-1 py-0.25 rounded-sm"
+                              >
+                                <BookMarked className="mr-0.5 w-4" />
+                                {entry.bookmark_count} bookmarks
+                              </Badge>
+                            </CardDescription>
+                          ) : (
+                            <></>
+                          )}
+                          {entry.entry_tags.length ? (
+                            <CardDescription>
+                              <>
+                                {(
+                                  entry.entry_tags.toArray() as unknown as Array<string>
+                                ).map((tag) => (
+                                  <Badge
+                                    key={tag}
+                                    variant="secondary"
+                                    className="mr-1 mb-1 text-xs px-1.5 rounded-sm"
+                                  >
+                                    {tag.toString()}
+                                  </Badge>
+                                ))}
+                              </>
+                            </CardDescription>
+                          ) : (
+                            <></>
+                          )}
+                        </CardHeader>
+                        {entry.entry_image_url ? (
+                          <CardContent
+                            className="grow flex flex-col justify-start"
+                            onClick={() => {
+                              const w = window.open(
+                                entry.entry_url,
+                                "_blank",
+                                "noopener,noreferrer"
+                              );
+                              if (w) {
+                                w.opener = null;
+                              }
+                            }}
+                          >
+                            <img
+                              src={entry.entry_image_url}
+                              alt="画像"
+                              className="max-w-fit"
+                              onError={(e: any) =>
+                                (e.target.style.display = "none")
+                              }
+                            />
+                          </CardContent>
+                        ) : (
+                          <></>
+                        )}
+                        <CardFooter>
+                          <a
+                            href={`https://b.hatena.ne.jp/entry/${entry.entry_url
+                              .replace("https://", "s/")
+                              .replace("http://", "")}`}
+                            target="_blank"
+                            title="このエントリをはてなブックマークに追加"
+                          >
+                            <img
+                              src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
+                              alt="このエントリをはてなブックマークに追加"
+                              width="25"
+                              height="25"
+                              className="transition duration-150 ease-in-out"
+                            />
+                          </a>
+                          <CopyToClipboardButton
+                            className="w-[25px] h-[25px] ml-2 p-0 rounded-sm"
+                            title="このエントリをマークダウン形式でクリップボードにコピー"
+                            onClick={() => {
+                              window.navigator.clipboard.writeText(
+                                `[${entry.entry_title}](${entry.entry_url})`
+                              );
+                            }}
                           />
-                        </CardContent>
-                      ) : (
-                        <></>
-                      )}
-                      <CardFooter>
-                        <a
-                          href={`https://b.hatena.ne.jp/entry/${entry.entry_url
-                            .replace("https://", "s/")
-                            .replace("http://", "")}`}
-                          target="_blank"
-                          title="このエントリをはてなブックマークに追加"
-                        >
-                          <img
-                            src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
-                            alt="このエントリをはてなブックマークに追加"
-                            width="25"
-                            height="25"
-                            className="transition duration-150 ease-in-out"
-                          />
-                        </a>
-                        <CopyToClipboardButton
-                          className="w-[25px] h-[25px] ml-2 p-0 rounded-sm"
-                          title="このエントリをマークダウン形式でクリップボードにコピー"
-                          onClick={() => {
-                            window.navigator.clipboard.writeText(
-                              `[${entry.entry_title}](${entry.entry_url})`
-                            );
-                          }}
-                        />
-                      </CardFooter>
-                    </Card>
-                  ))}
+                        </CardFooter>
+                      </Card>
+                    ))}
                 </CardContent>
               </Card>
             ))}

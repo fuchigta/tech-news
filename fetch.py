@@ -188,8 +188,7 @@ def to_entries(feed_info: FeedInfo, session: requests.Session):
         logger.error(
             f"HTTP get failed: url={feed_info['url']}, "
             f"status={response.status_code}, "
-            f"headers={response.headers}, "
-            f"text={response.text} "
+            f"headers={response.headers} "
         )
         return {"feed_url": feed_info["url"], "entries": []}
 

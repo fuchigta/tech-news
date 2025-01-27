@@ -225,5 +225,11 @@
     },
     {
         "url": "https://codezine.jp/rss/new/index.xml"
+    },
+    {
+        "url": "https://productzine.jp/rss/new/index.xml"
+    },
+    {
+        "url": "https://enterprisezine.jp/rss/new/index.xml"
     }
 ]

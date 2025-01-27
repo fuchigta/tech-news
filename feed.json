@@ -216,5 +216,11 @@
     },
     {
         "url": "https://techblog.lycorp.co.jp/ja/feed/index.xml"
+    },
+    {
+        "url": "https://www.oreilly.co.jp/blog/feeds/all.atom.xml"
+    },
+    {
+        "url": "https://www.oreilly.co.jp/catalog/soon.xml"
     }
 ]

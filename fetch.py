@@ -193,7 +193,7 @@ def to_entries(feed_info: FeedInfo, session: requests.Session):
             )
             return {"feed_url": feed_info["url"], "entries": []}
 
-        res = feedparser.parse(response.text)
+        res = feedparser.parse(BytesIO(response.content))
 
         feed_updated = get_updated(res.feed)
         expiry_delta = datetime.timedelta(days=config.feed.ENTRY_EXPIRY_DAYS)
